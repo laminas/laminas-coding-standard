@@ -2,12 +2,17 @@
 
 declare(strict_types=1);
 
-namespace ZendCodingStandardTest\fixed;
+namespace LaminasCodingStandardTest\fixed;
 
 use Bar\Baz;
 use DateInterval;
 use DateTimeImmutable;
 use DateTimeZone;
+use Vendor\Package\ClassA as A;
+use Vendor\Package\ClassB;
+use Vendor\Package\ClassC as C;
+use Vendor\Package\SomeNamespace\ClassD as D;
+
 use function chop;
 use function compact;
 use function extract;
@@ -16,15 +21,16 @@ use function settype;
 use function sizeof;
 use function strToLower;
 use function time;
-use const PHP_SAPI;
-use const DATE_RFC3339;
 use function var_dump;
-use Vendor\Package\{ClassA as A, ClassB, ClassC as C};
-use Vendor\Package\SomeNamespace\ClassD as D;
+use function Vendor\Package\functionA;
+use function Vendor\Package\functionB;
+use function Vendor\Package\functionC;
 
-use function Vendor\Package\{functionA, functionB, functionC};
-
-use const Vendor\Package\{ConstantA, ConstantB, ConstantC};
+use const DATE_RFC3339;
+use const PHP_SAPI;
+use const Vendor\Package\ConstantA;
+use const Vendor\Package\ConstantB;
+use const Vendor\Package\ConstantC;
 
 class BasicCodingStandard extends Bar implements FooInterface
 {

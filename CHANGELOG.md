@@ -10,9 +10,9 @@ All notable changes to this project will be documented in this file, in reverse 
 
 ### Changed
 
-- [#22](https://github.com/zendframework/zend-coding-standard/pull/22) refactors 
+- [zendframework/zend-coding-standard#22](https://github.com/zendframework/zend-coding-standard/pull/22) refactors 
   documentation. It now follows the PHP-FIG PSR-12 style.
-- [#22](https://github.com/zendframework/zend-coding-standard/pull/22) refactors
+- [zendframework/zend-coding-standard#22](https://github.com/zendframework/zend-coding-standard/pull/22) refactors
   the ruleset. It uses PSR-12 as the base ruleset with these additional rules:
 
   - The short open tag SHOULD NOT be used.
@@ -149,7 +149,7 @@ All notable changes to this project will be documented in this file, in reverse 
 
 ### Added
 
-- [#8](https://github.com/zendframework/zend-coding-standard/pull/8) adds some sniffs from webimpress/coding-standard.
+- [zendframework/zend-coding-standard#8](https://github.com/zendframework/zend-coding-standard/pull/8) adds some sniffs from webimpress/coding-standard.
 
   - Forbid null values for class properties
   - Comments at the end of the line, with at least single space
@@ -166,7 +166,7 @@ All notable changes to this project will be documented in this file, in reverse 
   - Forbid whitespace around double colon operator
   - Forbid whitespace around double colon operator
 
-- [#10](https://github.com/zendframework/zend-coding-standard/pull/10) adds additional sniffs.
+- [zendframework/zend-coding-standard#10](https://github.com/zendframework/zend-coding-standard/pull/10) adds additional sniffs.
 
   - Added AnonymousClassDeclaration sniff
   - Added ScopeIndent sniff
@@ -175,9 +175,9 @@ All notable changes to this project will be documented in this file, in reverse 
 
 ### Changed
 
-- [#8](https://github.com/zendframework/zend-coding-standard/pull/8) replaces sniffs in favor of webimpress/coding-standard as these are more reliable or fixes more cases.
+- [zendframework/zend-coding-standard#8](https://github.com/zendframework/zend-coding-standard/pull/8) replaces sniffs in favor of webimpress/coding-standard as these are more reliable or fixes more cases.
 
-- [#10](https://github.com/zendframework/zend-coding-standard/pull/10) adds additional sniffs.
+- [zendframework/zend-coding-standard#10](https://github.com/zendframework/zend-coding-standard/pull/10) adds additional sniffs.
 
   - Improve absolute class name references sniffs
   - Improve sniff for useless alias for classes, constants, functions and traits
@@ -217,22 +217,22 @@ All notable changes to this project will be documented in this file, in reverse 
 
 ### Fixed
 
-- [#7](https://github.com/zendframework/zend-coding-standard/pull/7) updates to composer-installer 0.5 which fixes a 'Class not found' error during installation.
+- [zendframework/zend-coding-standard#7](https://github.com/zendframework/zend-coding-standard/pull/7) updates to composer-installer 0.5 which fixes a 'Class not found' error during installation.
 
 ## 2.0.0alpha1 - 2018-11-18
 
 ### Added
 
-- [#5](https://github.com/zendframework/zend-coding-standard/pull/5) adds
-  online documentation: https://docs.zendframework.com/zend-coding-standard/
-- [#5](https://github.com/zendframework/zend-coding-standard/pull/5) adds
+- [zendframework/zend-coding-standard#5](https://github.com/zendframework/zend-coding-standard/pull/5) adds
+  online documentation: https://docs.laminas.dev/laminas-coding-standard/
+- [zendframework/zend-coding-standard#5](https://github.com/zendframework/zend-coding-standard/pull/5) adds
   PSR-12 rules.
 
   *NOTE:* PSR-12 is not finalized. e.g. The `!` operator and `:` placement for
   return values are still under discussion. We will change these rules, and,
   when PSR-12 is finalized, adapt them.
-- [#5](https://github.com/zendframework/zend-coding-standard/pull/5) extends
-  PSR-12 with Zend Framework specific rules:
+- [zendframework/zend-coding-standard#5](https://github.com/zendframework/zend-coding-standard/pull/5) extends
+  PSR-12 with Laminas specific rules:
 
   *NOTE:* Most of these rules should look familiar as they are already being
   used in components rewritten for PHP 7.1.
