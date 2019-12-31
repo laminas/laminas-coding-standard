@@ -124,7 +124,7 @@ class Commenting
      * @param ConfigInterface|null $config A custom configuration to utilize. An empty configuration is used
      *      when null is passed or the parameter is omitted.
      * @param ContainerInterface|null $container The IoC container to retrieve dependency instances.
-     *      `Zend\Di\DefaultContainer` is used when null is passed or the parameter is omitted.
+     *      `Laminas\Di\DefaultContainer` is used when null is passed or the parameter is omitted.
      * @param Definition\DefinitionInterface $definition A custom definition instance for creating requested instances.
      *      The runtime definition is used when null is passed or the parameter is omitted.
      * @param Resolver\DependencyResolverInterface|null $resolver A custom resolver instance to resolve dependencies.

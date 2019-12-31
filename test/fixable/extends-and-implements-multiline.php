@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace Vendor\Package;
 
-use ParentClass;
-use BarClass as Bar;
-use OtherVendor\OtherPackage\BazClass;
 use ArrayAccess;
+use BarClass as Bar;
 use Countable;
+use OtherVendor\OtherPackage\BazClass;
+use ParentClass;
 use Serializable;
 
 class ClassNameMultiline extends ParentClass implements

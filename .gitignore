@@ -3,11 +3,11 @@
 /composer.lock
 /coveralls-upload.json
 /docs/html/
+/laminas-mkdoc-theme.tgz
+/laminas-mkdoc-theme/
 /mkdocs.site.yml
 /phpcs.log
 /phpcs.xml
 /phpunit.xml
 /test/fix/
 /vendor/
-/zf-mkdoc-theme.tgz
-/zf-mkdoc-theme/

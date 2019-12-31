@@ -4,8 +4,10 @@ declare(strict_types = 1);
 
 namespace Example;
 
-use function strlen as stringLength;
 use Fancy\TestCase as TestCase;
+
+use function strlen as stringLength;
+
 use const PHP_RELEASE_VERSION as PHP_PATCH_VERSION;
 
 /**

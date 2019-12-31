@@ -1,4 +1,4 @@
-# Zend Framework Coding Style Guide
+# Laminas Coding Style Guide
 
 This specification extends and expands [PSR-12](https://github.com/php-fig/fig-standards/blob/master/proposed/extended-coding-style-guide.md),
 the extended coding style guide and requires adherence to [PSR-1](https://www.php-fig.org/psr/psr-1),
@@ -105,9 +105,9 @@ In addition to [PSR-12](https://github.com/php-fig/fig-standards/blob/master/pro
 ```php
 <?php
 /**
- * @see       https://github.com/zendframework/zend-coding-standard for the canonical source repository
- * @copyright Copyright (c) 2016-2018 Zend Technologies USA Inc. (https://www.zend.com)
- * @license   https://github.com/zendframework/zend-coding-standard/blob/master/LICENSE.md New BSD License
+ * @see       https://github.com/laminas/laminas-coding-standard for the canonical source repository
+ * @copyright Copyright (c) 2016-2018 Laminas (https://www.zend.com)
+ * @license   https://github.com/laminas/laminas-coding-standard/blob/master/LICENSE.md New BSD License
  */
 
 declare(strict_types=1);

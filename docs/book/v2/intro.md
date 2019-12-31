@@ -1,6 +1,6 @@
-# zend-coding-standard
+# laminas-coding-standard
 
-The coding standard ruleset for Zend Framework components.
+The coding standard ruleset for Laminas components.
 
 This specification extends and expands [PSR-12](https://github.com/php-fig/fig-standards/blob/master/proposed/extended-coding-style-guide.md), 
 the extended coding style guide and requires adherence to [PSR-1](https://www.php-fig.org/psr/psr-1), 
@@ -25,7 +25,7 @@ We will change these rules, and, when PSR-12 is finalized, adapt them.
 1. Install the module via composer by running:
 
    ```bash
-   $ composer require --dev zendframework/zend-coding-standard
+   $ composer require --dev laminas/laminas-coding-standard
    ```
 
 2. Add composer scripts into your `composer.json`:
@@ -58,8 +58,8 @@ We will change these rules, and, when PSR-12 is finalized, adapt them.
        <file>src</file>
        <file>test</file>
    
-       <!-- Include all rules from the Zend Coding Standard -->
-       <rule ref="ZendCodingStandard"/>
+       <!-- Include all rules from the Laminas Coding Standard -->
+       <rule ref="LaminasCodingStandard"/>
    </ruleset>
    ```
 
@@ -109,15 +109,15 @@ $xmlPackage->send();
 > **New rules or Sniffs may not be introduced in minor or bugfix releases and should always be based on the develop 
 branch and queued for the next major release, unless considered a bugfix for existing rules.**
 
-If you want to test changes against ZendFramework components or your own projects, install your forked 
-zend-coding-standard globally with composer: 
+If you want to test changes against Laminas components or your own projects, install your forked 
+laminas-coding-standard globally with composer: 
 ```bash
-$ composer global config repositories.zend-coding-standard vcs git@github.com:<FORK_NAMESPACE>/zend-coding-standard.git
-$ composer global require --dev zendframework/zend-coding-standard:dev-<FORKED_BRANCH>
+$ composer global config repositories.laminas-coding-standard vcs git@github.com:<FORK_NAMESPACE>/laminas-coding-standard.git
+$ composer global require --dev laminas/laminas-coding-standard:dev-<FORKED_BRANCH>
 
 # For this to work, add this to your path: ~/.composer/vendor/bin
 # Using `-s` prints the rules that triggered the errors so they can be reviewed easily. `-p` is for progress display.
-$ phpcs -sp --standard=ZendCodingStandard src test
+$ phpcs -sp --standard=LaminasCodingStandard src test
 ```
 Make sure you remove the global installation after testing from your global composer.json file!!!
 
