@@ -1,1 +1,1 @@
-# The coding standard ruleset for Zend Framework components
+# The coding standard ruleset for Laminas components

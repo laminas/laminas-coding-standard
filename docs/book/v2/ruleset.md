@@ -752,9 +752,9 @@ _PSR-12:_ Declare statements MUST contain no spaces and MUST be exactly `declare
 ```php
 <?php
 /**
- * @see       https://github.com/zendframework/zend-coding-standard for the canonical source repository
- * @copyright Copyright (c) 2016-2018 Zend Technologies USA Inc. (https://www.zend.com)
- * @license   https://github.com/zendframework/zend-coding-standard/blob/master/LICENSE.md New BSD License
+ * @see       https://github.com/laminas/laminas-coding-standard for the canonical source repository
+ * @copyright Copyright (c) 2016-2018 Laminas (https://www.zend.com)
+ * @license   https://github.com/laminas/laminas-coding-standard/blob/master/LICENSE.md New BSD License
  */
 
 declare(strict_types=1);
@@ -895,7 +895,7 @@ All double arrow symbols must be aligned to one space after the longest array ke
 return [
     ConfigAggregator::ENABLE_CACHE => true,
     'debug'                        => false,
-    'zend-expressive' => [
+    'mezzio' => [
         'raise_throwables'      => true,
         'programmatic_pipeline' => true,
         'error_handler'         => [
@@ -912,7 +912,7 @@ return [
 return [
     ConfigAggregator::ENABLE_CACHE => true,
     'debug' => false,
-    'zend-expressive' => [
+    'mezzio' => [
         'raise_throwables' => true,
         'programmatic_pipeline' => true,
         'error_handler' => [

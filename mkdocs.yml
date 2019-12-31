@@ -1,6 +1,6 @@
 docs_dir: docs/book
 site_dir: docs/html
-pages:
+nav:
     - index.md
     - 'Introduction': v2/intro.md
     - 'Coding Style Guide': v2/coding-style-guide.md
@@ -12,6 +12,6 @@ pages:
         - 'Reference':
             - 'Ruleset': v1/ruleset.md
 
-site_name: Zend Coding Standard
-site_description: 'The coding standard ruleset for Zend Framework components.'
-repo_url: 'https://github.com/zendframework/zend-coding-standard'
+site_name: Laminas Coding Standard
+site_description: 'The coding standard ruleset for Laminas components.'
+repo_url: 'https://github.com/laminas/laminas-coding-standard'
