@@ -1,7 +1,7 @@
-Zend Framework Coding Standard
+Laminas Coding Standard
 ==============================
 
-Repository with all coding standard ruleset for Zend Framework repositories.
+Repository with all coding standard ruleset for Laminas repositories.
 
 
 Installation
@@ -10,7 +10,7 @@ Installation
 1. Install the module via composer by running:
 
    ```bash
-   $ composer require --dev zendframework/zend-coding-standard
+   $ composer require --dev laminas/laminas-coding-standard
    ```
 
 2. Add composer scripts into your `composer.json`:
@@ -26,8 +26,8 @@ Installation
 
    ```xml
    <?xml version="1.0"?>
-   <ruleset name="Zend Framework Coding Standard">
-       <rule ref="./vendor/zendframework/zend-coding-standard/ruleset.xml"/>
+   <ruleset name="Laminas Coding Standard">
+       <rule ref="./vendor/laminas/laminas-coding-standard/ruleset.xml"/>
 
        <!-- Paths to check -->
        <file>config</file>
