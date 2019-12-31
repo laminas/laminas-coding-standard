@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace ZendCodingStandardTest\fixed;
+namespace LaminasCodingStandardTest\fixed;
 
-use Vendor\Package\ThirdTrait;
-use Vendor\Package\SecondTrait;
 use Vendor\Package\FirstTrait;
+use Vendor\Package\SecondTrait;
+use Vendor\Package\ThirdTrait;
 
 class UsingTraits
 {

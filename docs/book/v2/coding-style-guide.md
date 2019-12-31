@@ -1,4 +1,4 @@
-# Zend Framework Coding Style Guide
+# Laminas Coding Style Guide
 
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD",
 "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be
@@ -12,7 +12,7 @@ This specification extends [PSR-12][], the coding style guide and
 requires adherence to [PSR-1][], the basic coding standard.
 
 Like [PSR-12][], the intent of this specification is to reduce cognitive friction when
-scanning code from different authors contributing to Zend Framework. It does so by 
+scanning code from different authors contributing to Laminas. It does so by 
 enumerating a shared set of rules and expectations about how to format PHP code.
 
 ### 1.1 Previous language versions
@@ -27,24 +27,24 @@ This example encompasses some of the rules below as a quick overview:
 ```php
 <?php
 /**
- * @see       https://github.com/zendframework/zend-expressive for the canonical source repository
- * @copyright Copyright (c) 2015-2018 Zend Technologies USA Inc. (https://www.zend.com)
- * @license   https://github.com/zendframework/zend-expressive/blob/master/LICENSE.md New BSD License
+ * @see       https://github.com/mezzio/mezzio for the canonical source repository
+ * @copyright Copyright (c) 2015-2018 Laminas (https://www.zend.com)
+ * @license   https://github.com/mezzio/mezzio/blob/master/LICENSE.md New BSD License
  */
 
 declare(strict_types=1);
 
-namespace Zend\Expressive;
+namespace Mezzio;
 
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\MiddlewareInterface;
 use Psr\Http\Server\RequestHandlerInterface;
-use Zend\Expressive\Router\RouteCollector;
-use Zend\HttpHandlerRunner\RequestHandlerRunner;
-use Zend\Stratigility\MiddlewarePipeInterface;
+use Mezzio\Router\RouteCollector;
+use Laminas\HttpHandlerRunner\RequestHandlerRunner;
+use Laminas\Stratigility\MiddlewarePipeInterface;
 
-use function Zend\Stratigility\path;
+use function Laminas\Stratigility\path;
 
 class Application implements MiddlewareInterface, RequestHandlerInterface
 {
@@ -102,7 +102,7 @@ Code MUST follow all rules outlined in [PSR-1].
 The term 'StudlyCaps' in PSR-1 MUST be interpreted as PascalCase where the first letter of
 each word is capitalized including the very first letter.
 
-> ### Additional Zend Framework rules
+> ### Additional Laminas rules
 >
 > For consistency a bunch of older PHP features SHOULD NOT be used:
 >
@@ -128,7 +128,7 @@ each word is capitalized including the very first letter.
 
 ### 2.2 Files
 
-> ### Additional Zend Framework rules
+> ### Additional Laminas rules
 >
 > There MAY NOT be any content before the opening tag. Inline HTML in PHP code
 > SHOULD be avoided. All code MUST be executable and non executable code SHOULD
@@ -158,7 +158,7 @@ There MUST NOT be trailing whitespace at the end of lines.
 Blank lines MAY be added to improve readability and to indicate related
 blocks of code except where explicitly forbidden.
 
-> ### Additional Zend Framework rules
+> ### Additional Laminas rules
 >
 > There MAY be maximum one blank line to improve readability and to indicate 
 > related blocks of code except where explicitly forbidden.
@@ -167,7 +167,7 @@ blocks of code except where explicitly forbidden.
 
 There MUST NOT be more than one statement per line.
 
-> ### Additional Zend Framework rules
+> ### Additional Laminas rules
 >
 > There MUST NOT be a space before a semicolon. Redundant semicolons SHOULD be 
 > avoided.
@@ -177,7 +177,7 @@ There MUST NOT be more than one statement per line.
 Code MUST use an indent of 4 spaces for each indent level, and MUST NOT use
 tabs for indenting.
 
-> ### Additional Zend Framework rules
+> ### Additional Laminas rules
 >
 > Encapsed strings MAY be used instead of concatenating strings. When 
 > concatenating strings, there MUST be a single whitespace before and after the
@@ -211,13 +211,13 @@ Short form of type keywords MUST be used i.e. `bool` instead of `boolean`,
 
 ### 2.6 Variables
 
-> ### Additional Zend Framework rules
+> ### Additional Laminas rules
 >
 > Variable names MUST be declared in camelCase.
 
 ### 2.7 Arrays
 
-> ### Additional Zend Framework rules
+> ### Additional Laminas rules
 >
 > The short array syntax MUST be used to define arrays.
 >
@@ -284,7 +284,7 @@ opening and closing tags.
 Import statements MUST never begin with a leading backslash as they
 must always be fully qualified.
 
-> ### Additional Zend Framework rules
+> ### Additional Laminas rules
 >
 > There MUST be a single space after the namespace keyword and there MAY NOT be
 > a space around a namespace separator.
@@ -409,7 +409,7 @@ there are no arguments passed to the constructor.
 new Foo();
 ```
 
-> ### Additional Zend Framework rules
+> ### Additional Laminas rules
 >
 > There MUST NOT be duplicate class names.
 >
@@ -511,7 +511,7 @@ class ClassName
 Each individual trait that is imported into a class MUST be included
 one-per-line and each inclusion MUST have its own `use` import statement.
 
-> ### Additional Zend Framework rules
+> ### Additional Laminas rules
 >
 > Traits MUST be sorted alphabetically.
 
@@ -598,7 +598,7 @@ no meaning.
 
 There MUST be a space between type declaration and property name.
 
-> ### Additional Zend Framework rules
+> ### Additional Laminas rules
 >
 > Default null values MUST be omitted for class properties.
 
@@ -629,7 +629,7 @@ The opening brace MUST go on its own line, and the closing brace MUST go on the
 next line following the body. There MUST NOT be a space after the opening
 parenthesis, and there MUST NOT be a space before the closing parenthesis.
 
-> ### Additional Zend Framework rules
+> ### Additional Laminas rules
 >
 > There MUST be a single empty line between methods in a class.
 >
@@ -747,7 +747,7 @@ class ReturnTypeVariations
 In nullable type declarations, there MUST NOT be a space between the question mark
 and the type.
 
-> ### Additional Zend Framework rules
+> ### Additional Laminas rules
 >
 > The question mark MUST be used when the default argument value is null.
 
@@ -795,7 +795,7 @@ public function process(string $algorithm, &...$parts)
 When present, the `abstract` and `final` declarations MUST precede the
 visibility declaration.
 
-> ### Additional Zend Framework rules
+> ### Additional Laminas rules
 >
 > The `final` keyword on methods MUST be omitted in final declared classes.
 
@@ -881,7 +881,7 @@ The body of each structure MUST be enclosed by braces. This standardizes how
 the structures look and reduces the likelihood of introducing errors as new
 lines get added to the body.
 
-> ### Additional Zend Framework rules
+> ### Additional Laminas rules
 >
 > There MUST be one single space after `break` and `continue` structures with 
 > a numeric argument argument.
@@ -940,7 +940,7 @@ from `switch`, and the `break` keyword (or other terminating keywords) MUST be
 indented at the same level as the `case` body. There MUST be a comment such as
 `// no break` when fall-through is intentional in a non-empty `case` body.
 
-> ### Additional Zend Framework rules
+> ### Additional Laminas rules
 >
 > The `continue` control structure MUST NOT be used in switch statements, 
 > `break` SHOULD be used instead.
@@ -1104,7 +1104,7 @@ try {
 }
 ```
 
-> ### Additional Zend Framework rules
+> ### Additional Laminas rules
 >
 > All catch blocks MUST be reachable.
 
@@ -1116,7 +1116,7 @@ take).
 When space is permitted around an operator, multiple spaces MAY be
 used for readability purposes.
 
-> ### Additional Zend Framework rules
+> ### Additional Laminas rules
 >
 > There MUST be at least one space on either side of an equals sign used
 > to assign a value to a variable. In case of a block of related
@@ -1149,7 +1149,7 @@ $i++;
 
 Type casting operators MUST NOT have any space within the parentheses.
 
-> ### Additional Zend Framework rules
+> ### Additional Laminas rules
 >
 > There MUST be one whitespace after a type casting operator.
 
@@ -1157,7 +1157,7 @@ Type casting operators MUST NOT have any space within the parentheses.
 $intValue = (int) $input;
 ```
 
-> ### Additional Zend Framework rules
+> ### Additional Laminas rules
 >
 > There MUST be one whitespace after unary not.
 
@@ -1221,7 +1221,7 @@ If a return type is present, it MUST follow the same rules as with normal
 functions and methods; if the `use` keyword is present, the colon MUST follow
 the `use` list closing parentheses with no spaces between the two characters.
 
-> ### Additional Zend Framework rules
+> ### Additional Laminas rules
 >
 > Inherited variables passed via `use` MUST be used in closures.
 
@@ -1355,7 +1355,7 @@ $instance = new class extends \Foo implements
 
 ## 9. Commenting and DocBlocks
 
-> ### Additional Zend Framework rules
+> ### Additional Laminas rules
 >
 > Code SHOULD be written so it explains itself. DocBlocks and comments 
 > SHOULD only be used if necessary. They MUST NOT start with `#` and MUST 

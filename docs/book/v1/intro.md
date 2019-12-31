@@ -1,13 +1,13 @@
-# zend-coding-standard
+# laminas-coding-standard
 
-This component provides the coding standard ruleset for Zend Framework components.
+This component provides the coding standard ruleset for Laminas components.
 
 ## Installation
 
 1. Install the module via composer by running:
 
    ```bash
-   $ composer require --dev zendframework/zend-coding-standard
+   $ composer require --dev laminas/laminas-coding-standard
    ```
 
 2. Add composer scripts into your `composer.json`:
@@ -23,8 +23,8 @@ This component provides the coding standard ruleset for Zend Framework component
 
    ```xml
    <?xml version="1.0"?>
-   <ruleset name="Zend Framework Coding Standard">
-       <rule ref="./vendor/zendframework/zend-coding-standard/ruleset.xml"/>
+   <ruleset name="Laminas Coding Standard">
+       <rule ref="./vendor/laminas/laminas-coding-standard/ruleset.xml"/>
 
        <!-- Paths to check -->
        <file>config</file>

@@ -6,13 +6,14 @@
 
 declare(strict_types=1);
 
-namespace   ZendCodingStandardTest  \  fixed;
+namespace   LaminasCodingStandardTest  \  fixed;
 
-use Bar\Baz;
-use \DateTimeZone;
-use function strrev;
 use \DateInterval;
+use \DateTimeZone;
+use Bar\Baz;
 use DateTimeImmutable;
+
+use function strrev;
 
 /**
  * FooBar is an example class.

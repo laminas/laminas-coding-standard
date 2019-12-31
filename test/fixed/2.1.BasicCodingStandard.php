@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace ZendCodingStandardTest\fixed;
+namespace LaminasCodingStandardTest\fixed;
 
 use Bar\Baz;
 use DateTimeImmutable;

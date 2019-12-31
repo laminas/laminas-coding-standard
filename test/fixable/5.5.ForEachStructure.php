@@ -2,9 +2,10 @@
 
 declare(strict_types=1);
 
-namespace ZendCodingStandardTest\fixed;
+namespace LaminasCodingStandardTest\fixed;
 
 use Iterator;
+
 use function sprintf;
 
 class ForEachStructure
