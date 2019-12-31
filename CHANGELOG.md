@@ -22,22 +22,22 @@ All notable changes to this project will be documented in this file, in reverse 
 
 ### Fixed
 
-- [#7](https://github.com/zendframework/zend-coding-standard/pull/7) updates to composer-installer 0.5 which fixes a 'Class not found' error during installation.
+- [zendframework/zend-coding-standard#7](https://github.com/zendframework/zend-coding-standard/pull/7) updates to composer-installer 0.5 which fixes a 'Class not found' error during installation.
 
 ## 2.0.0-alpha.1 - 2018-11-18
 
 ### Added
 
-- [#5](https://github.com/zendframework/zend-coding-standard/pull/5) adds
-  online documentation: https://docs.zendframework.com/zend-coding-standard/
-- [#5](https://github.com/zendframework/zend-coding-standard/pull/5) adds
+- [zendframework/zend-coding-standard#5](https://github.com/zendframework/zend-coding-standard/pull/5) adds
+  online documentation: https://docs.laminas.dev/laminas-coding-standard/
+- [zendframework/zend-coding-standard#5](https://github.com/zendframework/zend-coding-standard/pull/5) adds
   PSR-12 rules.
 
   *NOTE:* PSR-12 is not finalized. e.g. The `!` operator and `:` placement for
   return values are still under discussion. We will change these rules, and,
   when PSR-12 is finalized, adapt them.
-- [#5](https://github.com/zendframework/zend-coding-standard/pull/5) extends
-  PSR-12 with ZendFramework specific rules:
+- [zendframework/zend-coding-standard#5](https://github.com/zendframework/zend-coding-standard/pull/5) extends
+  PSR-12 with Laminas specific rules:
 
   *NOTE:* Most of these rules should look familiar as they are already being
   used in components rewritten for PHP 7.1.
