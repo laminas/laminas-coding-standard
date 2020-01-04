@@ -49,7 +49,6 @@ install:
   - if [[ $DEPS == 'latest' ]]; then travis_retry composer update $COMPOSER_ARGS ; fi
   - if [[ $DEPS == 'lowest' ]]; then travis_retry composer update --prefer-lowest --prefer-stable $COMPOSER_ARGS ; fi
   - stty cols 120 && composer show
-  - cat phpunit.xml.dist
 
 script:
   - xmllint --noout --schema vendor/squizlabs/php_codesniffer/phpcs.xsd src/LaminasCodingStandard/ruleset.xml
