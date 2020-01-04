@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ruleset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:noNamespaceSchemaLocation="../../vendor/squizlabs/php_codesniffer/phpcs.xsd"
-         name="ZendCodingStandard">
-    <description>The Zend Framework coding standard.</description>
+         name="LaminasCodingStandard">
+    <description>The Laminas coding standard.</description>
 
     <!-- 1. Overview -->
 
@@ -24,7 +24,7 @@
          the first letter of each word is capitalized including the very first
          letter. -->
 
-    <!-- Additional Zend Framework rules -->
+    <!-- Additional Laminas rules -->
 
     <!-- There MAY NOT be any content before the opening tag. -->
     <rule ref="Generic.PHP.CharacterBeforePHPOpeningTag"/>
@@ -100,7 +100,7 @@
     <!-- The closing ?> tag MUST be omitted from files containing only PHP. -->
     <!-- checked by PSR2.Files.ClosingTag -->
 
-    <!-- Additional Zend Framework rules -->
+    <!-- Additional Laminas rules -->
 
     <!-- The declare(strict_types=1) directive MUST be declared and be the
          first statement in a file. -->
@@ -123,7 +123,7 @@
     <!-- There MUST NOT be more than one statement per line. -->
     <!-- checked by Generic.Formatting.DisallowMultipleStatements -->
 
-    <!-- Additional Zend Framework rules -->
+    <!-- Additional Laminas rules -->
 
     <!-- There MAY be maximum one blank line to improve readability and to
          indicate related blocks of code except where explicitly forbidden. -->
@@ -140,7 +140,7 @@
     <!-- checked by Generic.WhiteSpace.ScopeIndent -->
     <!-- checked by Generic.WhiteSpace.DisallowTabIndent -->
 
-    <!-- Additional Zend Framework rules -->
+    <!-- Additional Laminas rules -->
 
     <!-- Encapsed strings MAY be used instead of concatenating strings. When
          concatenating strings, there MUST be a single whitespace before and
@@ -176,14 +176,14 @@
 
     <!-- 2.6 Variables -->
 
-    <!-- Additional Zend Framework rules -->
+    <!-- Additional Laminas rules -->
 
     <!-- Variable names MUST be declared in camelCase. -->
     <rule ref="WebimpressCodingStandard.NamingConventions.ValidVariableName"/>
 
     <!-- 2.7 Arrays -->
 
-    <!-- Additional Zend Framework rules -->
+    <!-- Additional Laminas rules -->
 
     <!-- The short array syntax MUST be used to define arrays. -->
     <rule ref="Generic.Arrays.DisallowLongArraySyntax"/>
@@ -247,7 +247,7 @@
     <!-- Block declare statements are allowed and MUST be formatted as below. -->
     <!-- checked by PSR12.Files.DeclareStatement -->
 
-    <!-- Additional Zend Framework rules -->
+    <!-- Additional Laminas rules -->
 
     <!-- TODO: Declare statements must be after the File level docblock if present. -->
 
@@ -290,7 +290,7 @@
          even when there are no arguments passed to the constructor. -->
     <!-- checked by PSR12.Classes.ClassInstantiation -->
 
-    <!-- Additional Zend Framework rules -->
+    <!-- Additional Laminas rules -->
 
     <!-- There MUST NOT be duplicate class names. -->
     <rule ref="Generic.Classes.DuplicateClassName"/>
@@ -351,7 +351,7 @@
          taking note of indentation, spacing, and new lines. -->
     <!-- checked by PSR12.Traits.UseDeclaration -->
 
-    <!-- Additional Zend Framework rules -->
+    <!-- Additional Laminas rules -->
 
     <!-- Traits MUST be sorted alphabetically. -->
     <rule ref="WebimpressCodingStandard.Classes.AlphabeticallySortedTraits"/>
@@ -371,7 +371,7 @@
          minimum version supports constant visibilities (PHP 7.1 or later). -->
     <!-- checked by PSR12.Properties.ConstantVisibility -->
 
-    <!-- Additional Zend Framework rules -->
+    <!-- Additional Laminas rules -->
 
     <!-- Default null values MUST be omitted for class properties. -->
     <rule ref="WebimpressCodingStandard.Classes.NoNullValues"/>
@@ -396,7 +396,7 @@
     <!-- checked by Squiz.Functions.FunctionDeclaration -->
     <!-- checked by Squiz.Functions.LowercaseFunctionKeywords -->
 
-    <!-- Additional Zend Framework rules -->
+    <!-- Additional Laminas rules -->
 
     <!-- There MUST be a single empty line between methods in a class. -->
     <rule ref="WebimpressCodingStandard.Methods.LineAfter"/>
@@ -444,7 +444,7 @@
          question mark and the type. -->
     <!-- checked by PSR12.Functions.NullableTypeDeclaration -->
 
-    <!-- Additional Zend Framework rules -->
+    <!-- Additional Laminas rules -->
 
     <!-- The question mark MUST be used when the default argument value is null. -->
     <rule ref="SlevomatCodingStandard.TypeHints.NullableTypeForNullDefaultValue"/>
@@ -457,7 +457,7 @@
          declaration. -->
     <!-- checked by PSR2.Methods.MethodDeclaration -->
 
-    <!-- Additional Zend Framework rules -->
+    <!-- Additional Laminas rules -->
 
     <!-- The final keyword on methods MUST be omitted in final classes. -->
     <rule ref="Generic.CodeAnalysis.UnnecessaryFinalModifier"/>
@@ -501,7 +501,7 @@
     <!-- checked by Generic.ControlStructures.InlineControlStructure -->
     <!-- checked by WebimpressCodingStandard.WhiteSpace.BraceBlankLine -->
 
-    <!-- Additional Zend Framework rules -->
+    <!-- Additional Laminas rules -->
 
     <!-- There SHOULD be one single space after `break` and `continue` structures with
          a numeric argument argument. -->
@@ -550,7 +550,7 @@
     <!-- checked by PSR12.ControlStructures.BooleanOperatorPlacement -->
     <!-- checked by Squiz.ControlStructures.ControlSignature -->
 
-    <!-- Additional Zend Framework rules -->
+    <!-- Additional Laminas rules -->
 
     <!-- The `continue` control structure MUST NOT be used in switch statements,
          `break` SHOULD be used instead. -->
@@ -599,7 +599,7 @@
 
     <!-- 5.6 try, catch, finally -->
 
-    <!-- Additional Zend Framework rules -->
+    <!-- Additional Laminas rules -->
 
     <!-- All catch blocks MUST be reachable. -->
     <rule ref="SlevomatCodingStandard.Exceptions.DeadCatch"/>
@@ -610,7 +610,7 @@
          used for readability purposes. -->
     <!-- All operators not described here are left undefined. -->
 
-    <!-- Additional Zend Framework rules -->
+    <!-- Additional Laminas rules -->
 
     <!-- There MUST be at least one space on either side of an equals sign used
          to assign a value to a variable. In case of a block of related
@@ -654,7 +654,7 @@
     <!-- Type casting operators MUST NOT have any space within the parentheses. -->
     <!-- checked by Squiz.WhiteSpace.CastSpacing -->
 
-    <!-- Additional Zend Framework rules -->
+    <!-- Additional Laminas rules -->
 
     <!-- There MUST be one whitespace after a type casting operator. -->
     <rule ref="Generic.Formatting.SpaceAfterCast"/>
@@ -706,7 +706,7 @@
          the two characters. -->
     <!-- checked by PSR12.Functions.ReturnTypeDeclaration -->
 
-    <!-- Additional Zend Framework rules -->
+    <!-- Additional Laminas rules -->
 
     <!-- Inherited variables passed via `use` MUST be used in closures. -->
     <rule ref="SlevomatCodingStandard.Functions.UnusedInheritedVariablePassedToClosure"/>
@@ -723,7 +723,7 @@
 
     <!-- 9. Commenting and DocBlocks -->
 
-    <!-- Additional Zend Framework rules -->
+    <!-- Additional Laminas rules -->
 
     <!-- DocBlocks and comments SHOULD only be used if necessary. Code SHOULD
          be written so it explains itself. They MUST NOT start with `#` and MUST
