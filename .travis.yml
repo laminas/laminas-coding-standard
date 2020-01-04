@@ -1,41 +1,59 @@
 language: php
 
-php:
-- 7.1
-- 7.2
-- 7.3
-
 cache:
   directories:
     - $HOME/.composer/cache
 
-before_install:
-  - composer self-update
+env:
+  global:
+    - COMPOSER_ARGS="--no-interaction"
 
-install: travis_retry composer update --prefer-dist
+matrix:
+  fast_finish: true
+  include:
+    - php: 7.1
+      env:
+        - DEPS=lowest
+    - php: 7.1
+      env:
+        - DEPS=latest
+    - php: 7.2
+      env:
+        - DEPS=lowest
+    - php: 7.2
+      env:
+        - DEPS=latest
+    - php: 7.3
+      env:
+        - DEPS=lowest
+    - php: 7.3
+      env:
+        - DEPS=latest
+    - php: 7.4
+      env:
+        - DEPS=lowest
+    - php: 7.4
+      env:
+        - DEPS=latest
+
+addons:
+  apt:
+    packages:
+    - libxml2-utils
+
+before_install:
+  - phpenv config-rm xdebug.ini || return 0
+
+install:
+  - travis_retry composer install $COMPOSER_ARGS
+  - if [[ $DEPS == 'latest' ]]; then travis_retry composer update $COMPOSER_ARGS ; fi
+  - if [[ $DEPS == 'lowest' ]]; then travis_retry composer update --prefer-lowest --prefer-stable $COMPOSER_ARGS ; fi
+  - stty cols 120 && composer show
+  - cat phpunit.xml.dist
 
 script:
-  - vendor/bin/phpcs
-  - vendor/bin/phpcs $(find test/fixable/* | sort) --report=summary --report-file=phpcs.log; diff test/expected-report.txt phpcs.log
-
-stages:
-  - Validate against schema
-  - Validate fixes
-  - Test
-
-jobs:
-  include:
-    - stage: Validate against schema
-      addons:
-        apt:
-          packages:
-          - libxml2-utils
-      script: xmllint --noout --schema vendor/squizlabs/php_codesniffer/phpcs.xsd src/LaminasCodingStandard/ruleset.xml
-
-    - stage: Validate fixes
-      before_script:
-      - cp -R test/fixable/ test/fix/
-      script: vendor/bin/phpcbf test/fix; diff test/fix test/fixed
+  - xmllint --noout --schema vendor/squizlabs/php_codesniffer/phpcs.xsd src/LaminasCodingStandard/ruleset.xml
+  - composer check
 
 notifications:
   email: false
