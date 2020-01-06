@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file, in reverse chronological order by release.
 
+## 2.0.0rc1 - TBD
+
+### Added
+
+- Nothing.
+
+### Changed
+
+- [#12](https://github.com/laminas/laminas-coding-standard/pull/12) locks dependencies to prevent bugs introduced in newer dependencies.
+
+### Deprecated
+
+- Nothing.
+
+### Removed
+
+- Nothing.
+
+### Fixed
+
+- [#12](https://github.com/laminas/laminas-coding-standard/pull/12) fixes coding standard name.
+
 ## 2.0.0alpha4 - 2019-11-05
 
 ### Added
