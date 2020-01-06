@@ -28,7 +28,7 @@ This example encompasses some of the rules below as a quick overview:
 <?php
 /**
  * @see       https://github.com/mezzio/mezzio for the canonical source repository
- * @copyright Copyright (c) 2015-2018 Laminas (https://www.zend.com)
+ * @copyright https://github.com/mezzio/mezzio/blob/master/COPYRIGHT.md
  * @license   https://github.com/mezzio/mezzio/blob/master/LICENSE.md New BSD License
  */
 
