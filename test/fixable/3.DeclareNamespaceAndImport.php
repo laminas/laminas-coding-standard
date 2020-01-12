@@ -1,12 +1,12 @@
 <?php
 
-declare(strict_types=1);
-
 /**
  * @see       https://github.com/laminas/laminas-coding-standard for the canonical source repository
  * @copyright https://github.com/laminas/laminas-coding-standard/blob/master/COPYRIGHT.md
  * @license   https://github.com/laminas/laminas-coding-standard/blob/master/LICENSE.md New BSD License
  */
+
+declare(strict_types=1);
 
 namespace   LaminasCodingStandardTest  \  fixed;
 
