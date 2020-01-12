@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file, in reverse chronological order by release.
 
+## 2.0.0rc2 - TBD
+
+### Added
+
+- Nothing.
+
+### Changed
+
+- Nothing.
+
+### Deprecated
+
+- Nothing.
+
+### Removed
+
+- Nothing.
+
+### Fixed
+
+- [#16](https://github.com/laminas/laminas-coding-standard/pull/16) fixes the placement of strict type declarations.
+
 ## 2.0.0rc1 - 2020-01-06
 
 ### Added
