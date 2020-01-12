@@ -104,7 +104,14 @@
 
     <!-- The declare(strict_types=1) directive MUST be declared and be the
          first statement in a file. -->
-    <rule ref="Generic.PHP.RequireStrictTypes"/>
+    <rule ref="WebimpressCodingStandard.Files.DeclareStrictTypes">
+        <properties>
+            <property name="containsTags" type="array">
+                <element value="@copyright"/>
+                <element value="@license"/>
+            </property>
+        </properties>
+    </rule>
 
     <!-- 2.3 Lines -->
 
