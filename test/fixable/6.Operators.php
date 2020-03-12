@@ -84,6 +84,7 @@ class Operators
     {
         // Loose comparison operators SHOULD NOT be used, use strict comparison
         // operators instead.
+        // Fix that manually.
 
         $foo == 123;
         123 == $foo;

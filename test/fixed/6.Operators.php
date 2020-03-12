@@ -83,11 +83,12 @@ class Operators
     {
         // Loose comparison operators SHOULD NOT be used, use strict comparison
         // operators instead.
+        // Fix that manually.
 
-        $foo === 123;
-        123 === $foo;
-        true !== 0.0;
-        false !== true;
+        $foo == 123;
+        123 == $foo;
+        true != 0.0;
+        false <> true;
     }
 
     public function testUseNullCoalesceOperator(): void
