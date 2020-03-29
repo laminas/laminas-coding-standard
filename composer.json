@@ -55,6 +55,6 @@
         "test-diff": "diff test/fix test/fixed"
     },
     "replace": {
-        "zendframework/zend-coding-standard": "self.version"
+        "zendframework/zend-coding-standard": "^1.0.0"
     }
 }
