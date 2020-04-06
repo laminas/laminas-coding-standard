@@ -53,8 +53,5 @@
         "test-prepare": "rm -rf test/fix/; cp -R test/fixable/ test/fix/;",
         "test-fix": "phpcbf test/fix > /dev/null || true",
         "test-diff": "diff test/fix test/fixed"
-    },
-    "replace": {
-        "zendframework/zend-coding-standard": "^1.0.0"
     }
 }
