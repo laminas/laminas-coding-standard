@@ -22,7 +22,9 @@ class ForStructure
         // between them.
 
         for (
-            $i = 0; $i < 10; $i++
+            $i = 0;
+            $i < 10;
+            $i++
         ) {
             echo $i;
         }
