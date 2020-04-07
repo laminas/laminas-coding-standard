@@ -780,6 +780,8 @@
         <exclude name="PEAR.Commenting.FunctionComment.ThrowsNotCapital"/>
         <!-- Doesn't work with self as typehint -->
         <exclude name="Squiz.Commenting.FunctionComment.TypeHintMissing"/>
+        <!-- May use excessive whitespace to align comments after parameter names -->
+        <exclude name="Squiz.Commenting.FunctionComment.SpacingAfterParamName"/>
     </rule>
 
     <!-- DocBlocks and comments SHOULD NOT be used for already typehinted arguments,
