@@ -103,6 +103,15 @@ $xmlPackage->send();
 // phpcs:enable
 ```
 
+Ignore a specific violation:
+```php
+$xmlPackage = new XMLPackage;
+$xmlPackage['error_code'] = get_default_error_code_value();
+// phpcs:ignore Generic.Commenting.Todo.Found
+// TODO: Add an error message here.
+$xmlPackage->send();
+```
+
 ## Development
 
 > **New rules or Sniffs may not be introduced in minor or bugfix releases and should always be based on the develop 
