@@ -1,0 +1,15 @@
+docs_dir: docs/book
+site_dir: docs/html
+nav:
+    - index.md
+    - 'Introduction': v2/intro.md
+    - 'Coding Style Guide': v2/coding-style-guide.md
+    - v1:
+        - v1/index.md
+        - 'Introduction': v1/intro.md
+        - 'Reference':
+            - 'Ruleset': v1/ruleset.md
+
+site_name: Laminas Coding Standard
+site_description: 'The coding standard ruleset for Laminas components.'
+repo_url: 'https://github.com/laminas/laminas-coding-standard'
