@@ -121,7 +121,8 @@ $ composer global require --dev laminas/laminas-coding-standard:dev-<FORKED_BRAN
 $ phpcs -sp --standard=LaminasCodingStandard src test
 ```
 
-Make sure you remove the global installation after testing from your global composer.json file!!!
+**Make sure you remove the global installation after testing from your global
+`composer.json` file!**
 
 Documentation can be previewed locally by installing [MkDocs](https://www.mkdocs.org/#installation) and run 
 `mkdocs serve`. This will start a server where you can read the docs.
