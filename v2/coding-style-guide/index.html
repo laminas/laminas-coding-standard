@@ -1,155 +1,325 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        
-        
-        <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>Coding Style Guide - Laminas Coding Standard</title>
-        <link href="../../css/bootstrap.min.css" rel="stylesheet">
-        <link href="../../css/font-awesome.min.css" rel="stylesheet">
-        <link href="../../css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
 
-        <script src="../../js/jquery-1.10.2.min.js" defer></script>
-        <script src="../../js/bootstrap.min.js" defer></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-        <script>hljs.initHighlightingOnLoad();</script> 
-    </head>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The coding standard ruleset for Laminas components.">  
+    <link rel="canonical" href="https://docs.laminas.dev/laminas-coding-standard/v2/coding-style-guide/">
+    <link rel="shortcut icon" href="https://docs.laminas.dev/img/trademark-laminas-foundation-rgb.svg">
 
-    <body>
-        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
-            <div class="container">
-                <a class="navbar-brand" href="../..">Laminas Coding Standard</a>
-                <!-- Expander button -->
-                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+    <title>Coding Style Guide - laminas-coding-standard - Laminas Docs</title>
 
-                <!-- Expanded navigation -->
-                <div id="navbar-collapse" class="navbar-collapse collapse">
-                        <!-- Main navigation -->
-                        <ul class="nav navbar-nav">
-                            <li class="navitem">
-                                <a href="../.." class="nav-link">Home</a>
-                            </li>
-                            <li class="navitem">
-                                <a href="../intro/" class="nav-link">Introduction</a>
-                            </li>
-                            <li class="navitem active">
-                                <a href="./" class="nav-link">Coding Style Guide</a>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">v1 <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    
-<li>
-    <a href="../../v1/" class="dropdown-item">The coding standard ruleset for Laminas components</a>
-</li>
-                                    
-<li>
-    <a href="../../v1/intro/" class="dropdown-item">Introduction</a>
-</li>
-                                    
-  <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">Reference</a>
-    <ul class="dropdown-menu">
-            
-<li>
-    <a href="../../v1/ruleset/" class="dropdown-item">Ruleset</a>
-</li>
-    </ul>
-  </li>
-                                </ul>
-                            </li>
-                        </ul>
-
-                    <ul class="nav navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
-                                <i class="fa fa-search"></i> Search
-                            </a>
-                        </li>
-                            <li class="nav-item">
-                                <a rel="prev" href="../intro/" class="nav-link">
-                                    <i class="fa fa-arrow-left"></i> Previous
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a rel="next" href="../../v1/" class="nav-link">
-                                    Next <i class="fa fa-arrow-right"></i>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="https://github.com/laminas/laminas-coding-standard/edit/master/docs/v2/coding-style-guide.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
-                            </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="row">
-                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
-            <span class="fa fa-angle-down"></span>
-        </button>
-    </div>
+    <link rel="stylesheet" href="https://docs.laminas.dev/css/styles.css">
+    
+</head>
+<body id="page-top" class="components" data-spy="scroll" data-target=".toc" data-offset="20">
 
     
-    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
-        <ul class="nav flex-column">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+        
+        <a class="logo-link navbar-brand" href="https://getlaminas.org/" data-tooltip data-placement="bottom" title="Go to the Laminas homepage">
+            <img src="https://docs.laminas.dev/img/laminas-foundation-white.svg" height="28" alt="Laminas">
+        </a>
+        <a class="navbar-title" href="https://docs.laminas.dev/" data-tooltip data-placement="bottom" title="Go to the Laminas Documentation">
+            Documentation
+        </a>
+
+        
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
             
-            <li class="nav-item" data-level="1"><a href="#laminas-coding-style-guide" class="nav-link">Laminas Coding Style Guide</a>
-              <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#1-overview" class="nav-link">1. Overview</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#2-general" class="nav-link">2. General</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#3-declare-statements-namespace-and-import-statements" class="nav-link">3. Declare Statements, Namespace, and Import Statements</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#4-classes-properties-and-methods" class="nav-link">4. Classes, Properties, and Methods</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#5-control-structures" class="nav-link">5. Control Structures</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#6-operators" class="nav-link">6. Operators</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#7-closures" class="nav-link">7. Closures</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#8-anonymous-classes" class="nav-link">8. Anonymous Classes</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#9-commenting-and-docblocks" class="nav-link">9. Commenting and DocBlocks</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-              </ul>
-            </li>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <div class="dropdown sub-project-selector">
+                        <a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false">
+                            All Docs
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a href="https://docs.mezzio.dev/" class="dropdown-item">
+                                <div class="row align-items-center">
+                                    <div class="col-md-4 col-sm-12">
+                                        <img src="https://docs.laminas.dev/img/laminas-mezzio-rgb.svg">
+                                    </div>
+                                    <div class="col-md-8 col-sm-12">
+                                        <strong>Mezzio</strong><br>
+                                        PSR-15 Middleware in Minutes
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="https://docs.laminas.dev/components/" class="dropdown-item">
+                                <div class="row align-items-center">
+                                    <div class="col-md-4 col-sm-12">
+                                        <img src="https://docs.laminas.dev/img/laminas-components-rgb.svg">
+                                    </div>
+                                    <div class="col-md-8 col-sm-12">
+                                        <strong>Components</strong><br>
+                                        Components for Enterprise Applications
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="https://docs.laminas.dev/mvc" class="dropdown-item">
+                                <div class="row align-items-center">
+                                    <div class="col-md-4 col-sm-12">
+                                        <img src="https://docs.laminas.dev/img/laminas-mvc-rgb.svg">
+                                    </div>
+                                    <div class="col-md-8 col-sm-12">
+                                        <strong>MVC</strong><br>
+                                        MVC for Enterprise Applications
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="https://api-tools.getlaminas.org/documentation" class="dropdown-item">
+                                <div class="row align-items-center">
+                                    <div class="col-md-4 col-sm-12">
+                                        <img src="https://docs.laminas.dev/img/laminas-api-tools-rgb.svg">
+                                    </div>
+                                    <div class="col-md-8 col-sm-12">
+                                        <strong>API Tools</strong><br>
+                                        Build RESTful APIs in Minutes
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item dropdown-item--secondardy" href="https://docs.laminas.dev/migration/">
+                                <div class="row align-items-center">
+                                    <div class="col-md-8 offset-md-4 col-sm-12">
+                                        Migration to Laminas
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="dropdown-item dropdown-item--secondardy" href="https://docs.laminas.dev/tutorials/">
+                                <div class="row align-items-center">
+                                    <div class="col-md-8 offset-md-4 col-sm-12">
+                                        Tutorials
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="https://getlaminas.org/participate" class="nav-link">Community</a>
+                </li>
+            </ul>
+
+            
+            
+                <div class="d-block d-sm-none">
+                    
+    <div class="subnavigation hidden-print">
+        <h4 class="subnavigation__title">
+            <a href="../..">laminas-coding-standard</a>
+        </h4>
+
+        <h5 class="subnavigation__subtitle">Table of Contents</h5>
+
+        <ul class="subnavigation__list">
+            
+
+                
+                
+                    
+                        
+    <li class="subnavigation__list-item ">
+        <a href="../intro/" class="subnavigation__link">Introduction</a>
+    </li>
+
+                    
+                        
+    <li class="subnavigation__list-item subnavigation__list-item--active">
+        <a href="./" class="subnavigation__link">Coding Style Guide</a>
+    </li>
+
+                    
+                
+            
+
+                
+                
+
+                    
+                    
+                
+            
         </ul>
     </div>
-</div></div>
-                    <div class="col-md-9" role="main">
 
-<h1 id="laminas-coding-style-guide">Laminas Coding Style Guide</h1>
+                </div>
+            
+
+            
+            <div class="d-block d-sm-none">
+                <div class="component-selector">
+    
+    <h5 class="component-selector__subtitle">Find documentation…</h5>
+    <select class="form-control component-selector__control">
+        <option value="/">Overview</option>
+        <optgroup label="Components"></optgroup>
+    </select>
+</div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+    
+    <header class="header">
+    <div class="container">
+        <div class="row">
+
+            
+            <div class="col-8">
+                <h1 class="header__title">
+                    Components
+
+                    
+                        <small class="header__subtitle">laminas-coding-standard</small>
+                    
+                </h1>
+            </div>
+
+            
+            <div class="col-4 text-sm-right">
+                
+                    
+<div class="version-selector">
+    <div class="btn-group">
+        <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="version-selector-dropdown">
+            
+                v2
+            
+        </button>
+        <div class="dropdown-menu" aria-labelledby="version-selector-dropdown">
+            
+                
+                    <a href="../intro/" class="dropdown-item active">
+                        
+                            v2 (latest)
+                        
+                    </a>
+                
+            
+                
+                    <a href="../../v1/index.md" class="dropdown-item">
+                        
+                            v1
+                        
+                    </a>
+                
+            
+        </div>
+    </div>
+</div>
+
+
+                    <a href="#" class="header__link header__link--search" data-toggle="modal" data-target="#mkdocs_search_modal" title="Open search">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                    <a href="https://github.com/laminas/laminas-coding-standard/" class="header__link header__link--github" title="Go to repository of laminas-coding-standard">
+                        <i class="fa fa-github"></i> GitHub
+                    </a>
+                
+            </div>
+        </div>
+    </div>
+</header>
+
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9 col-sm-12 content" role="main">
+                
+                
+                    
+    
+
+    
+    
+        <div class="toc">
+            <h6 class="toc__headline">On this page</h6>
+            <ul class="toc__list">
+                
+                    <li class="toc__entry">
+                        <a href="#1-overview" class="toc__link nav-link">1. Overview</a>
+                    </li>
+                
+                    <li class="toc__entry">
+                        <a href="#2-general" class="toc__link nav-link">2. General</a>
+                    </li>
+                
+                    <li class="toc__entry">
+                        <a href="#3-declare-statements-namespace-and-import-statements" class="toc__link nav-link">3. Declare Statements, Namespace, and Import Statements</a>
+                    </li>
+                
+                    <li class="toc__entry">
+                        <a href="#4-classes-properties-and-methods" class="toc__link nav-link">4. Classes, Properties, and Methods</a>
+                    </li>
+                
+                    <li class="toc__entry">
+                        <a href="#5-control-structures" class="toc__link nav-link">5. Control Structures</a>
+                    </li>
+                
+                    <li class="toc__entry">
+                        <a href="#6-operators" class="toc__link nav-link">6. Operators</a>
+                    </li>
+                
+                    <li class="toc__entry">
+                        <a href="#7-closures" class="toc__link nav-link">7. Closures</a>
+                    </li>
+                
+                    <li class="toc__entry">
+                        <a href="#8-anonymous-classes" class="toc__link nav-link">8. Anonymous Classes</a>
+                    </li>
+                
+                    <li class="toc__entry">
+                        <a href="#9-commenting-and-docblocks" class="toc__link nav-link">9. Commenting and DocBlocks</a>
+                    </li>
+                
+            </ul>
+        </div>
+    
+
+                
+
+                
+                    <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        
+            <li class="breadcrumb-item"><a href="https://docs.laminas.dev/">Overview</a></li>
+            <li class="breadcrumb-item"><a href="https://docs.laminas.dev/components/">Components</a></li>
+
+            
+                <li class="breadcrumb-item"><a href="../..">laminas-coding-standard</a></li>
+
+                
+                    
+                        
+                        
+                    
+                
+
+                <li class="breadcrumb-item active" aria-current="page">Coding Style Guide</li>
+            
+        
+    </ol>
+</nav>
+
+
+
+
+
+
+    
+    
+
+    <h1 id="laminas-coding-style-guide">Laminas Coding Style Guide</h1>
 <p>The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD",
 "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be
 interpreted as described in <a href="http://tools.ietf.org/html/rfc2119">RFC 2119</a>.</p>
@@ -159,12 +329,12 @@ requires adherence to <a href="https://www.php-fig.org/psr/psr-1/">PSR-1</a>, th
 <p>Like <a href="https://www.php-fig.org/psr/psr-12/">PSR-12</a>, the intent of this specification is to reduce cognitive friction when
 scanning code from different authors contributing to Laminas. It does so by 
 enumerating a shared set of rules and expectations about how to format PHP code.</p>
-<h3 id="11-previous-language-versions">1.1 Previous language versions</h3>
+<h3>1.1 Previous language versions</h3>
 <p>Throughout this document, any instructions MAY be ignored if they do not exist in versions
 of PHP supported by your project.</p>
-<h3 id="12-example">1.2 Example</h3>
+<h3>1.2 Example</h3>
 <p>This example encompasses some of the rules below as a quick overview:</p>
-<pre><code class="php">&lt;?php
+<pre class="highlight"><code class="language-php">&lt;?php
 /**
  * @see       https://github.com/mezzio/mezzio for the canonical source repository
  * @copyright https://github.com/mezzio/mezzio/blob/master/COPYRIGHT.md
@@ -229,16 +399,15 @@ class Application implements MiddlewareInterface, RequestHandlerInterface
     {
         $this-&gt;runner-&gt;run();
     }
-}
-</code></pre>
+}</code></pre>
 
 <h2 id="2-general">2. General</h2>
-<h3 id="21-basic-coding-standard">2.1 Basic Coding Standard</h3>
+<h3>2.1 Basic Coding Standard</h3>
 <p>Code MUST follow all rules outlined in <a href="https://www.php-fig.org/psr/psr-1/">PSR-1</a>.</p>
 <p>The term 'StudlyCaps' in PSR-1 MUST be interpreted as PascalCase where the first letter of
 each word is capitalized including the very first letter.</p>
 <blockquote>
-<h3 id="additional-laminas-rules">Additional Laminas rules</h3>
+<h3>Additional Laminas rules</h3>
 <p>For consistency a bunch of older PHP features SHOULD NOT be used:</p>
 <ul>
 <li>The <a href="https://www.php.net/manual/en/language.basic-syntax.phptags.php">short open tag</a> SHOULD NOT be used.</li>
@@ -257,9 +426,9 @@ each word is capitalized including the very first letter.</p>
 <p>Parentheses MUST be omitted where possible.</p>
 <p>PHP function calls MUST be in lowercase.</p>
 </blockquote>
-<h3 id="22-files">2.2 Files</h3>
+<h3>2.2 Files</h3>
 <blockquote>
-<h3 id="additional-laminas-rules_1">Additional Laminas rules</h3>
+<h3>Additional Laminas rules</h3>
 <p>There MAY NOT be any content before the opening tag. Inline HTML in PHP code
 SHOULD be avoided. All code MUST be executable and non executable code SHOULD
 be removed.</p>
@@ -270,7 +439,7 @@ statement in a file.
 <p>All PHP files MUST use the Unix LF (linefeed) line ending only.</p>
 <p>All PHP files MUST end with a non-blank line, terminated with a single LF.</p>
 <p>The closing <code>?&gt;</code> tag MUST be omitted from files containing only PHP.</p>
-<h3 id="23-lines">2.3 Lines</h3>
+<h3>2.3 Lines</h3>
 <p>There MUST NOT be a hard limit on line length.</p>
 <p>The soft limit on line length MUST be 120 characters.</p>
 <p>Lines SHOULD NOT be longer than 80 characters; lines longer than that SHOULD
@@ -279,55 +448,54 @@ be split into multiple subsequent lines of no more than 80 characters each.</p>
 <p>Blank lines MAY be added to improve readability and to indicate related
 blocks of code except where explicitly forbidden.</p>
 <blockquote>
-<h3 id="additional-laminas-rules_2">Additional Laminas rules</h3>
+<h3>Additional Laminas rules</h3>
 <p>There MAY be maximum one blank line to improve readability and to indicate 
 related blocks of code except where explicitly forbidden.</p>
 <p>There MAY NOT be any blank line after opening braces and before closing braces.</p>
 </blockquote>
 <p>There MUST NOT be more than one statement per line.</p>
 <blockquote>
-<h3 id="additional-laminas-rules_3">Additional Laminas rules</h3>
+<h3>Additional Laminas rules</h3>
 <p>There MUST NOT be a space before a semicolon. Redundant semicolons SHOULD be 
 avoided.</p>
 </blockquote>
-<h3 id="24-indenting-and-spacing">2.4 Indenting and Spacing</h3>
+<h3>2.4 Indenting and Spacing</h3>
 <p>Code MUST use an indent of 4 spaces for each indent level, and MUST NOT use
 tabs for indenting.</p>
 <blockquote>
-<h3 id="additional-laminas-rules_4">Additional Laminas rules</h3>
+<h3>Additional Laminas rules</h3>
 <p>Encapsed strings MAY be used instead of concatenating strings. When 
 concatenating strings, there MUST be a single whitespace before and after the
 concatenation operator. The concatenation operator MUST NOT be the at the end 
 of a line. If multi-line concatenation is used there MUST be an indent of 4 
 spaces.</p>
 </blockquote>
-<pre><code class="php">&lt;?php
+<pre class="highlight"><code class="language-php">&lt;?php
 
 // Encapsed strings
 $a = 'foo';
 $b = 'bar';
 
-$c = &quot;I like $a and $b&quot;;
+$c = "I like $a and $b";
 
 // Concatenating
 $a = 'Hello ';
 $b = $a
-   . 'World!';
-</code></pre>
+   . 'World!';</code></pre>
 
-<h3 id="25-keywords-and-types">2.5 Keywords and Types</h3>
+<h3>2.5 Keywords and Types</h3>
 <p>All PHP reserved keywords and types <a href="https://www.php.net/manual/en/reserved.keywords.php">[1]</a><a href="https://www.php.net/manual/en/reserved.other-reserved-words.php">[2]</a> MUST be in lower case.</p>
 <p>Any new types and keywords added to future PHP versions MUST be in lower case.</p>
 <p>Short form of type keywords MUST be used i.e. <code>bool</code> instead of <code>boolean</code>,
 <code>int</code> instead of <code>integer</code> etc.</p>
-<h3 id="26-variables">2.6 Variables</h3>
+<h3>2.6 Variables</h3>
 <blockquote>
-<h3 id="additional-laminas-rules_5">Additional Laminas rules</h3>
+<h3>Additional Laminas rules</h3>
 <p>Variable names MUST be declared in camelCase.</p>
 </blockquote>
-<h3 id="27-arrays">2.7 Arrays</h3>
+<h3>2.7 Arrays</h3>
 <blockquote>
-<h3 id="additional-laminas-rules_6">Additional Laminas rules</h3>
+<h3>Additional Laminas rules</h3>
 <p>The short array syntax MUST be used to define arrays.</p>
 <p>All values in multiline arrays must be indented with 4 spaces.</p>
 <p>All array values must be followed by a comma, including the last value.</p>
@@ -336,7 +504,7 @@ bracket when referencing an array.</p>
 <p>All double arrow symbols MUST be aligned to one space after the longest array
 key.</p>
 </blockquote>
-<pre><code class="php">&lt;?php
+<pre class="highlight"><code class="language-php">&lt;?php
 
 $array2 = [
     'one'    =&gt; function () {
@@ -349,16 +517,14 @@ $array2 = [
     },
     'longer' =&gt; 2,
     3        =&gt; 'three',
-];
-</code></pre>
+];</code></pre>
 
 <blockquote>
 <p>The short list syntax <code>[...]</code> SHOULD be used instead of <code>list(...)</code>.</p>
 </blockquote>
-<pre><code class="php">&lt;?php
+<pre class="highlight"><code class="language-php">&lt;?php
 
-[$a, $b, $c] = [1, 2, 3];
-</code></pre>
+[$a, $b, $c] = [1, 2, 3];</code></pre>
 
 <h2 id="3-declare-statements-namespace-and-import-statements">3. Declare Statements, Namespace, and Import Statements</h2>
 <p>The header of a PHP file may consist of a number of different blocks. If present,
@@ -385,7 +551,7 @@ opening and closing tags.</p>
 <p>Import statements MUST never begin with a leading backslash as they
 must always be fully qualified.</p>
 <blockquote>
-<h3 id="additional-laminas-rules_7">Additional Laminas rules</h3>
+<h3>Additional Laminas rules</h3>
 <p>There MUST be a single space after the namespace keyword and there MAY NOT be
 a space around a namespace separator.</p>
 <p>Import statements MUST be alphabetically sorted.</p>
@@ -398,7 +564,7 @@ name is imported.</p>
 <p>Classes, traits, interfaces, constants and functions MUST be imported.</p>
 </blockquote>
 <p>The following example illustrates a complete list of all blocks:</p>
-<pre><code class="php">&lt;?php
+<pre class="highlight"><code class="language-php">&lt;?php
 
 /**
  * This file contains an example of coding styles.
@@ -429,53 +595,48 @@ class FooBar
 {
     // ... additional PHP code ...
 }
-
 </code></pre>
 
 <p>Compound namespaces with a depth of more than two MUST NOT be used. Therefore the
 following is the maximum compounding depth allowed:</p>
-<pre><code class="php">&lt;?php
+<pre class="highlight"><code class="language-php">&lt;?php
 
 use Vendor\Package\SomeNamespace\{
     SubnamespaceOne\ClassA,
     SubnamespaceOne\ClassB,
     SubnamespaceTwo\ClassY,
     ClassZ,
-};
-</code></pre>
+};</code></pre>
 
 <p>And the following would not be allowed:</p>
-<pre><code class="php">&lt;?php
+<pre class="highlight"><code class="language-php">&lt;?php
 
 use Vendor\Package\SomeNamespace\{
     SubnamespaceOne\AnotherNamespace\ClassA,
     SubnamespaceOne\ClassB,
     ClassZ,
-};
-</code></pre>
+};</code></pre>
 
 <p>When wishing to declare strict types in files containing markup outside PHP
 opening and closing tags, the declaration MUST be on the first line of the file
 and include an opening PHP tag, the strict types declaration and closing tag.</p>
 <p>For example:</p>
-<pre><code class="php">&lt;?php declare(strict_types=1) ?&gt;
+<pre class="highlight"><code class="language-php">&lt;?php declare(strict_types=1) ?&gt;
 &lt;html&gt;
 &lt;body&gt;
     &lt;?php
         // ... additional PHP code ...
     ?&gt;
 &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+&lt;/html&gt;</code></pre>
 
 <p>Declare statements MUST contain no spaces and MUST be exactly <code>declare(strict_types=1)</code>
 (with an optional semi-colon terminator).</p>
 <p>Block declare statements are allowed and MUST be formatted as below. Note position of
 braces and spacing:</p>
-<pre><code class="php">declare(ticks=1) {
+<pre class="highlight"><code class="language-php">declare(ticks=1) {
     // some code
-}
-</code></pre>
+}</code></pre>
 
 <h2 id="4-classes-properties-and-methods">4. Classes, Properties, and Methods</h2>
 <p>The term "class" refers to all classes, interfaces, and traits.</p>
@@ -483,11 +644,10 @@ braces and spacing:</p>
 same line.</p>
 <p>When instantiating a new class, parentheses MUST always be present even when
 there are no arguments passed to the constructor.</p>
-<pre><code class="php">new Foo();
-</code></pre>
+<pre class="highlight"><code class="language-php">new Foo();</code></pre>
 
 <blockquote>
-<h3 id="additional-laminas-rules_8">Additional Laminas rules</h3>
+<h3>Additional Laminas rules</h3>
 <p>There MUST NOT be duplicate class names.</p>
 <p>The file name MUST match the case of the terminating class name.</p>
 <p>PHP 4 style constructors MUST NOT be used.</p>
@@ -504,7 +664,7 @@ and string reference.</p>
 <p>There MAY NOT be any whitespace around the double colon operator.</p>
 <p>Unused private methods, constants and properties MUST be removed.</p>
 </blockquote>
-<h3 id="41-extends-and-implements">4.1 Extends and Implements</h3>
+<h3>4.1 Extends and Implements</h3>
 <p>The <code>extends</code> and <code>implements</code> keywords MUST be declared on the same line as
 the class name.</p>
 <p>The opening brace for the class MUST go on its own line; the closing brace
@@ -513,7 +673,7 @@ for the class MUST go on the next line after the body.</p>
 by a blank line.</p>
 <p>Closing braces MUST be on their own line and MUST NOT be preceded by a blank
 line.</p>
-<pre><code class="php">&lt;?php
+<pre class="highlight"><code class="language-php">&lt;?php
 
 namespace Vendor\Package;
 
@@ -524,14 +684,13 @@ use OtherVendor\OtherPackage\BazClass;
 class ClassName extends ParentClass implements \ArrayAccess, \Countable
 {
     // constants, properties, methods
-}
-</code></pre>
+}</code></pre>
 
 <p>Lists of <code>implements</code> and, in the case of interfaces, <code>extends</code> MAY be split
 across multiple lines, where each subsequent line is indented once. When doing
 so, the first item in the list MUST be on the next line, and there MUST be only
 one interface per line.</p>
-<pre><code class="php">&lt;?php
+<pre class="highlight"><code class="language-php">&lt;?php
 
 namespace Vendor\Package;
 
@@ -545,13 +704,12 @@ class ClassName extends ParentClass implements
     \Serializable
 {
     // constants, properties, methods
-}
-</code></pre>
+}</code></pre>
 
-<h3 id="42-using-traits">4.2 Using traits</h3>
+<h3>4.2 Using traits</h3>
 <p>The <code>use</code> keyword used inside the classes to implement traits MUST be
 declared on the next line after the opening brace.</p>
-<pre><code class="php">&lt;?php
+<pre class="highlight"><code class="language-php">&lt;?php
 
 namespace Vendor\Package;
 
@@ -560,16 +718,15 @@ use Vendor\Package\FirstTrait;
 class ClassName
 {
     use FirstTrait;
-}
-</code></pre>
+}</code></pre>
 
 <p>Each individual trait that is imported into a class MUST be included
 one-per-line and each inclusion MUST have its own <code>use</code> import statement.</p>
 <blockquote>
-<h3 id="additional-laminas-rules_9">Additional Laminas rules</h3>
+<h3>Additional Laminas rules</h3>
 <p>Traits MUST be sorted alphabetically.</p>
 </blockquote>
-<pre><code class="php">&lt;?php
+<pre class="highlight"><code class="language-php">&lt;?php
 
 namespace Vendor\Package;
 
@@ -582,12 +739,11 @@ class ClassName
     use FirstTrait;
     use SecondTrait;
     use ThirdTrait;
-}
-</code></pre>
+}</code></pre>
 
 <p>When the class has nothing after the <code>use</code> import statement, the class
 closing brace MUST be on the next line after the <code>use</code> import statement.</p>
-<pre><code class="php">&lt;?php
+<pre class="highlight"><code class="language-php">&lt;?php
 
 namespace Vendor\Package;
 
@@ -596,11 +752,10 @@ use Vendor\Package\FirstTrait;
 class ClassName
 {
     use FirstTrait;
-}
-</code></pre>
+}</code></pre>
 
 <p>Otherwise, it MUST have a blank line after the <code>use</code> import statement.</p>
-<pre><code class="php">&lt;?php
+<pre class="highlight"><code class="language-php">&lt;?php
 
 namespace Vendor\Package;
 
@@ -611,12 +766,11 @@ class ClassName
     use FirstTrait;
 
     private $property;
-}
-</code></pre>
+}</code></pre>
 
 <p>When using the <code>insteadof</code> and <code>as</code> operators they must be used as follows taking
 note of indentation, spacing, and new lines.</p>
-<pre><code class="php">&lt;?php
+<pre class="highlight"><code class="language-php">&lt;?php
 
 class Talker
 {
@@ -625,10 +779,9 @@ class Talker
         A::bigTalk insteadof C;
         C::mediumTalk as FooBar;
     }
-}
-</code></pre>
+}</code></pre>
 
-<h3 id="43-properties-and-constants">4.3 Properties and Constants</h3>
+<h3>4.3 Properties and Constants</h3>
 <p>Visibility MUST be declared on all properties.</p>
 <p>Visibility MUST be declared on all constants if your project PHP minimum
 version supports constant visibilities (PHP 7.1 or later).</p>
@@ -639,11 +792,11 @@ protected or private visibility. That is, an underscore prefix explicitly has
 no meaning.</p>
 <p>There MUST be a space between type declaration and property name.</p>
 <blockquote>
-<h3 id="additional-laminas-rules_10">Additional Laminas rules</h3>
+<h3>Additional Laminas rules</h3>
 <p>Default null values MUST be omitted for class properties.</p>
 </blockquote>
 <p>A property declaration looks like the following:</p>
-<pre><code class="php">&lt;?php
+<pre class="highlight"><code class="language-php">&lt;?php
 
 namespace Vendor\Package;
 
@@ -651,10 +804,9 @@ class ClassName
 {
     public $foo; // `= null` should be omitted
     public static int $bar = 0;
-}
-</code></pre>
+}</code></pre>
 
-<h3 id="44-methods-and-functions">4.4 Methods and Functions</h3>
+<h3>4.4 Methods and Functions</h3>
 <p>Visibility MUST be declared on all methods.</p>
 <p>Method names MUST NOT be prefixed with a single underscore to indicate
 protected or private visibility. That is, an underscore prefix explicitly has
@@ -664,7 +816,7 @@ The opening brace MUST go on its own line, and the closing brace MUST go on the
 next line following the body. There MUST NOT be a space after the opening
 parenthesis, and there MUST NOT be a space before the closing parenthesis.</p>
 <blockquote>
-<h3 id="additional-laminas-rules_11">Additional Laminas rules</h3>
+<h3>Additional Laminas rules</h3>
 <p>There MUST be a single empty line between methods in a class.</p>
 <p>The pseudo-variable <code>$this</code> MUST NOT be called inside a static method or 
 function.</p>
@@ -673,7 +825,7 @@ returned on the next line.</p>
 </blockquote>
 <p>A method declaration looks like the following. Note the placement of
 parentheses, commas, spaces, and braces:</p>
-<pre><code class="php">&lt;?php
+<pre class="highlight"><code class="language-php">&lt;?php
 
 namespace Vendor\Package;
 
@@ -683,25 +835,23 @@ class ClassName
     {
         // method body
     }
-}
-</code></pre>
+}</code></pre>
 
 <p>A function declaration looks like the following. Note the placement of
 parentheses, commas, spaces, and braces:</p>
-<pre><code class="php">&lt;?php
+<pre class="highlight"><code class="language-php">&lt;?php
 
 function fooBarBaz($arg1, &amp;$arg2, $arg3 = [])
 {
     // function body
-}
-</code></pre>
+}</code></pre>
 
-<h3 id="45-method-and-function-arguments">4.5 Method and Function Arguments</h3>
+<h3>4.5 Method and Function Arguments</h3>
 <p>In the argument list, there MUST NOT be a space before each comma, and there
 MUST be one space after each comma.</p>
 <p>Method and function arguments with default values MUST go at the end of the argument
 list.</p>
-<pre><code class="php">&lt;?php
+<pre class="highlight"><code class="language-php">&lt;?php
 
 namespace Vendor\Package;
 
@@ -711,8 +861,7 @@ class ClassName
     {
         // method body
     }
-}
-</code></pre>
+}</code></pre>
 
 <p>Argument lists MAY be split across multiple lines, where each subsequent line
 is indented once. When doing so, the first item in the list MUST be on the
@@ -720,7 +869,7 @@ next line, and there MUST be only one argument per line.</p>
 <p>When the argument list is split across multiple lines, the closing parenthesis
 and opening brace MUST be placed together on their own line with one space
 between them.</p>
-<pre><code class="php">&lt;?php
+<pre class="highlight"><code class="language-php">&lt;?php
 
 namespace Vendor\Package;
 
@@ -733,14 +882,13 @@ class ClassName
     ) {
         // method body
     }
-}
-</code></pre>
+}</code></pre>
 
 <p>When you have a return type declaration present, there MUST be one space after
 the colon followed by the type declaration. The colon and declaration MUST be
 on the same line as the argument list closing parenthesis with no spaces between
 the two characters.</p>
-<pre><code class="php">&lt;?php
+<pre class="highlight"><code class="language-php">&lt;?php
 
 declare(strict_types=1);
 
@@ -760,16 +908,15 @@ class ReturnTypeVariations
     ): string {
         return 'foo';
     }
-}
-</code></pre>
+}</code></pre>
 
 <p>In nullable type declarations, there MUST NOT be a space between the question mark
 and the type.</p>
 <blockquote>
-<h3 id="additional-laminas-rules_12">Additional Laminas rules</h3>
+<h3>Additional Laminas rules</h3>
 <p>The question mark MUST be used when the default argument value is null.</p>
 </blockquote>
-<pre><code class="php">&lt;?php
+<pre class="highlight"><code class="language-php">&lt;?php
 
 declare(strict_types=1);
 
@@ -781,37 +928,34 @@ class ReturnTypeVariations
     {
         return 'foo';
     }
-}
-</code></pre>
+}</code></pre>
 
 <p>When using the reference operator <code>&amp;</code> before an argument, there MUST NOT be
 a space after it, like in the previous example.</p>
 <p>There MUST NOT be a space between the variadic three dot operator and the argument
 name:</p>
-<pre><code class="php">public function process(string $algorithm, ...$parts)
+<pre class="highlight"><code class="language-php">public function process(string $algorithm, ...$parts)
 {
     // processing
-}
-</code></pre>
+}</code></pre>
 
 <p>When combining both the reference operator and the variadic three dot operator,
 there MUST NOT be any space between the two of them:</p>
-<pre><code class="php">public function process(string $algorithm, &amp;...$parts)
+<pre class="highlight"><code class="language-php">public function process(string $algorithm, &amp;...$parts)
 {
     // processing
-}
-</code></pre>
+}</code></pre>
 
-<h3 id="46-abstract-final-and-static">4.6 <code>abstract</code>, <code>final</code>, and <code>static</code></h3>
+<h3>4.6 <code>abstract</code>, <code>final</code>, and <code>static</code></h3>
 <p>When present, the <code>abstract</code> and <code>final</code> declarations MUST precede the
 visibility declaration.</p>
 <blockquote>
-<h3 id="additional-laminas-rules_13">Additional Laminas rules</h3>
+<h3>Additional Laminas rules</h3>
 <p>The <code>final</code> keyword on methods MUST be omitted in final declared classes.</p>
 </blockquote>
 <p>When present, the <code>static</code> declaration MUST come after the visibility
 declaration.</p>
-<pre><code class="php">&lt;?php
+<pre class="highlight"><code class="language-php">&lt;?php
 
 namespace Vendor\Package;
 
@@ -825,37 +969,34 @@ abstract class ClassName
     {
         // method body
     }
-}
-</code></pre>
+}</code></pre>
 
-<h3 id="47-method-and-function-calls">4.7 Method and Function Calls</h3>
+<h3>4.7 Method and Function Calls</h3>
 <p>When making a method or function call, there MUST NOT be a space between the
 method or function name and the opening parenthesis, there MUST NOT be a space
 after the opening parenthesis, and there MUST NOT be a space before the
 closing parenthesis. In the argument list, there MUST NOT be a space before
 each comma, and there MUST be one space after each comma.</p>
-<pre><code class="php">&lt;?php
+<pre class="highlight"><code class="language-php">&lt;?php
 
 bar();
 $foo-&gt;bar($arg1);
-Foo::bar($arg2, $arg3);
-</code></pre>
+Foo::bar($arg2, $arg3);</code></pre>
 
 <p>Argument lists MAY be split across multiple lines, where each subsequent line
 is indented once. When doing so, the first item in the list MUST be on the
 next line, and there MUST be only one argument per line. A single argument being
 split across multiple lines (as might be the case with an anonymous function or
 array) does not constitute splitting the argument list itself.</p>
-<pre><code class="php">&lt;?php
+<pre class="highlight"><code class="language-php">&lt;?php
 
 $foo-&gt;bar(
     $longArgument,
     $longerArgument,
     $muchLongerArgument
-);
-</code></pre>
+);</code></pre>
 
-<pre><code class="php">&lt;?php
+<pre class="highlight"><code class="language-php">&lt;?php
 
 somefunction($foo, $bar, [
   // ...
@@ -863,8 +1004,7 @@ somefunction($foo, $bar, [
 
 $app-&gt;get('/hello/{name}', function ($name) use ($app) {
     return 'Hello ' . $app-&gt;escape($name);
-});
-</code></pre>
+});</code></pre>
 
 <h2 id="5-control-structures">5. Control Structures</h2>
 <p>The general style rules for control structures are as follows:</p>
@@ -882,16 +1022,16 @@ $app-&gt;get('/hello/{name}', function ($name) use ($app) {
 the structures look and reduces the likelihood of introducing errors as new
 lines get added to the body.</p>
 <blockquote>
-<h3 id="additional-laminas-rules_14">Additional Laminas rules</h3>
+<h3>Additional Laminas rules</h3>
 <p>There MUST be one single space after <code>break</code> and <code>continue</code> structures with 
 a numeric argument argument.</p>
 <p>Statements MUST NOT be empty, except for catch statements.</p>
 </blockquote>
-<h3 id="51-if-elseif-else">5.1 <code>if</code>, <code>elseif</code>, <code>else</code></h3>
+<h3>5.1 <code>if</code>, <code>elseif</code>, <code>else</code></h3>
 <p>An <code>if</code> structure looks like the following. Note the placement of parentheses,
 spaces, and braces; and that <code>else</code> and <code>elseif</code> are on the same line as the
 closing brace from the earlier body.</p>
-<pre><code class="php">&lt;?php
+<pre class="highlight"><code class="language-php">&lt;?php
 
 if ($expr1) {
     // if body
@@ -899,8 +1039,7 @@ if ($expr1) {
     // elseif body
 } else {
     // else body;
-}
-</code></pre>
+}</code></pre>
 
 <p>The keyword <code>elseif</code> SHOULD be used instead of <code>else if</code> so that all control
 keywords look like single words.</p>
@@ -910,7 +1049,7 @@ MUST be on the next line. The closing parenthesis and opening brace MUST be
 placed together on their own line with one space between them. Boolean
 operators between conditions MUST always be at the beginning or at the end of
 the line, not a mix of both.</p>
-<pre><code class="php">&lt;?php
+<pre class="highlight"><code class="language-php">&lt;?php
 
 if (
     $expr1
@@ -922,21 +1061,20 @@ if (
     &amp;&amp; $expr4
 ) {
     // elseif body
-}
-</code></pre>
+}</code></pre>
 
-<h3 id="52-switch-case">5.2 <code>switch</code>, <code>case</code></h3>
+<h3>5.2 <code>switch</code>, <code>case</code></h3>
 <p>A <code>switch</code> structure looks like the following. Note the placement of
 parentheses, spaces, and braces. The <code>case</code> statement MUST be indented once
 from <code>switch</code>, and the <code>break</code> keyword (or other terminating keywords) MUST be
 indented at the same level as the <code>case</code> body. There MUST be a comment such as
 <code>// no break</code> when fall-through is intentional in a non-empty <code>case</code> body.</p>
 <blockquote>
-<h3 id="additional-laminas-rules_15">Additional Laminas rules</h3>
+<h3>Additional Laminas rules</h3>
 <p>The <code>continue</code> control structure MUST NOT be used in switch statements, 
 <code>break</code> SHOULD be used instead.</p>
 </blockquote>
-<pre><code class="php">&lt;?php
+<pre class="highlight"><code class="language-php">&lt;?php
 
 switch ($expr) {
     case 0:
@@ -953,8 +1091,7 @@ switch ($expr) {
     default:
         echo 'Default case';
         break;
-}
-</code></pre>
+}</code></pre>
 
 <p>Expressions in parentheses MAY be split across multiple lines, where each
 subsequent line is indented at least once. When doing so, the first condition
@@ -962,25 +1099,23 @@ MUST be on the next line. The closing parenthesis and opening brace MUST be
 placed together on their own line with one space between them. Boolean
 operators between conditions MUST always be at the beginning or at the end of
 the line, not a mix of both.</p>
-<pre><code class="php">&lt;?php
+<pre class="highlight"><code class="language-php">&lt;?php
 
 switch (
     $expr1
     &amp;&amp; $expr2
 ) {
     // structure body
-}
-</code></pre>
+}</code></pre>
 
-<h3 id="53-while-do-while">5.3 <code>while</code>, <code>do while</code></h3>
+<h3>5.3 <code>while</code>, <code>do while</code></h3>
 <p>A <code>while</code> statement looks like the following. Note the placement of
 parentheses, spaces, and braces.</p>
-<pre><code class="php">&lt;?php
+<pre class="highlight"><code class="language-php">&lt;?php
 
 while ($expr) {
     // structure body
-}
-</code></pre>
+}</code></pre>
 
 <p>Expressions in parentheses MAY be split across multiple lines, where each
 subsequent line is indented at least once. When doing so, the first condition
@@ -988,54 +1123,50 @@ MUST be on the next line. The closing parenthesis and opening brace MUST be
 placed together on their own line with one space between them. Boolean
 operators between conditions MUST always be at the beginning or at the end of
 the line, not a mix of both.</p>
-<pre><code class="php">&lt;?php
+<pre class="highlight"><code class="language-php">&lt;?php
 
 while (
     $expr1
     &amp;&amp; $expr2
 ) {
     // structure body
-}
-</code></pre>
+}</code></pre>
 
 <p>Similarly, a <code>do while</code> statement looks like the following. Note the placement
 of parentheses, spaces, and braces.</p>
-<pre><code class="php">&lt;?php
+<pre class="highlight"><code class="language-php">&lt;?php
 
 do {
     // structure body;
-} while ($expr);
-</code></pre>
+} while ($expr);</code></pre>
 
 <p>Expressions in parentheses MAY be split across multiple lines, where each
 subsequent line is indented at least once. When doing so, the first condition
 MUST be on the next line. Boolean operators between conditions MUST
 always be at the beginning or at the end of the line, not a mix of both.</p>
-<pre><code class="php">&lt;?php
+<pre class="highlight"><code class="language-php">&lt;?php
 
 do {
     // structure body;
 } while (
     $expr1
     &amp;&amp; $expr2
-);
-</code></pre>
+);</code></pre>
 
-<h3 id="54-for">5.4 <code>for</code></h3>
+<h3>5.4 <code>for</code></h3>
 <p>A <code>for</code> statement looks like the following. Note the placement of parentheses,
 spaces, and braces.</p>
-<pre><code class="php">&lt;?php
+<pre class="highlight"><code class="language-php">&lt;?php
 
 for ($i = 0; $i &lt; 10; $i++) {
     // for body
-}
-</code></pre>
+}</code></pre>
 
 <p>Expressions in parentheses MAY be split across multiple lines, where each
 subsequent line is indented at least once. When doing so, the first expression
 MUST be on the next line. The closing parenthesis and opening brace MUST be
 placed together on their own line with one space between them.</p>
-<pre><code class="php">&lt;?php
+<pre class="highlight"><code class="language-php">&lt;?php
 
 for (
     $i = 0;
@@ -1043,23 +1174,21 @@ for (
     $i++
 ) {
     // for body
-}
-</code></pre>
+}</code></pre>
 
-<h3 id="55-foreach">5.5 <code>foreach</code></h3>
+<h3>5.5 <code>foreach</code></h3>
 <p>A <code>foreach</code> statement looks like the following. Note the placement of
 parentheses, spaces, and braces.</p>
-<pre><code class="php">&lt;?php
+<pre class="highlight"><code class="language-php">&lt;?php
 
 foreach ($iterable as $key =&gt; $value) {
     // foreach body
-}
-</code></pre>
+}</code></pre>
 
-<h3 id="56-try-catch-finally">5.6 <code>try</code>, <code>catch</code>, <code>finally</code></h3>
+<h3>5.6 <code>try</code>, <code>catch</code>, <code>finally</code></h3>
 <p>A <code>try-catch-finally</code> block looks like the following. Note the placement of
 parentheses, spaces, and braces.</p>
-<pre><code class="php">&lt;?php
+<pre class="highlight"><code class="language-php">&lt;?php
 
 try {
     // try body
@@ -1069,11 +1198,10 @@ try {
     // catch body
 } finally {
     // finally body
-}
-</code></pre>
+}</code></pre>
 
 <blockquote>
-<h3 id="additional-laminas-rules_16">Additional Laminas rules</h3>
+<h3>Additional Laminas rules</h3>
 <p>All catch blocks MUST be reachable.</p>
 </blockquote>
 <h2 id="6-operators">6. Operators</h2>
@@ -1082,7 +1210,7 @@ take).</p>
 <p>When space is permitted around an operator, multiple spaces MAY be
 used for readability purposes.</p>
 <blockquote>
-<h3 id="additional-laminas-rules_17">Additional Laminas rules</h3>
+<h3>Additional Laminas rules</h3>
 <p>There MUST be at least one space on either side of an equals sign used
 to assign a value to a variable. In case of a block of related
 assignments, more spaces MUST be inserted before the equal sign to
@@ -1096,55 +1224,48 @@ operators instead. e.g. use <code>===</code> instead of <code>==</code>.</p>
 <p>The <code>&amp;&amp;</code> and <code>||</code> operators SHOULD be used instead of <code>and</code> and <code>or</code>.</p>
 </blockquote>
 <p>All operators not described here are left undefined.</p>
-<h3 id="61-unary-operators">6.1. Unary operators</h3>
+<h3>6.1. Unary operators</h3>
 <p>The increment/decrement operators MUST NOT have any space between
 the operator and operand.</p>
-<pre><code class="php">$i++;
-++$j;
-</code></pre>
+<pre class="highlight"><code class="language-php">$i++;
+++$j;</code></pre>
 
 <p>Type casting operators MUST NOT have any space within the parentheses.</p>
 <blockquote>
-<h3 id="additional-laminas-rules_18">Additional Laminas rules</h3>
+<h3>Additional Laminas rules</h3>
 <p>There MUST be one whitespace after a type casting operator.</p>
 </blockquote>
-<pre><code class="php">$intValue = (int) $input;
-</code></pre>
+<pre class="highlight"><code class="language-php">$intValue = (int) $input;</code></pre>
 
 <blockquote>
-<h3 id="additional-laminas-rules_19">Additional Laminas rules</h3>
+<h3>Additional Laminas rules</h3>
 <p>There MUST be one whitespace after unary not.</p>
 </blockquote>
-<pre><code class="php">&lt;?php
+<pre class="highlight"><code class="language-php">&lt;?php
 
 if (! true) {
     return false;
-}
-</code></pre>
+}</code></pre>
 
-<h3 id="62-binary-operators">6.2. Binary operators</h3>
+<h3>6.2. Binary operators</h3>
 <p>All binary <a href="https://www.php.net/manual/en/language.operators.arithmetic.php">arithmetic</a>, <a href="https://www.php.net/manual/en/language.operators.comparison.php">comparison</a>, <a href="https://www.php.net/manual/en/language.operators.assignment.php">assignment</a>, <a href="https://www.php.net/manual/en/language.operators.bitwise.php">bitwise</a>,
 <a href="https://www.php.net/manual/en/language.operators.logical.php">logical</a>, <a href="https://www.php.net/manual/en/language.operators.string.php">string</a>, and <a href="https://www.php.net/manual/en/language.operators.type.php">type</a> operators MUST be preceded and
 followed by at least one space:</p>
-<pre><code class="php">if ($a === $b) {
+<pre class="highlight"><code class="language-php">if ($a === $b) {
     $foo = $bar ?? $a ?? $b;
 } elseif ($a &gt; $b) {
     $foo = $a + $b * $c;
-}
-</code></pre>
+}</code></pre>
 
-<h3 id="63-ternary-operators">6.3. Ternary operators</h3>
+<h3>6.3. Ternary operators</h3>
 <p>The conditional operator, also known simply as the ternary operator, MUST be
 preceded and followed by at least one space around both the <code>?</code>
 and <code>:</code> characters:</p>
-<pre><code class="php">$variable = $foo ? 'foo' : 'bar';
-</code></pre>
+<pre class="highlight"><code class="language-php">$variable = $foo ? 'foo' : 'bar';</code></pre>
 
 <p>When the middle operand of the conditional operator is omitted, the operator
-MUST follow the same style rules as other binary <a href="https://www.php.net/manual/en/language.operators.comparison.php">comparison</a> operators:</p>
-<pre><code class="php">$variable = $foo ?: 'bar';
-</code></pre>
-
+MUST follow the same style rules as other binary <a href="https://www.php.net/manual/en/language.operators.comparison.php">comparison</a> operators:
+<pre class="highlight"><code class="language-php">$variable = $foo ?: 'bar';</code></pre></p>
 <h2 id="7-closures">7. Closures</h2>
 <p>Closures MUST be declared with a space after the <code>function</code> keyword, and a
 space before and after the <code>use</code> keyword.</p>
@@ -1161,12 +1282,12 @@ list.</p>
 functions and methods; if the <code>use</code> keyword is present, the colon MUST follow
 the <code>use</code> list closing parentheses with no spaces between the two characters.</p>
 <blockquote>
-<h3 id="additional-laminas-rules_20">Additional Laminas rules</h3>
+<h3>Additional Laminas rules</h3>
 <p>Inherited variables passed via <code>use</code> MUST be used in closures.</p>
 </blockquote>
 <p>A closure declaration looks like the following. Note the placement of
 parentheses, commas, spaces, and braces:</p>
-<pre><code class="php">&lt;?php
+<pre class="highlight"><code class="language-php">&lt;?php
 
 $closureWithArgs = function ($arg1, $arg2) {
     // body
@@ -1178,8 +1299,7 @@ $closureWithArgsAndVars = function ($arg1, $arg2) use ($var1, $var2) {
 
 $closureWithArgsVarsAndReturn = function ($arg1, $arg2) use ($var1, $var2): bool {
     // body
-};
-</code></pre>
+};</code></pre>
 
 <p>Argument lists and variable lists MAY be split across multiple lines, where
 each subsequent line is indented once. When doing so, the first item in the
@@ -1190,7 +1310,7 @@ multiple lines, the closing parenthesis and opening brace MUST be placed
 together on their own line with one space between them.</p>
 <p>The following are examples of closures with and without argument lists and
 variable lists split across multiple lines.</p>
-<pre><code class="php">&lt;?php
+<pre class="highlight"><code class="language-php">&lt;?php
 
 $longArgs_noVars = function (
     $longArgument,
@@ -1234,12 +1354,11 @@ $shortArgs_longVars = function ($arg) use (
     $muchLongerVar3
 ) {
    // body
-};
-</code></pre>
+};</code></pre>
 
 <p>Note that the formatting rules also apply when the closure is used directly
 in a function or method call as an argument.</p>
-<pre><code class="php">&lt;?php
+<pre class="highlight"><code class="language-php">&lt;?php
 
 $foo-&gt;bar(
     $arg1,
@@ -1247,22 +1366,20 @@ $foo-&gt;bar(
         // body
     },
     $arg3
-);
-</code></pre>
+);</code></pre>
 
 <h2 id="8-anonymous-classes">8. Anonymous Classes</h2>
 <p>Anonymous Classes MUST follow the same guidelines and principles as closures
 in the above section.</p>
-<pre><code class="php">&lt;?php
+<pre class="highlight"><code class="language-php">&lt;?php
 
-$instance = new class {};
-</code></pre>
+$instance = new class {};</code></pre>
 
 <p>The opening brace MAY be on the same line as the <code>class</code> keyword so long as
 the list of <code>implements</code> interfaces does not wrap. If the list of interfaces
 wraps, the brace MUST be placed on the line immediately following the last
 interface.</p>
-<pre><code class="php">&lt;?php
+<pre class="highlight"><code class="language-php">&lt;?php
 
 // Brace on the same line
 $instance = new class extends \Foo implements \HandleableInterface {
@@ -1276,12 +1393,11 @@ $instance = new class extends \Foo implements
     \Serializable
 {
     // Class content
-};
-</code></pre>
+};</code></pre>
 
 <h2 id="9-commenting-and-docblocks">9. Commenting and DocBlocks</h2>
 <blockquote>
-<h3 id="additional-laminas-rules_21">Additional Laminas rules</h3>
+<h3>Additional Laminas rules</h3>
 <p>Code SHOULD be written so it explains itself. DocBlocks and comments 
 SHOULD only be used if necessary. They MUST NOT start with <code>#</code> and MUST 
 NOT be empty. They SHOULD NOT be used for already typehinted arguments, 
@@ -1294,8 +1410,7 @@ contain multiple spaces between the tag, type and description.</p>
 <code>@throws</code> tags.</p>
 <p>DocBlocks MUST follow this specific order of annotations with empty
 newline between specific groups:</p>
-<p><code>php
-/**
+<pre class="highlight"><code class="language-php">/**
  * &lt;Summary&gt;
  *
  * &lt;Description&gt;
@@ -1310,7 +1425,8 @@ newline between specific groups:</p>
  * @param
  * @return
  * @throws
- */</code></p>
+ */</code></pre>
+
 <p>The annotations <code>@api</code>, <code>@author</code>, <code>@category</code>, <code>@created</code>, <code>@package</code>,
 <code>@subpackage</code> and <code>@version</code> MUST NOT be used in comments. Git commits
 provide accurate information.</p>
@@ -1324,84 +1440,211 @@ be written as one-liners. The <code>@var</code> MAY NOT be used for constants.</
 single space preceding. Inline DocComments MUST NOT be placed after curly 
 brackets.</p>
 <p>Heredoc and nowdoc tags MUST be uppercase without spaces.</p>
-</blockquote></div>
+</blockquote>
+
+
+
+
+    <nav>
+    <ul class="page-nav hidden-print">
+
+        
+        <li class="page-nav__item">
+            
+                <a rel="prev" class="page-nav__link page-nav__link--prev" href="../intro/">
+                    <i class="fa fa-chevron-left"></i> Previous
+                </a>
+            
+        </li>
+
+        
+        <li class="page-nav__item">
+            
+                <a rel="next" class="page-nav__link page-nav__link--next" href="../../v1/intro/">
+                    Next <i class="fa fa-chevron-right"></i>
+                </a>
+            
+        </li>
+    </ul>
+</nav>
+
+
+
+
+    <div class="help-wanted">
+        <p>
+            Found a mistake or want to contribute to the documentation?
+            <a href="https://github.com/laminas/laminas-coding-standard/edit/master/docs/book/v2/coding-style-guide.md" target="_blank" class="help-wanted__link">
+                Edit this page on GitHub!
+            </a>
+        </p>
+    </div>
+
+                
+            </div>
+            <div class="col-md-3 col-sm-12 sidebar">
+                
+                    <div class="component-selector">
+    
+    <h5 class="component-selector__subtitle">Find documentation…</h5>
+    <select class="form-control component-selector__control">
+        <option value="/">Overview</option>
+        <optgroup label="Components"></optgroup>
+    </select>
+</div>
+                    
+    <div class="subnavigation hidden-print">
+        <h4 class="subnavigation__title">
+            <a href="../..">laminas-coding-standard</a>
+        </h4>
+
+        <h5 class="subnavigation__subtitle">Table of Contents</h5>
+
+        <ul class="subnavigation__list">
+            
+
+                
+                
+                    
+                        
+    <li class="subnavigation__list-item ">
+        <a href="../intro/" class="subnavigation__link">Introduction</a>
+    </li>
+
+                    
+                        
+    <li class="subnavigation__list-item subnavigation__list-item--active">
+        <a href="./" class="subnavigation__link">Coding Style Guide</a>
+    </li>
+
+                    
+                
+            
+
+                
+                
+
+                    
+                    
+                
+            
+        </ul>
+    </div>
+
+                
+            </div>
+        </div>
+    </div>
+
+    
+    <footer class="footer">
+    <div class="container">
+
+        
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <a class="footer__button" href="#page-top"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
             </div>
         </div>
 
-        <footer class="col-md-12">
-            <hr>
-            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
-        </footer>
-        <script>
-            var base_url = "../..",
-                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
-        </script>
-        <script src="../../js/base.js" defer></script>
-        <script src="../../search/main.js" defer></script>
+        <div class="row">
+            <div class="col-md-12">
+                <h5>Laminas</h5>
+                <ul>
+                    <li>Laminas Project <a href="https://getlaminas.org/">The new foundation for the community-supported, open source continuation of Zend Framework</a></li>
+                    <li>Laminas Components and MVC <a href="https://docs.laminas.dev/">Components and MVC for enterprise applications</a></li>
+                    <li>Mezzio <a href="https://docs.mezzio.dev/">PSR-15 middleware in minutes</a></li>
+                    <li>Laminas API Tools <a href="https://api-tools.getlaminas.org/">Build RESTful APIs in minutes</a></li>
+                </ul>
+            </div>
+        </div>
 
-        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+
+                    
+                    <div class="col-md-4">
+                        <h4 class="footer__headline">Support</h4>
+                        <ul class="support__list">
+                            <li class="support__list-item">
+                                <a href="https://discourse.laminas.dev" class="support__link" title="Forum"><i class="fa fa-comments"></i></a>
+                            </li>
+                            <li class="support__list-item">
+                                <a href="https://laminas.dev/chat" class="support__link" title="Chat"><i class="fa fa-slack"></i></a>
+                            </li>
+                            <li class="support__list-item">
+                                <a href="https://github.com/laminas" class="support__link" title="Github"><i class="fa fa-github"></i></a>
+                            </li>
+                            <li class="support__list-item">
+                                <a href="https://twitter.com/getlaminas" class="support__link" title="Twitter"><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li class="support__list-item">
+                                <a href="https://getlaminas.org/blog/rss.xml" class="support__link" title="Blog feed"><i class="fa fa-rss"></i></a>
+                            </li>
+                            <li class="support__list-item">
+                                <a href="https://getlaminas.org/security/feed" class="support__link" title="Security feed"><i class="fa fa-rss-square"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    
+                    <div class="col-md-4">
+                        <h4 class="footer__headline">License</h4>
+                        <p>
+                            Code licensed under <a
+                                href="https://github.com/laminas/laminas-coding-standard/blob/master/LICENSE.md">BSD 3-Clause</a>.
+                        </p>
+                    </div>
+
+                    
+                    <div class="col-md-4">
+                        <h4 class="footer__headline">Copyright</h4>
+                        <p>
+                            <!--Built with love by the Laminas team with the help of our
+                            <a href="https://github.com/laminas/laminas-coding-standard/graphs/contributors">contributors</a>.<br>-->
+                            &copy; 2020 <a href="https://getlaminas.org/">Laminas Project</a> a Series of LF Projects, LLC.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <script>
+        let base_url = '../..',
+            project  = "components",
+            siteName = 'laminas-coding-standard';
+    </script>
+    <script src="https://docs.laminas.dev/js/scripts.js"></script>
+    
+        <script src="../../search/main.js"></script>
+    
+
+    
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title" id="searchModalLabel">Search</h4>
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h5 class="modal-title">Search</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    <span class="sr-only">Close</span>
+                </button>
             </div>
             <div class="modal-body">
-                <p>
-                    From here you can search these documents. Enter
-                    your search terms below.
-                </p>
-                <form>
+                <form role="form">
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                        <input type="text" class="form-control" placeholder="Search in laminas-coding-standard" id="mkdocs-search-query">
                     </div>
                 </form>
                 <div id="mkdocs-search-results"></div>
             </div>
-            <div class="modal-footer">
-            </div>
-        </div>
-    </div>
-</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-            </div>
-            <div class="modal-body">
-              <div class="table-responsive"><table class="table">
-                <thead>
-                  <tr>
-                    <th style="width: 20%;">Keys</th>
-                    <th>Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="help shortcut"><kbd>?</kbd></td>
-                    <td>Open this help</td>
-                  </tr>
-                  <tr>
-                    <td class="next shortcut"><kbd>n</kbd></td>
-                    <td>Next page</td>
-                  </tr>
-                  <tr>
-                    <td class="prev shortcut"><kbd>p</kbd></td>
-                    <td>Previous page</td>
-                  </tr>
-                  <tr>
-                    <td class="search shortcut"><kbd>s</kbd></td>
-                    <td>Search</td>
-                  </tr>
-                </tbody>
-              </table></div>
-            </div>
-            <div class="modal-footer">
-            </div>
         </div>
     </div>
 </div>
+</body>
 
-    </body>
+
 </html>

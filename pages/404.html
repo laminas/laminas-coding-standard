@@ -6,10 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="The coding standard ruleset for Laminas components.">  
-    <link rel="canonical" href="https://docs.laminas.dev/laminas-coding-standard/v2/intro/">
     <link rel="shortcut icon" href="https://docs.laminas.dev/img/trademark-laminas-foundation-rgb.svg">
 
-    <title>Introduction - laminas-coding-standard - Laminas Docs</title>
+    <title>laminas-coding-standard - Laminas Docs</title>
 
     <link rel="stylesheet" href="https://docs.laminas.dev/css/styles.css">
     
@@ -115,7 +114,7 @@
                     
     <div class="subnavigation hidden-print">
         <h4 class="subnavigation__title">
-            <a href="../..">laminas-coding-standard</a>
+            <a href="../.">laminas-coding-standard</a>
         </h4>
 
         <h5 class="subnavigation__subtitle">Table of Contents</h5>
@@ -125,18 +124,8 @@
 
                 
                 
-                    
-                        
-    <li class="subnavigation__list-item subnavigation__list-item--active">
-        <a href="./" class="subnavigation__link">Introduction</a>
-    </li>
 
                     
-                        
-    <li class="subnavigation__list-item ">
-        <a href="../coding-style-guide/" class="subnavigation__link">Coding Style Guide</a>
-    </li>
-
                     
                 
             
@@ -199,7 +188,7 @@
         <div class="dropdown-menu" aria-labelledby="version-selector-dropdown">
             
                 
-                    <a href="./" class="dropdown-item active">
+                    <a href="../v2/intro/" class="dropdown-item">
                         
                             v2 (latest)
                         
@@ -207,7 +196,7 @@
                 
             
                 
-                    <a href="../../v1/index.md" class="dropdown-item">
+                    <a href="../v1/index.md" class="dropdown-item">
                         
                             v1
                         
@@ -238,222 +227,21 @@
                 
                 
                     
-    
-
-    
-    
-        <div class="toc">
-            <h6 class="toc__headline">On this page</h6>
-            <ul class="toc__list">
-                
-                    <li class="toc__entry">
-                        <a href="#installation" class="toc__link nav-link">Installation</a>
-                    </li>
-                
-                    <li class="toc__entry">
-                        <a href="#usage" class="toc__link nav-link">Usage</a>
-                    </li>
-                
-                    <li class="toc__entry">
-                        <a href="#ignoring-parts-of-a-file" class="toc__link nav-link">Ignoring parts of a File</a>
-                    </li>
-                
-                    <li class="toc__entry">
-                        <a href="#development" class="toc__link nav-link">Development</a>
-                    </li>
-                
-                    <li class="toc__entry">
-                        <a href="#reference" class="toc__link nav-link">Reference</a>
-                    </li>
-                
-            </ul>
-        </div>
-    
-
                 
 
                 
-                    <nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-        
-            <li class="breadcrumb-item"><a href="https://docs.laminas.dev/">Overview</a></li>
-            <li class="breadcrumb-item"><a href="https://docs.laminas.dev/components/">Components</a></li>
 
-            
-                <li class="breadcrumb-item"><a href="../..">laminas-coding-standard</a></li>
-
-                
-                    
-                        
-                        
-                    
-                
-
-                <li class="breadcrumb-item active" aria-current="page">Introduction</li>
-            
-        
-    </ol>
-</nav>
-
-
-
-
-
-
-    
-    
-
-    <h1 id="laminas-coding-standard">laminas-coding-standard</h1>
-<p>The coding standard ruleset for Laminas components.</p>
-<p>This specification extends and expands <a href="https://github.com/php-fig/fig-standards/blob/master/proposed/extended-coding-style-guide.md">PSR-12</a>, 
-the extended coding style guide and requires adherence to <a href="https://www.php-fig.org/psr/psr-1">PSR-1</a>, 
-the basic coding standard. These are minimal specifications and don't address all factors, including things like:</p>
-<ul>
-<li>whitespace around operators</li>
-<li>alignment of array keys and operators</li>
-<li>alignment of object operations</li>
-<li>how to format multi-line conditionals</li>
-<li>what and what not to import, and how</li>
-<li>etc.</li>
-</ul>
-<p>Contributors have different coding styles and so do the maintainers. During code reviews there are regularly 
-discussions about spaces and alignments, where and when was said that a function needs to be imported. And 
-that's where this coding standard comes in: To have internal consistency in a component and between components.</p>
-<h2 id="installation">Installation</h2>
-<ol>
-<li>Install the module via composer by running:</li>
-</ol>
-<pre class="highlight"><code class="language-bash">$ composer require --dev laminas/laminas-coding-standard</code></pre>
-
-<ol>
-<li>Add composer scripts into your <code>composer.json</code>:</li>
-</ol>
-<pre class="highlight"><code class="language-json">"scripts": {
-  "cs-check": "phpcs",
-  "cs-fix": "phpcbf"
-}</code></pre>
-
-<ol>
-<li>Create file <code>phpcs.xml</code> on base path of your repository with this content:</li>
-</ol>
-<pre class="highlight"><code class="language-xml">&lt;?xml version="1.0"?&gt;
-&lt;ruleset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:noNamespaceSchemaLocation="vendor/squizlabs/php_codesniffer/phpcs.xsd"&gt;
-
-    &lt;arg name="basepath" value="."/&gt;
-    &lt;arg name="cache" value=".phpcs-cache"/&gt;
-    &lt;arg name="colors"/&gt;
-    &lt;arg name="extensions" value="php"/&gt;
-    &lt;arg name="parallel" value="80"/&gt;
-
-    &lt;!-- Show progress --&gt;
-    &lt;arg value="p"/&gt;
-
-    &lt;!-- Paths to check --&gt;
-    &lt;file&gt;config&lt;/file&gt;
-    &lt;file&gt;src&lt;/file&gt;
-    &lt;file&gt;test&lt;/file&gt;
-
-    &lt;!-- Include all rules from the Laminas Coding Standard --&gt;
-    &lt;rule ref="LaminasCodingStandard"/&gt;
-&lt;/ruleset&gt;</code></pre>
-
-<p>You can add or exclude some locations in that file.
-For a reference please see: https://github.com/squizlabs/PHP_CodeSniffer/wiki/Annotated-ruleset.xml</p>
-<h2 id="usage">Usage</h2>
-<ul>
-<li>To run checks only:</li>
-</ul>
-<pre class="highlight"><code class="language-bash">$ composer cs-check</code></pre>
-
-<ul>
-<li>To automatically fix many CS issues:</li>
-</ul>
-<pre class="highlight"><code class="language-bash">$ composer cs-fix</code></pre>
-
-<h2 id="ignoring-parts-of-a-file">Ignoring parts of a File</h2>
+<h1 class="content__title">404</h1>
 <blockquote>
-<p>Note: Before PHP_CodeSniffer version 3.2.0, <code>// @codingStandardsIgnoreStart</code> and <code>// @codingStandardsIgnoreEnd</code> were
-used. These are deprecated and will be removed in PHP_CodeSniffer version 4.0.</p>
+    <h3>Something went wrong!</h3>
+    <p>
+        We're sorry, but the page you are looking for does not exist.
+    </p>
 </blockquote>
-<p>Disable parts of a file:
-<pre class="highlight"><code class="language-php">$xmlPackage = new XMLPackage;
-// phpcs:disable
-$xmlPackage['error_code'] = get_default_error_code_value();
-$xmlPackage-&gt;send();
-// phpcs:enable</code></pre></p>
-<p>Disable a specific rule:
-<pre class="highlight"><code class="language-php">// phpcs:disable Generic.Commenting.Todo.Found
-$xmlPackage = new XMLPackage;
-$xmlPackage['error_code'] = get_default_error_code_value();
-// TODO: Add an error message here.
-$xmlPackage-&gt;send();
-// phpcs:enable</code></pre></p>
-<h2 id="development">Development</h2>
-<blockquote>
-<p><strong>New rules or Sniffs may not be introduced in minor or bugfix releases and should always be based on the develop 
-branch and queued for the next major release, unless considered a bugfix for existing rules.</strong></p>
-</blockquote>
-<p>If you want to test changes against Laminas components or your own projects, install your forked 
-laminas-coding-standard globally with composer: 
-<pre class="highlight"><code class="language-bash">$ composer global config repositories.laminas-coding-standard vcs git@github.com:&lt;FORK_NAMESPACE&gt;/laminas-coding-standard.git
-$ composer global require --dev laminas/laminas-coding-standard:dev-&lt;FORKED_BRANCH&gt;
 
-# For this to work, add this to your path: ~/.composer/vendor/bin
-# Using `-s` prints the rules that triggered the errors so they can be reviewed easily. `-p` is for progress display.
-$ phpcs -sp --standard=LaminasCodingStandard src test</code></pre>
-Make sure you remove the global installation after testing from your global composer.json file!!!</p>
-<p>Documentation can be previewed locally by installing <a href="https://www.mkdocs.org/#installation">MkDocs</a> and run 
-<code>mkdocs serve</code>. This will start a server where you can read the docs.</p>
-<h2 id="reference">Reference</h2>
-<p>Rules can be added, excluded or tweaked locally, depending on your preferences. More information on how to do this can
-be found here:</p>
-<ul>
-<li><a href="https://github.com/squizlabs/PHP_CodeSniffer/wiki/Coding-Standard-Tutorial">Coding Standard Tutorial</a></li>
-<li><a href="https://github.com/squizlabs/PHP_CodeSniffer/wiki/Configuration-Options">Configuration Options</a></li>
-<li><a href="https://github.com/squizlabs/PHP_CodeSniffer/wiki/Annotated-Ruleset#selectively-applying-rules">Selectively Applying Rules</a></li>
-<li><a href="https://github.com/squizlabs/PHP_CodeSniffer/wiki/Customisable-Sniff-Properties">Customisable Sniff Properties</a></li>
-</ul>
+<a href="../." class="btn btn-default" role="button">Go to homepage</a>
 
 
-
-
-    <nav>
-    <ul class="page-nav hidden-print">
-
-        
-        <li class="page-nav__item">
-            
-                <a rel="prev" class="page-nav__link page-nav__link--prev" href="../..">
-                    <i class="fa fa-chevron-left"></i> Previous
-                </a>
-            
-        </li>
-
-        
-        <li class="page-nav__item">
-            
-                <a rel="next" class="page-nav__link page-nav__link--next" href="../coding-style-guide/">
-                    Next <i class="fa fa-chevron-right"></i>
-                </a>
-            
-        </li>
-    </ul>
-</nav>
-
-
-
-
-    <div class="help-wanted">
-        <p>
-            Found a mistake or want to contribute to the documentation?
-            <a href="https://github.com/laminas/laminas-coding-standard/edit/master/docs/book/v2/intro.md" target="_blank" class="help-wanted__link">
-                Edit this page on GitHub!
-            </a>
-        </p>
-    </div>
-
-                
             </div>
             <div class="col-md-3 col-sm-12 sidebar">
                 
@@ -468,7 +256,7 @@ be found here:</p>
                     
     <div class="subnavigation hidden-print">
         <h4 class="subnavigation__title">
-            <a href="../..">laminas-coding-standard</a>
+            <a href="../.">laminas-coding-standard</a>
         </h4>
 
         <h5 class="subnavigation__subtitle">Table of Contents</h5>
@@ -478,18 +266,8 @@ be found here:</p>
 
                 
                 
-                    
-                        
-    <li class="subnavigation__list-item subnavigation__list-item--active">
-        <a href="./" class="subnavigation__link">Introduction</a>
-    </li>
 
                     
-                        
-    <li class="subnavigation__list-item ">
-        <a href="../coding-style-guide/" class="subnavigation__link">Coding Style Guide</a>
-    </li>
-
                     
                 
             
@@ -586,13 +364,13 @@ be found here:</p>
 </footer>
 
     <script>
-        let base_url = '../..',
+        let base_url = '..',
             project  = "components",
             siteName = 'laminas-coding-standard';
     </script>
     <script src="https://docs.laminas.dev/js/scripts.js"></script>
     
-        <script src="../../search/main.js"></script>
+        <script src="../search/main.js"></script>
     
 
     
