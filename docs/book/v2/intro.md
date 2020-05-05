@@ -20,13 +20,11 @@ that's where this coding standard comes in: To have internal consistency in a co
 ## Installation
 
 1. Install the module via composer by running:
-
    ```bash
    $ composer require --dev laminas/laminas-coding-standard
    ```
 
 2. Add composer scripts into your `composer.json`:
-
    ```json
    "scripts": {
      "cs-check": "phpcs",
@@ -35,7 +33,6 @@ that's where this coding standard comes in: To have internal consistency in a co
    ```
 
 3. Create file `phpcs.xml` on base path of your repository with this content:
-
    ```xml
    <?xml version="1.0"?>
    <ruleset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -66,13 +63,11 @@ For a reference please see: https://github.com/squizlabs/PHP_CodeSniffer/wiki/An
 ## Usage
 
 * To run checks only:
-
   ```bash
   $ composer cs-check
   ```
 
 * To automatically fix many CS issues:
-
   ```bash
   $ composer cs-fix
   ```
