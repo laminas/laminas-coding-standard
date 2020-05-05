@@ -1,4 +1,4 @@
-# laminas-coding-standard
+# Introduction
 
 ## Installation
 
