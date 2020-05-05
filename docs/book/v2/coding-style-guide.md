@@ -1274,25 +1274,26 @@ $instance = new class extends \Foo implements
 > DocBlocks MUST follow this specific order of annotations with empty
 > newline between specific groups:
 >
-> ```php
-> /**
->  * <Summary>
->  *
->  * <Description>
->  *
->  * @internal
->  * @deprecated
->  *
->  * @link
->  * @see
->  * @uses
->  *
->  * @param
->  * @return
->  * @throws
->  */
-> ```
->
+
+```php
+/**
+ * <Summary>
+ *
+ * <Description>
+ *
+ * @internal
+ * @deprecated
+ *
+ * @link
+ * @see
+ * @uses
+ *
+ * @param
+ * @return
+ * @throws
+ */
+```
+
 > The annotations `@api`, `@author`, `@category`, `@created`, `@package`,
 > `@subpackage` and `@version` MUST NOT be used in comments. Git commits
 > provide accurate information.
