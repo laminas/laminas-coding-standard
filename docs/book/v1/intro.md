@@ -1,7 +1,5 @@
 # laminas-coding-standard
 
-This component provides the coding standard ruleset for Laminas components.
-
 ## Installation
 
 1. Install the module via Composer by running:

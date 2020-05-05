@@ -1,7 +1,5 @@
 # laminas-coding-standard
 
-The coding standard ruleset for Laminas components.
-
 This specification extends and expands [PSR-12](https://github.com/php-fig/fig-standards/blob/master/proposed/extended-coding-style-guide.md), 
 the extended coding style guide and requires adherence to [PSR-1](https://www.php-fig.org/psr/psr-1), 
 the basic coding standard. These are minimal specifications and don't address all factors, including things like:
