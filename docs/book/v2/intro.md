@@ -74,8 +74,11 @@ For a reference please see: https://github.com/squizlabs/PHP_CodeSniffer/wiki/An
 
 ## Ignoring parts of a File
 
-> Note: Before PHP_CodeSniffer version 3.2.0, `// @codingStandardsIgnoreStart` and `// @codingStandardsIgnoreEnd` were
-> used. These are deprecated and will be removed in PHP_CodeSniffer version 4.0.
+> ### Deprecation
+>
+> Before PHP_CodeSniffer version 3.2.0, `// @codingStandardsIgnoreStart` and
+> `// @codingStandardsIgnoreEnd` were used. These are deprecated and will be
+> removed in PHP_CodeSniffer version 4.0.
 
 Disable parts of a file:
 ```php
@@ -98,8 +101,11 @@ $xmlPackage->send();
 
 ## Development
 
-> **New rules or Sniffs may not be introduced in minor or bugfix releases and should always be based on the develop 
-branch and queued for the next major release, unless considered a bugfix for existing rules.**
+> ### New Rules or Sniffs
+>
+> New rules or Sniffs may not be introduced in minor or bugfix releases and
+> should always be based on the develop branch and queued for the next major
+> release, unless considered a bugfix for existing rules.
 
 If you want to test changes against Laminas components or your own projects, install your forked 
 laminas-coding-standard globally with composer: 
