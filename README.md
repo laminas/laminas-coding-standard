@@ -1,6 +1,6 @@
 # laminas-coding-standard
 
-[![Build Status](https://travis-ci.org/laminas/laminas-coding-standard.svg?branch=master)](https://travis-ci.org/laminas/laminas-coding-standard)
+[![Build Status](https://travis-ci.com/laminas/laminas-coding-standard.svg?branch=master)](https://travis-ci.org/laminas/laminas-coding-standard)
 
 The coding standard ruleset for Laminas components.
 
