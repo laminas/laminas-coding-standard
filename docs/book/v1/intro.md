@@ -4,12 +4,12 @@ This component provides the coding standard ruleset for Laminas components.
 
 ## Installation
 
-1. Install the module via composer by running:
+1. Install the module via Composer by running:
    ```bash
    $ composer require --dev laminas/laminas-coding-standard
    ```
 
-2. Add composer scripts into your `composer.json`:
+2. Add Composer scripts into your `composer.json`:
    ```json
    "scripts": {
      "cs-check": "phpcs",

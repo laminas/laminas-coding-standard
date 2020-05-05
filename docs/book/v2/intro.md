@@ -19,12 +19,12 @@ that's where this coding standard comes in: To have internal consistency in a co
 
 ## Installation
 
-1. Install the module via composer by running:
+1. Install the module via Composer by running:
    ```bash
    $ composer require --dev laminas/laminas-coding-standard
    ```
 
-2. Add composer scripts into your `composer.json`:
+2. Add Composer scripts into your `composer.json`:
    ```json
    "scripts": {
      "cs-check": "phpcs",
@@ -110,7 +110,7 @@ $xmlPackage->send();
 > release, unless considered a bugfix for existing rules.
 
 If you want to test changes against Laminas components or your own projects, install your forked 
-laminas-coding-standard globally with composer:
+laminas-coding-standard globally with Composer:
 
 ```bash
 $ composer global config repositories.laminas-coding-standard vcs git@github.com:<FORK_NAMESPACE>/laminas-coding-standard.git
