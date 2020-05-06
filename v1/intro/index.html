@@ -305,26 +305,23 @@
     
     
 
-    <h1 id="laminas-coding-standard">laminas-coding-standard</h1>
-<p>This component provides the coding standard ruleset for Laminas components.</p>
+    <h1 id="introduction">Introduction</h1>
 <h2 id="installation">Installation</h2>
 <ol>
-<li>Install the module via composer by running:</li>
-</ol>
-<pre class="highlight"><code class="language-bash">$ composer require --dev laminas/laminas-coding-standard</code></pre>
-
-<ol>
-<li>Add composer scripts into your <code>composer.json</code>:</li>
-</ol>
-<pre class="highlight"><code class="language-json">"scripts": {
+<li>
+<p>Install the module via Composer by running:
+   <pre class="highlight"><code class="language-bash">$ composer require --dev laminas/laminas-coding-standard</code></pre></p>
+</li>
+<li>
+<p>Add Composer scripts into your <code>composer.json</code>:
+   <pre class="highlight"><code class="language-json">"scripts": {
   "cs-check": "phpcs",
   "cs-fix": "phpcbf"
-}</code></pre>
-
-<ol>
-<li>Create file <code>phpcs.xml</code> on base path of your repository with content:</li>
-</ol>
-<pre class="highlight"><code class="language-xml">&lt;?xml version="1.0"?&gt;
+}</code></pre></p>
+</li>
+<li>
+<p>Create file <code>phpcs.xml</code> on base path of your repository with content:
+   <pre class="highlight"><code class="language-xml">&lt;?xml version="1.0"?&gt;
 &lt;ruleset name="Laminas Coding Standard"&gt;
     &lt;rule ref="./vendor/laminas/laminas-coding-standard/ruleset.xml"/&gt;
 
@@ -332,20 +329,22 @@
     &lt;file&gt;config&lt;/file&gt;
     &lt;file&gt;src&lt;/file&gt;
     &lt;file&gt;test&lt;/file&gt;
-&lt;/ruleset&gt;</code></pre>
-
+&lt;/ruleset&gt;</code></pre></p>
+</li>
+</ol>
 <p>You can add or exclude some locations in that file.
 For a reference please see: https://github.com/squizlabs/PHP_CodeSniffer/wiki/Annotated-ruleset.xml</p>
 <h2 id="usage">Usage</h2>
 <ul>
-<li>To run checks only:</li>
+<li>
+<p>To run checks only:
+  <pre class="highlight"><code class="language-bash">$ composer cs-check</code></pre></p>
+</li>
+<li>
+<p>To automatically fix many CS issues:
+  <pre class="highlight"><code class="language-bash">$ composer cs-fix</code></pre></p>
+</li>
 </ul>
-<pre class="highlight"><code class="language-bash">$ composer cs-check</code></pre>
-
-<ul>
-<li>To automatically fix many CS issues:</li>
-</ul>
-<pre class="highlight"><code class="language-bash">$ composer cs-fix</code></pre>
 
 
 

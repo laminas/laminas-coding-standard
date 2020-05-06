@@ -327,7 +327,7 @@ interpreted as described in <a href="http://tools.ietf.org/html/rfc2119">RFC 211
 <p>This specification extends <a href="https://www.php-fig.org/psr/psr-12/">PSR-12</a>, the coding style guide and
 requires adherence to <a href="https://www.php-fig.org/psr/psr-1/">PSR-1</a>, the basic coding standard.</p>
 <p>Like <a href="https://www.php-fig.org/psr/psr-12/">PSR-12</a>, the intent of this specification is to reduce cognitive friction when
-scanning code from different authors contributing to Laminas. It does so by 
+scanning code from different authors contributing to Laminas. It does so by
 enumerating a shared set of rules and expectations about how to format PHP code.</p>
 <h3>1.1 Previous language versions</h3>
 <p>Throughout this document, any instructions MAY be ignored if they do not exist in versions
@@ -411,7 +411,7 @@ each word is capitalized including the very first letter.</p>
 <p>For consistency a bunch of older PHP features SHOULD NOT be used:</p>
 <ul>
 <li>The <a href="https://www.php.net/manual/en/language.basic-syntax.phptags.php">short open tag</a> SHOULD NOT be used.</li>
-<li>Deprecated features SHOULD be avoided (<a href="https://www.php.net/manual/en/migration70.deprecated.php">[7.0]</a>, 
+<li>Deprecated features SHOULD be avoided (<a href="https://www.php.net/manual/en/migration70.deprecated.php">[7.0]</a>,
   <a href="https://www.php.net/manual/en/migration71.deprecated.php">[7.1]</a>, <a href="https://www.php.net/manual/en/migration72.deprecated.php">[7.2]</a>, <a href="https://www.php.net/manual/en/migration73.deprecated.php">[7.3]</a>,
   <a href="https://www.php.net/manual/en/migration74.deprecated.php">[7.4]</a>)</li>
 <li>The <a href="https://www.php.net/manual/en/language.operators.execution.php">backtick operator</a> MUST NOT be used.</li>
@@ -432,7 +432,7 @@ each word is capitalized including the very first letter.</p>
 <p>There MAY NOT be any content before the opening tag. Inline HTML in PHP code
 SHOULD be avoided. All code MUST be executable and non executable code SHOULD
 be removed.</p>
-<p>The <code>declare(strict_types=1)</code> directive MUST be declared and be the first 
+<p>The <code>declare(strict_types=1)</code> directive MUST be declared and be the first
 statement in a file.
 </p>
 </blockquote>
@@ -449,14 +449,14 @@ be split into multiple subsequent lines of no more than 80 characters each.</p>
 blocks of code except where explicitly forbidden.</p>
 <blockquote>
 <h3>Additional Laminas rules</h3>
-<p>There MAY be maximum one blank line to improve readability and to indicate 
+<p>There MAY be maximum one blank line to improve readability and to indicate
 related blocks of code except where explicitly forbidden.</p>
 <p>There MAY NOT be any blank line after opening braces and before closing braces.</p>
 </blockquote>
 <p>There MUST NOT be more than one statement per line.</p>
 <blockquote>
 <h3>Additional Laminas rules</h3>
-<p>There MUST NOT be a space before a semicolon. Redundant semicolons SHOULD be 
+<p>There MUST NOT be a space before a semicolon. Redundant semicolons SHOULD be
 avoided.</p>
 </blockquote>
 <h3>2.4 Indenting and Spacing</h3>
@@ -464,15 +464,13 @@ avoided.</p>
 tabs for indenting.</p>
 <blockquote>
 <h3>Additional Laminas rules</h3>
-<p>Encapsed strings MAY be used instead of concatenating strings. When 
+<p>Encapsed strings MAY be used instead of concatenating strings. When
 concatenating strings, there MUST be a single whitespace before and after the
-concatenation operator. The concatenation operator MUST NOT be the at the end 
-of a line. If multi-line concatenation is used there MUST be an indent of 4 
+concatenation operator. The concatenation operator MUST NOT be the at the end
+of a line. If multi-line concatenation is used there MUST be an indent of 4
 spaces.</p>
 </blockquote>
-<pre class="highlight"><code class="language-php">&lt;?php
-
-// Encapsed strings
+<pre class="highlight"><code class="language-php">// Encapsed strings
 $a = 'foo';
 $b = 'bar';
 
@@ -499,14 +497,12 @@ $b = $a
 <p>The short array syntax MUST be used to define arrays.</p>
 <p>All values in multiline arrays must be indented with 4 spaces.</p>
 <p>All array values must be followed by a comma, including the last value.</p>
-<p>There MUST NOT be whitespace around the opening bracket or before the closing 
+<p>There MUST NOT be whitespace around the opening bracket or before the closing
 bracket when referencing an array.</p>
 <p>All double arrow symbols MUST be aligned to one space after the longest array
 key.</p>
 </blockquote>
-<pre class="highlight"><code class="language-php">&lt;?php
-
-$array2 = [
+<pre class="highlight"><code class="language-php">$array2 = [
     'one'    =&gt; function () {
         $foo    = [1, 2, 3];
         $barBar = [
@@ -522,9 +518,7 @@ $array2 = [
 <blockquote>
 <p>The short list syntax <code>[...]</code> SHOULD be used instead of <code>list(...)</code>.</p>
 </blockquote>
-<pre class="highlight"><code class="language-php">&lt;?php
-
-[$a, $b, $c] = [1, 2, 3];</code></pre>
+<pre class="highlight"><code class="language-php">[$a, $b, $c] = [1, 2, 3];</code></pre>
 
 <h2 id="3-declare-statements-namespace-and-import-statements">3. Declare Statements, Namespace, and Import Statements</h2>
 <p>The header of a PHP file may consist of a number of different blocks. If present,
@@ -575,7 +569,7 @@ declare(strict_types=1);
 namespace Vendor\Package;
 
 use Vendor\Package\ClassA as A;
-use Vendor\Package\ClassB; 
+use Vendor\Package\ClassB;
 use Vendor\Package\ClassC as C;
 use Vendor\Package\SomeNamespace\ClassD as D;
 use Vendor\Package\AnotherNamespace\ClassE as E;
@@ -599,9 +593,7 @@ class FooBar
 
 <p>Compound namespaces with a depth of more than two MUST NOT be used. Therefore the
 following is the maximum compounding depth allowed:</p>
-<pre class="highlight"><code class="language-php">&lt;?php
-
-use Vendor\Package\SomeNamespace\{
+<pre class="highlight"><code class="language-php">use Vendor\Package\SomeNamespace\{
     SubnamespaceOne\ClassA,
     SubnamespaceOne\ClassB,
     SubnamespaceTwo\ClassY,
@@ -609,9 +601,7 @@ use Vendor\Package\SomeNamespace\{
 };</code></pre>
 
 <p>And the following would not be allowed:</p>
-<pre class="highlight"><code class="language-php">&lt;?php
-
-use Vendor\Package\SomeNamespace\{
+<pre class="highlight"><code class="language-php">use Vendor\Package\SomeNamespace\{
     SubnamespaceOne\AnotherNamespace\ClassA,
     SubnamespaceOne\ClassB,
     ClassZ,
@@ -656,10 +646,10 @@ there are no arguments passed to the constructor.</p>
 <p>Exception classes MUST have a <code>Exception</code> suffix.</p>
 <p>Interface classes MUST have a <code>Interface</code> suffix.</p>
 <p>Trait classes MUST have a <code>Trait</code> suffix.</p>
-<p>For self-reference a class lower-case <code>self::</code> MUST be used without spaces 
+<p>For self-reference a class lower-case <code>self::</code> MUST be used without spaces
 around the scope resolution operator.</p>
-<p>Class name resolution via <code>::class</code> MUST be used instead of <code>__CLASS__</code>, 
-<code>get_class()</code>, <code>get_class($this)</code>, <code>get_called_class()</code>, <code>get_parent_class()</code> 
+<p>Class name resolution via <code>::class</code> MUST be used instead of <code>__CLASS__</code>,
+<code>get_class()</code>, <code>get_class($this)</code>, <code>get_called_class()</code>, <code>get_parent_class()</code>
 and string reference.</p>
 <p>There MAY NOT be any whitespace around the double colon operator.</p>
 <p>Unused private methods, constants and properties MUST be removed.</p>
@@ -673,9 +663,7 @@ for the class MUST go on the next line after the body.</p>
 by a blank line.</p>
 <p>Closing braces MUST be on their own line and MUST NOT be preceded by a blank
 line.</p>
-<pre class="highlight"><code class="language-php">&lt;?php
-
-namespace Vendor\Package;
+<pre class="highlight"><code class="language-php">namespace Vendor\Package;
 
 use FooClass;
 use BarClass as Bar;
@@ -690,9 +678,7 @@ class ClassName extends ParentClass implements \ArrayAccess, \Countable
 across multiple lines, where each subsequent line is indented once. When doing
 so, the first item in the list MUST be on the next line, and there MUST be only
 one interface per line.</p>
-<pre class="highlight"><code class="language-php">&lt;?php
-
-namespace Vendor\Package;
+<pre class="highlight"><code class="language-php">namespace Vendor\Package;
 
 use FooClass;
 use BarClass as Bar;
@@ -709,9 +695,7 @@ class ClassName extends ParentClass implements
 <h3>4.2 Using traits</h3>
 <p>The <code>use</code> keyword used inside the classes to implement traits MUST be
 declared on the next line after the opening brace.</p>
-<pre class="highlight"><code class="language-php">&lt;?php
-
-namespace Vendor\Package;
+<pre class="highlight"><code class="language-php">namespace Vendor\Package;
 
 use Vendor\Package\FirstTrait;
 
@@ -726,9 +710,7 @@ one-per-line and each inclusion MUST have its own <code>use</code> import statem
 <h3>Additional Laminas rules</h3>
 <p>Traits MUST be sorted alphabetically.</p>
 </blockquote>
-<pre class="highlight"><code class="language-php">&lt;?php
-
-namespace Vendor\Package;
+<pre class="highlight"><code class="language-php">namespace Vendor\Package;
 
 use Vendor\Package\FirstTrait;
 use Vendor\Package\SecondTrait;
@@ -743,9 +725,7 @@ class ClassName
 
 <p>When the class has nothing after the <code>use</code> import statement, the class
 closing brace MUST be on the next line after the <code>use</code> import statement.</p>
-<pre class="highlight"><code class="language-php">&lt;?php
-
-namespace Vendor\Package;
+<pre class="highlight"><code class="language-php">namespace Vendor\Package;
 
 use Vendor\Package\FirstTrait;
 
@@ -755,9 +735,7 @@ class ClassName
 }</code></pre>
 
 <p>Otherwise, it MUST have a blank line after the <code>use</code> import statement.</p>
-<pre class="highlight"><code class="language-php">&lt;?php
-
-namespace Vendor\Package;
+<pre class="highlight"><code class="language-php">namespace Vendor\Package;
 
 use Vendor\Package\FirstTrait;
 
@@ -770,9 +748,7 @@ class ClassName
 
 <p>When using the <code>insteadof</code> and <code>as</code> operators they must be used as follows taking
 note of indentation, spacing, and new lines.</p>
-<pre class="highlight"><code class="language-php">&lt;?php
-
-class Talker
+<pre class="highlight"><code class="language-php">class Talker
 {
     use A, B, C {
         B::smallTalk insteadof A;
@@ -796,11 +772,7 @@ no meaning.</p>
 <p>Default null values MUST be omitted for class properties.</p>
 </blockquote>
 <p>A property declaration looks like the following:</p>
-<pre class="highlight"><code class="language-php">&lt;?php
-
-namespace Vendor\Package;
-
-class ClassName
+<pre class="highlight"><code class="language-php">class ClassName
 {
     public $foo; // `= null` should be omitted
     public static int $bar = 0;
@@ -811,25 +783,21 @@ class ClassName
 <p>Method names MUST NOT be prefixed with a single underscore to indicate
 protected or private visibility. That is, an underscore prefix explicitly has
 no meaning.</p>
-<p>Method and function names MUST NOT be declared with space after the method name. 
+<p>Method and function names MUST NOT be declared with space after the method name.
 The opening brace MUST go on its own line, and the closing brace MUST go on the
 next line following the body. There MUST NOT be a space after the opening
 parenthesis, and there MUST NOT be a space before the closing parenthesis.</p>
 <blockquote>
 <h3>Additional Laminas rules</h3>
 <p>There MUST be a single empty line between methods in a class.</p>
-<p>The pseudo-variable <code>$this</code> MUST NOT be called inside a static method or 
+<p>The pseudo-variable <code>$this</code> MUST NOT be called inside a static method or
 function.</p>
-<p>Returned variables SHOULD be useful and SHOULD NOT be assigned to a value and 
+<p>Returned variables SHOULD be useful and SHOULD NOT be assigned to a value and
 returned on the next line.</p>
 </blockquote>
 <p>A method declaration looks like the following. Note the placement of
 parentheses, commas, spaces, and braces:</p>
-<pre class="highlight"><code class="language-php">&lt;?php
-
-namespace Vendor\Package;
-
-class ClassName
+<pre class="highlight"><code class="language-php">class ClassName
 {
     public function fooBarBaz($arg1, &amp;$arg2, $arg3 = [])
     {
@@ -839,9 +807,7 @@ class ClassName
 
 <p>A function declaration looks like the following. Note the placement of
 parentheses, commas, spaces, and braces:</p>
-<pre class="highlight"><code class="language-php">&lt;?php
-
-function fooBarBaz($arg1, &amp;$arg2, $arg3 = [])
+<pre class="highlight"><code class="language-php">function fooBarBaz($arg1, &amp;$arg2, $arg3 = [])
 {
     // function body
 }</code></pre>
@@ -851,11 +817,7 @@ function fooBarBaz($arg1, &amp;$arg2, $arg3 = [])
 MUST be one space after each comma.</p>
 <p>Method and function arguments with default values MUST go at the end of the argument
 list.</p>
-<pre class="highlight"><code class="language-php">&lt;?php
-
-namespace Vendor\Package;
-
-class ClassName
+<pre class="highlight"><code class="language-php">class ClassName
 {
     public function foo(int $arg1, &amp;$arg2, $arg3 = [])
     {
@@ -869,11 +831,7 @@ next line, and there MUST be only one argument per line.</p>
 <p>When the argument list is split across multiple lines, the closing parenthesis
 and opening brace MUST be placed together on their own line with one space
 between them.</p>
-<pre class="highlight"><code class="language-php">&lt;?php
-
-namespace Vendor\Package;
-
-class ClassName
+<pre class="highlight"><code class="language-php">class ClassName
 {
     public function aVeryLongMethodName(
         ClassTypeHint $arg1,
@@ -888,13 +846,7 @@ class ClassName
 the colon followed by the type declaration. The colon and declaration MUST be
 on the same line as the argument list closing parenthesis with no spaces between
 the two characters.</p>
-<pre class="highlight"><code class="language-php">&lt;?php
-
-declare(strict_types=1);
-
-namespace Vendor\Package;
-
-class ReturnTypeVariations
+<pre class="highlight"><code class="language-php">class ReturnTypeVariations
 {
     public function functionName(int $arg1, $arg2): string
     {
@@ -916,13 +868,7 @@ and the type.</p>
 <h3>Additional Laminas rules</h3>
 <p>The question mark MUST be used when the default argument value is null.</p>
 </blockquote>
-<pre class="highlight"><code class="language-php">&lt;?php
-
-declare(strict_types=1);
-
-namespace Vendor\Package;
-
-class ReturnTypeVariations
+<pre class="highlight"><code class="language-php">class ReturnTypeVariations
 {
     public function functionName(?string $arg1, ?int &amp;$arg2 = null): ?string
     {
@@ -955,11 +901,7 @@ visibility declaration.</p>
 </blockquote>
 <p>When present, the <code>static</code> declaration MUST come after the visibility
 declaration.</p>
-<pre class="highlight"><code class="language-php">&lt;?php
-
-namespace Vendor\Package;
-
-abstract class ClassName
+<pre class="highlight"><code class="language-php">abstract class ClassName
 {
     protected static $foo;
 
@@ -977,9 +919,7 @@ method or function name and the opening parenthesis, there MUST NOT be a space
 after the opening parenthesis, and there MUST NOT be a space before the
 closing parenthesis. In the argument list, there MUST NOT be a space before
 each comma, and there MUST be one space after each comma.</p>
-<pre class="highlight"><code class="language-php">&lt;?php
-
-bar();
+<pre class="highlight"><code class="language-php">bar();
 $foo-&gt;bar($arg1);
 Foo::bar($arg2, $arg3);</code></pre>
 
@@ -988,17 +928,13 @@ is indented once. When doing so, the first item in the list MUST be on the
 next line, and there MUST be only one argument per line. A single argument being
 split across multiple lines (as might be the case with an anonymous function or
 array) does not constitute splitting the argument list itself.</p>
-<pre class="highlight"><code class="language-php">&lt;?php
-
-$foo-&gt;bar(
+<pre class="highlight"><code class="language-php">$foo-&gt;bar(
     $longArgument,
     $longerArgument,
     $muchLongerArgument
 );</code></pre>
 
-<pre class="highlight"><code class="language-php">&lt;?php
-
-somefunction($foo, $bar, [
+<pre class="highlight"><code class="language-php">somefunction($foo, $bar, [
   // ...
 ], $baz);
 
@@ -1023,7 +959,7 @@ the structures look and reduces the likelihood of introducing errors as new
 lines get added to the body.</p>
 <blockquote>
 <h3>Additional Laminas rules</h3>
-<p>There MUST be one single space after <code>break</code> and <code>continue</code> structures with 
+<p>There MUST be one single space after <code>break</code> and <code>continue</code> structures with
 a numeric argument argument.</p>
 <p>Statements MUST NOT be empty, except for catch statements.</p>
 </blockquote>
@@ -1031,9 +967,7 @@ a numeric argument argument.</p>
 <p>An <code>if</code> structure looks like the following. Note the placement of parentheses,
 spaces, and braces; and that <code>else</code> and <code>elseif</code> are on the same line as the
 closing brace from the earlier body.</p>
-<pre class="highlight"><code class="language-php">&lt;?php
-
-if ($expr1) {
+<pre class="highlight"><code class="language-php">if ($expr1) {
     // if body
 } elseif ($expr2) {
     // elseif body
@@ -1049,9 +983,7 @@ MUST be on the next line. The closing parenthesis and opening brace MUST be
 placed together on their own line with one space between them. Boolean
 operators between conditions MUST always be at the beginning or at the end of
 the line, not a mix of both.</p>
-<pre class="highlight"><code class="language-php">&lt;?php
-
-if (
+<pre class="highlight"><code class="language-php">if (
     $expr1
     &amp;&amp; $expr2
 ) {
@@ -1071,12 +1003,10 @@ indented at the same level as the <code>case</code> body. There MUST be a commen
 <code>// no break</code> when fall-through is intentional in a non-empty <code>case</code> body.</p>
 <blockquote>
 <h3>Additional Laminas rules</h3>
-<p>The <code>continue</code> control structure MUST NOT be used in switch statements, 
+<p>The <code>continue</code> control structure MUST NOT be used in switch statements,
 <code>break</code> SHOULD be used instead.</p>
 </blockquote>
-<pre class="highlight"><code class="language-php">&lt;?php
-
-switch ($expr) {
+<pre class="highlight"><code class="language-php">switch ($expr) {
     case 0:
         echo 'First case, with a break';
         break;
@@ -1099,9 +1029,7 @@ MUST be on the next line. The closing parenthesis and opening brace MUST be
 placed together on their own line with one space between them. Boolean
 operators between conditions MUST always be at the beginning or at the end of
 the line, not a mix of both.</p>
-<pre class="highlight"><code class="language-php">&lt;?php
-
-switch (
+<pre class="highlight"><code class="language-php">switch (
     $expr1
     &amp;&amp; $expr2
 ) {
@@ -1111,9 +1039,7 @@ switch (
 <h3>5.3 <code>while</code>, <code>do while</code></h3>
 <p>A <code>while</code> statement looks like the following. Note the placement of
 parentheses, spaces, and braces.</p>
-<pre class="highlight"><code class="language-php">&lt;?php
-
-while ($expr) {
+<pre class="highlight"><code class="language-php">while ($expr) {
     // structure body
 }</code></pre>
 
@@ -1123,9 +1049,7 @@ MUST be on the next line. The closing parenthesis and opening brace MUST be
 placed together on their own line with one space between them. Boolean
 operators between conditions MUST always be at the beginning or at the end of
 the line, not a mix of both.</p>
-<pre class="highlight"><code class="language-php">&lt;?php
-
-while (
+<pre class="highlight"><code class="language-php">while (
     $expr1
     &amp;&amp; $expr2
 ) {
@@ -1134,9 +1058,7 @@ while (
 
 <p>Similarly, a <code>do while</code> statement looks like the following. Note the placement
 of parentheses, spaces, and braces.</p>
-<pre class="highlight"><code class="language-php">&lt;?php
-
-do {
+<pre class="highlight"><code class="language-php">do {
     // structure body;
 } while ($expr);</code></pre>
 
@@ -1144,9 +1066,7 @@ do {
 subsequent line is indented at least once. When doing so, the first condition
 MUST be on the next line. Boolean operators between conditions MUST
 always be at the beginning or at the end of the line, not a mix of both.</p>
-<pre class="highlight"><code class="language-php">&lt;?php
-
-do {
+<pre class="highlight"><code class="language-php">do {
     // structure body;
 } while (
     $expr1
@@ -1156,9 +1076,7 @@ do {
 <h3>5.4 <code>for</code></h3>
 <p>A <code>for</code> statement looks like the following. Note the placement of parentheses,
 spaces, and braces.</p>
-<pre class="highlight"><code class="language-php">&lt;?php
-
-for ($i = 0; $i &lt; 10; $i++) {
+<pre class="highlight"><code class="language-php">for ($i = 0; $i &lt; 10; $i++) {
     // for body
 }</code></pre>
 
@@ -1166,9 +1084,7 @@ for ($i = 0; $i &lt; 10; $i++) {
 subsequent line is indented at least once. When doing so, the first expression
 MUST be on the next line. The closing parenthesis and opening brace MUST be
 placed together on their own line with one space between them.</p>
-<pre class="highlight"><code class="language-php">&lt;?php
-
-for (
+<pre class="highlight"><code class="language-php">for (
     $i = 0;
     $i &lt; 10;
     $i++
@@ -1179,18 +1095,14 @@ for (
 <h3>5.5 <code>foreach</code></h3>
 <p>A <code>foreach</code> statement looks like the following. Note the placement of
 parentheses, spaces, and braces.</p>
-<pre class="highlight"><code class="language-php">&lt;?php
-
-foreach ($iterable as $key =&gt; $value) {
+<pre class="highlight"><code class="language-php">foreach ($iterable as $key =&gt; $value) {
     // foreach body
 }</code></pre>
 
 <h3>5.6 <code>try</code>, <code>catch</code>, <code>finally</code></h3>
 <p>A <code>try-catch-finally</code> block looks like the following. Note the placement of
 parentheses, spaces, and braces.</p>
-<pre class="highlight"><code class="language-php">&lt;?php
-
-try {
+<pre class="highlight"><code class="language-php">try {
     // try body
 } catch (FirstThrowableType $e) {
     // catch body
@@ -1205,7 +1117,7 @@ try {
 <p>All catch blocks MUST be reachable.</p>
 </blockquote>
 <h2 id="6-operators">6. Operators</h2>
-<p>Style rules for operators are grouped by arity (the number of operands they 
+<p>Style rules for operators are grouped by arity (the number of operands they
 take).</p>
 <p>When space is permitted around an operator, multiple spaces MAY be
 used for readability purposes.</p>
@@ -1219,7 +1131,7 @@ promote readability.</p>
 multilines are used.</p>
 <p>Loose comparison operators SHOULD NOT be used, use strict comparison
 operators instead. e.g. use <code>===</code> instead of <code>==</code>.</p>
-<p>The null coalesce operator SHOULD be used when possible. </p>
+<p>The null coalesce operator SHOULD be used when possible.</p>
 <p>Assignment operators SHOULD be used when possible.</p>
 <p>The <code>&amp;&amp;</code> and <code>||</code> operators SHOULD be used instead of <code>and</code> and <code>or</code>.</p>
 </blockquote>
@@ -1241,9 +1153,7 @@ the operator and operand.</p>
 <h3>Additional Laminas rules</h3>
 <p>There MUST be one whitespace after unary not.</p>
 </blockquote>
-<pre class="highlight"><code class="language-php">&lt;?php
-
-if (! true) {
+<pre class="highlight"><code class="language-php">if (! true) {
     return false;
 }</code></pre>
 
@@ -1287,9 +1197,7 @@ the <code>use</code> list closing parentheses with no spaces between the two cha
 </blockquote>
 <p>A closure declaration looks like the following. Note the placement of
 parentheses, commas, spaces, and braces:</p>
-<pre class="highlight"><code class="language-php">&lt;?php
-
-$closureWithArgs = function ($arg1, $arg2) {
+<pre class="highlight"><code class="language-php">$closureWithArgs = function ($arg1, $arg2) {
     // body
 };
 
@@ -1310,9 +1218,7 @@ multiple lines, the closing parenthesis and opening brace MUST be placed
 together on their own line with one space between them.</p>
 <p>The following are examples of closures with and without argument lists and
 variable lists split across multiple lines.</p>
-<pre class="highlight"><code class="language-php">&lt;?php
-
-$longArgs_noVars = function (
+<pre class="highlight"><code class="language-php">$longArgs_noVars = function (
     $longArgument,
     $longerArgument,
     $muchLongerArgument
@@ -1358,9 +1264,7 @@ $shortArgs_longVars = function ($arg) use (
 
 <p>Note that the formatting rules also apply when the closure is used directly
 in a function or method call as an argument.</p>
-<pre class="highlight"><code class="language-php">&lt;?php
-
-$foo-&gt;bar(
+<pre class="highlight"><code class="language-php">$foo-&gt;bar(
     $arg1,
     function ($arg2) use ($var1) {
         // body
@@ -1371,17 +1275,13 @@ $foo-&gt;bar(
 <h2 id="8-anonymous-classes">8. Anonymous Classes</h2>
 <p>Anonymous Classes MUST follow the same guidelines and principles as closures
 in the above section.</p>
-<pre class="highlight"><code class="language-php">&lt;?php
-
-$instance = new class {};</code></pre>
+<pre class="highlight"><code class="language-php">$instance = new class {};</code></pre>
 
 <p>The opening brace MAY be on the same line as the <code>class</code> keyword so long as
 the list of <code>implements</code> interfaces does not wrap. If the list of interfaces
 wraps, the brace MUST be placed on the line immediately following the last
 interface.</p>
-<pre class="highlight"><code class="language-php">&lt;?php
-
-// Brace on the same line
+<pre class="highlight"><code class="language-php">// Brace on the same line
 $instance = new class extends \Foo implements \HandleableInterface {
     // Class content
 };
@@ -1398,9 +1298,9 @@ $instance = new class extends \Foo implements
 <h2 id="9-commenting-and-docblocks">9. Commenting and DocBlocks</h2>
 <blockquote>
 <h3>Additional Laminas rules</h3>
-<p>Code SHOULD be written so it explains itself. DocBlocks and comments 
-SHOULD only be used if necessary. They MUST NOT start with <code>#</code> and MUST 
-NOT be empty. They SHOULD NOT be used for already typehinted arguments, 
+<p>Code SHOULD be written so it explains itself. DocBlocks and comments
+SHOULD only be used if necessary. They MUST NOT start with <code>#</code> and MUST
+NOT be empty. They SHOULD NOT be used for already typehinted arguments,
 except arrays.</p>
 <p>The asterisks in a DocBlock should align, and there should be one
 space between the asterisk and tag.</p>
@@ -1409,7 +1309,9 @@ contain multiple spaces between the tag, type and description.</p>
 <p>If a function throws any exceptions, it SHOULD be documented with
 <code>@throws</code> tags.</p>
 <p>DocBlocks MUST follow this specific order of annotations with empty
-newline between specific groups:</p>
+newline between specific groups:
+</p>
+</blockquote>
 <pre class="highlight"><code class="language-php">/**
  * &lt;Summary&gt;
  *
@@ -1427,6 +1329,7 @@ newline between specific groups:</p>
  * @throws
  */</code></pre>
 
+<blockquote>
 <p>The annotations <code>@api</code>, <code>@author</code>, <code>@category</code>, <code>@created</code>, <code>@package</code>,
 <code>@subpackage</code> and <code>@version</code> MUST NOT be used in comments. Git commits
 provide accurate information.</p>
@@ -1437,7 +1340,7 @@ of properties. Single-line property comments with a <code>@var</code> tag SHOULD
 be written as one-liners. The <code>@var</code> MAY NOT be used for constants.</p>
 <p>The correct tag case of PHPDocs and PHPUnit tags MUST be used.</p>
 <p>Inline DocComments MAY be used at the end of the line, with at least a
-single space preceding. Inline DocComments MUST NOT be placed after curly 
+single space preceding. Inline DocComments MUST NOT be placed after curly
 brackets.</p>
 <p>Heredoc and nowdoc tags MUST be uppercase without spaces.</p>
 </blockquote>
