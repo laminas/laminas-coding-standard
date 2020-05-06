@@ -1,10 +1,10 @@
-# laminas-coding-standard
+# Introduction
 
-The coding standard ruleset for Laminas components.
-
-This specification extends and expands [PSR-12](https://github.com/php-fig/fig-standards/blob/master/proposed/extended-coding-style-guide.md), 
+**This specification extends and expands [PSR-12](https://github.com/php-fig/fig-standards/blob/master/proposed/extended-coding-style-guide.md), 
 the extended coding style guide and requires adherence to [PSR-1](https://www.php-fig.org/psr/psr-1), 
-the basic coding standard. These are minimal specifications and don't address all factors, including things like:
+the basic coding standard.**
+
+These are minimal specifications and don't address all factors, including things like:
 
 - whitespace around operators
 - alignment of array keys and operators
@@ -19,14 +19,12 @@ that's where this coding standard comes in: To have internal consistency in a co
 
 ## Installation
 
-1. Install the module via composer by running:
-
+1. Install the module via Composer by running:
    ```bash
    $ composer require --dev laminas/laminas-coding-standard
    ```
 
-2. Add composer scripts into your `composer.json`:
-
+2. Add Composer scripts into your `composer.json`:
    ```json
    "scripts": {
      "cs-check": "phpcs",
@@ -35,7 +33,6 @@ that's where this coding standard comes in: To have internal consistency in a co
    ```
 
 3. Create file `phpcs.xml` on base path of your repository with this content:
-
    ```xml
    <?xml version="1.0"?>
    <ruleset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -60,29 +57,31 @@ that's where this coding standard comes in: To have internal consistency in a co
    </ruleset>
    ```
 
-You can add or exclude some locations in that file.
-For a reference please see: https://github.com/squizlabs/PHP_CodeSniffer/wiki/Annotated-ruleset.xml
+You can add or exclude some locations in that file. For a reference please see
+the ["Annotated Ruleset" of PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer/wiki/Annotated-Ruleset).
 
 ## Usage
 
 * To run checks only:
-
   ```bash
   $ composer cs-check
   ```
 
 * To automatically fix many CS issues:
-
   ```bash
   $ composer cs-fix
   ```
 
 ## Ignoring parts of a File
 
-> Note: Before PHP_CodeSniffer version 3.2.0, `// @codingStandardsIgnoreStart` and `// @codingStandardsIgnoreEnd` were
-> used. These are deprecated and will be removed in PHP_CodeSniffer version 4.0.
+> ### Deprecation
+>
+> Before PHP_CodeSniffer version 3.2.0, `// @codingStandardsIgnoreStart` and
+> `// @codingStandardsIgnoreEnd` were used. These are deprecated and will be
+> removed in PHP_CodeSniffer version 4.0.
 
 Disable parts of a file:
+
 ```php
 $xmlPackage = new XMLPackage;
 // phpcs:disable
@@ -92,6 +91,7 @@ $xmlPackage->send();
 ```
 
 Disable a specific rule:
+
 ```php
 // phpcs:disable Generic.Commenting.Todo.Found
 $xmlPackage = new XMLPackage;
@@ -103,11 +103,15 @@ $xmlPackage->send();
 
 ## Development
 
-> **New rules or Sniffs may not be introduced in minor or bugfix releases and should always be based on the develop 
-branch and queued for the next major release, unless considered a bugfix for existing rules.**
+> ### New Rules or Sniffs
+>
+> New rules or Sniffs may not be introduced in minor or bugfix releases and
+> should always be based on the develop branch and queued for the next major
+> release, unless considered a bugfix for existing rules.
 
 If you want to test changes against Laminas components or your own projects, install your forked 
-laminas-coding-standard globally with composer: 
+laminas-coding-standard globally with Composer:
+
 ```bash
 $ composer global config repositories.laminas-coding-standard vcs git@github.com:<FORK_NAMESPACE>/laminas-coding-standard.git
 $ composer global require --dev laminas/laminas-coding-standard:dev-<FORKED_BRANCH>
@@ -116,7 +120,9 @@ $ composer global require --dev laminas/laminas-coding-standard:dev-<FORKED_BRAN
 # Using `-s` prints the rules that triggered the errors so they can be reviewed easily. `-p` is for progress display.
 $ phpcs -sp --standard=LaminasCodingStandard src test
 ```
-Make sure you remove the global installation after testing from your global composer.json file!!!
+
+**Make sure you remove the global installation after testing from your global
+`composer.json` file!**
 
 Documentation can be previewed locally by installing [MkDocs](https://www.mkdocs.org/#installation) and run 
 `mkdocs serve`. This will start a server where you can read the docs.
