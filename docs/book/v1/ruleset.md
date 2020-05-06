@@ -1,16 +1,16 @@
 # Ruleset
 
-## Use PSR-2 coding standard as a base
-*PSR2*
+## Overview
 
-## Disallow long array syntax
-*Generic.Arrays.DisallowLongArraySyntax*
+This specification extends [PSR-2][], the coding style guide and
+requires adherence to [PSR-1][], the basic coding standard.
 
-## Force whitespace after `!`
-*Generic.Formatting.SpaceAfterNot*
+## Additional Laminas rules
 
-## Forbid spaces before semicolon `;`
-*Squiz.WhiteSpace.SemicolonSpacing*
+- Disallow long array syntax
+- Force whitespace after `!`
+- Forbid spaces before semicolon `;`
+- Forbid superfluous whitespaces
 
-## Forbid superfluous whitespaces
-*Squiz.WhiteSpace.SuperfluousWhitespace, Squiz.WhiteSpace.SuperfluousWhitespace.EmptyLines*
+[PSR-1]: https://www.php-fig.org/psr/psr-1/
+[PSR-2]: https://www.php-fig.org/psr/psr-2/
