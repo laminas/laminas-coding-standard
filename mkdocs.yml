@@ -6,13 +6,14 @@ extra:
     versions:
       - v2
       - v1
+    installation:
+        composer_dev: true
 nav:
     - Home: index.md
     - v2:
         - 'Introduction': v2/intro.md
         - 'Coding Style Guide': v2/coding-style-guide.md
     - v1:
-        - v1/index.md
         - 'Introduction': v1/intro.md
         - 'Ruleset': v1/ruleset.md
 site_name: laminas-coding-standard
