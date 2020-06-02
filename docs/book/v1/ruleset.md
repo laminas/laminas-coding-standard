@@ -2,8 +2,8 @@
 
 ## Overview
 
-This specification extends [PSR-2][], the coding style guide and
-requires adherence to [PSR-1][], the basic coding standard.
+This specification extends [PSR-2][], the coding style guide and requires
+adherence to [PSR-1][], the basic coding standard.
 
 ## Additional Laminas rules
 
