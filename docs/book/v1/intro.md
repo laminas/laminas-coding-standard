@@ -29,7 +29,7 @@
    ```
 
 You can add or exclude some locations in that file.
-For a reference please see: https://github.com/squizlabs/PHP_CodeSniffer/wiki/Annotated-ruleset.xml
+For a reference please see: https://github.com/squizlabs/PHP_CodeSniffer/wiki/Annotated-Ruleset
 
 ## Usage
 
