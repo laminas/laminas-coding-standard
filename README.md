@@ -63,7 +63,7 @@ that's where this coding standard comes in: To have internal consistency in a co
    ```
 
 You can add or exclude some locations in that file.
-For a reference please see: https://github.com/squizlabs/PHP_CodeSniffer/wiki/Annotated-ruleset.xml
+For a reference please see: https://github.com/squizlabs/PHP_CodeSniffer/wiki/Annotated-Ruleset
 
 ## Usage
 
