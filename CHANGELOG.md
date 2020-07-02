@@ -6,7 +6,7 @@ All notable changes to this project will be documented in this file, in reverse 
 
 ### Added
 
-- Nothing.
+- [#34](https://github.com/laminas/laminas-coding-standard/pull/34) Added support for `dealerdirect/phpcodesniffer-composer-installer` and thus composer 2.0
 
 ### Changed
 
