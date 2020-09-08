@@ -644,7 +644,7 @@
     </rule>
     <!-- Loose comparison operators SHOULD NOT be used, use strict comparison
          operators instead. -->
-    <rule ref="SlevomatCodingStandard.Operators.DisallowEqualOperators"/>
+    <rule ref="SlevomatCodingStandard.Operators.DisallowEqualOperators" phpcs-only="true"/>
     <!-- The null coalesce operator MUST be used when possible. -->
     <rule ref="SlevomatCodingStandard.ControlStructures.RequireNullCoalesceOperator"/>
     <!-- Assignment operators SHOULD be used when possible. -->
