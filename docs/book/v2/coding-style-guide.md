@@ -1257,11 +1257,32 @@ $instance = new class extends \Foo implements
 
 > ### Additional Laminas rules
 >
-> Code SHOULD be written so it explains itself. DocBlocks and comments
-> SHOULD only be used if necessary. They MUST NOT start with `#` and MUST
-> NOT be empty. They SHOULD NOT be used for already typehinted arguments,
+> Code SHOULD be written so it explains itself.
+>
+> DocBlocks and comments SHOULD only be used if necessary. They MUST NOT start
+> with `#` and MUST NOT be empty.
+>
+> DocBlocks and comments SHOULD NOT be used for already typehinted arguments,
 > except arrays.
 >
+
+```php
+/**
+ * Sets a single-line title
+ *
+ * The string `param` and `return` tags should be omitted as they are already
+ * type hinted.
+ *
+ * A `param` tag should be here to describe the array.
+ *
+ * @param array<string,string> $context
+ */
+public function setTitle(string $title, array $context): void
+{
+    // ...
+}
+```
+
 > The asterisks in a DocBlock should align, and there should be one
 > space between the asterisk and tag.
 >

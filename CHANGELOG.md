@@ -2,27 +2,32 @@
 
 All notable changes to this project will be documented in this file, in reverse chronological order by release.
 
-## 2.2.0 - TBD
+## 2.1.1 - 2020-10-24
 
-### Added
+-----
 
-- Nothing.
+### Release Notes for [2.1.1](https://github.com/laminas/laminas-coding-standard/milestone/4)
 
-### Changed
+2.1.x bugfix release (patch)
 
-- Nothing.
+### 2.1.1
 
-### Deprecated
+- Total issues resolved: **3**
+- Total pull requests resolved: **4**
+- Total contributors: **3**
 
-- Nothing.
+#### Documentation
 
-### Removed
+ - [45: docs: add example for type hinting in docblocks](https://github.com/laminas/laminas-coding-standard/pull/45) thanks to @geerteltink and @Xerkus
 
-- Nothing.
+#### Bug
 
-### Fixed
+ - [44: fix: unused imports and generics](https://github.com/laminas/laminas-coding-standard/pull/44) thanks to @geerteltink
+ - [41: fix: update dependencies to ensure some fixes are included](https://github.com/laminas/laminas-coding-standard/pull/41) thanks to @geerteltink
 
-- Nothing.
+#### Enhancement
+
+ - [42: feat: php 8 support](https://github.com/laminas/laminas-coding-standard/pull/42) thanks to @geerteltink and @boesing
 
 ## 2.0.1 - 2020-07-02
 
