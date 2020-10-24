@@ -19,7 +19,7 @@ class MethodsAndFunctions
         // NOT be a space after the opening parenthesis, and there MUST NOT be a
         // space before the closing parenthesis.
 
-        function fooBar ( $arg1, &$arg2, $arg3 = [] ) {
+        function fooBar ( $arg1, &$arg2, $arg3 = [] ): void {
             // function body
         }
 
@@ -27,7 +27,7 @@ class MethodsAndFunctions
 
 
 
-    public function testOneSingleLineBetweenMethods()
+    public function testOneSingleLineBetweenMethods(): void
     {
         // There MUST be a single empty line between methods in a class.
     }

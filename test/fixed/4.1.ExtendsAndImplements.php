@@ -14,7 +14,7 @@ class ExtendsAndImplements extends ParentClass implements
     Countable,
     Serializable
 {
-    public function testClassDeclaration()
+    public function testClassDeclaration(): void
     {
         // The extends and implements keywords MUST be declared on the same line
         // as the class name.
