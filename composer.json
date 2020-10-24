@@ -20,7 +20,7 @@
         "sort-packages": true
     },
     "require": {
-        "php": "^7.1",
+        "php": "^7.3 || ~8.0.0",
         "dealerdirect/phpcodesniffer-composer-installer": "^0.6.2 || ^0.7",
         "laminas/laminas-zendframework-bridge": "^1.0",
         "slevomat/coding-standard": "^6.4.1",
