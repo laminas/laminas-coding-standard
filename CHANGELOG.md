@@ -4,7 +4,6 @@ All notable changes to this project will be documented in this file, in reverse 
 
 ## 2.1.1 - 2020-10-24
 
-
 -----
 
 ### Release Notes for [2.1.1](https://github.com/laminas/laminas-coding-standard/milestone/4)
