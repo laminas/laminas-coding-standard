@@ -60,13 +60,13 @@ class Lines
         // There MAY NOT be any blank line after opening braces and before
         // closing braces.
 
-        $noBlankLine = function () use ($noBlankLine) {
+        $noBlankLine = function () use ($noBlankLine): void {
 
             $noBlankLine = 1;
 
         };
 
-        $closure = function () {
+        $closure = function (): void {
 
             $noBlankLine = 1;
 

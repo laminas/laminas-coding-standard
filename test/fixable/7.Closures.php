@@ -37,11 +37,11 @@ class Closures
         // MUST follow the use list closing parentheses with no spaces between
         // the two characters.
 
-        $closureWithArgs = function ($arg1, $arg2) {
+        $closureWithArgs = function ($arg1, $arg2): void {
             echo "$arg1, $arg2";
         };
 
-        $closureWithArgsAndVars = function ($arg1, $arg2) use ($var1, $var2) {
+        $closureWithArgsAndVars = function ($arg1, $arg2) use ($var1, $var2): void {
             echo "$arg1, $arg2, $var1, $var2";
         };
 

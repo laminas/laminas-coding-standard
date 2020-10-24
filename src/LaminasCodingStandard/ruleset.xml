@@ -264,13 +264,17 @@
     <!-- There MAY NOT be a space around a namespace separator. -->
     <rule ref="WebimpressCodingStandard.WhiteSpace.NamespaceSeparator"/>
     <!-- Import statements MUST be alphabetically sorted. -->
-    <rule ref="WebimpressCodingStandard.Namespaces.AlphabeticallySortedUses"/>
+    <rule ref="SlevomatCodingStandard.Namespaces.AlphabeticallySortedUses"/>
     <!-- Functions and const keywords MUST be lowercase in import statements. -->
     <rule ref="WebimpressCodingStandard.Namespaces.ConstAndFunctionKeywords"/>
     <!-- Unused import statements MUST be removed.-->
-    <rule ref="WebimpressCodingStandard.Namespaces.UnusedUseStatement"/>
+    <rule ref="SlevomatCodingStandard.Namespaces.UnusedUses">
+        <properties>
+            <property name="searchAnnotations" value="true"/>
+        </properties>
+    </rule>
     <!-- Superfluous leading backslash in import statements MUST be removed. -->
-    <rule ref="WebimpressCodingStandard.Namespaces.UseDoesNotStartWithBackslash"/>
+    <rule ref="SlevomatCodingStandard.Namespaces.UseDoesNotStartWithBackslash"/>
     <!-- Fancy group import statements MUST NOT be used. -->
     <rule ref="SlevomatCodingStandard.Namespaces.DisallowGroupUse"/>
     <!-- Each import statement MUST be on its own line. -->
@@ -280,13 +284,23 @@
     <rule ref="SlevomatCodingStandard.Namespaces.NamespaceSpacing"/>
     <!-- Import statements aliases for classes, traits, functions and constants
          MUST be useful. -->
-    <rule ref="WebimpressCodingStandard.Namespaces.RedundantAlias"/>
+    <rule ref="SlevomatCodingStandard.Namespaces.UselessAlias"/>
     <!-- Classes, traits, interfaces, constants and functions MUST be imported. -->
-    <rule ref="WebimpressCodingStandard.PHP.DisallowFqn"/>
-    <!-- Internal functions MUST be imported. -->
-    <rule ref="WebimpressCodingStandard.PHP.ImportInternalFunction"/>
-    <!-- Internal constants MUST be imported. -->
-    <rule ref="WebimpressCodingStandard.PHP.ImportInternalConstant"/>
+    <rule ref="SlevomatCodingStandard.Namespaces.ReferenceUsedNamesOnly">
+        <properties>
+            <property name="allowFullyQualifiedGlobalClasses" value="false"/>
+            <!-- Internal functions MUST be imported. -->
+            <property name="allowFallbackGlobalFunctions" value="false"/>
+            <property name="allowFullyQualifiedGlobalFunctions" value="false"/>
+            <!-- Internal constants MUST be imported. -->
+            <property name="allowFallbackGlobalConstants" value="false"/>
+            <property name="allowFullyQualifiedGlobalConstants" value="false"/>
+            <property name="allowFullyQualifiedNameForCollidingClasses" value="true"/>
+            <property name="allowFullyQualifiedNameForCollidingConstants" value="true"/>
+            <property name="allowFullyQualifiedNameForCollidingFunctions" value="true"/>
+            <property name="searchAnnotations" value="true"/>
+        </properties>
+    </rule>
 
     <!-- 4. Classes, Properties, and Methods -->
 
@@ -787,11 +801,14 @@
 
     <!-- DocBlocks and comments SHOULD NOT be used for already typehinted arguments,
          except arrays. -->
-    <rule ref="WebimpressCodingStandard.Functions.Param"/>
-    <rule ref="WebimpressCodingStandard.Functions.ReturnType"/>
-    <rule ref="WebimpressCodingStandard.Commenting.TagWithType">
-        <exclude name="WebimpressCodingStandard.Commenting.TagWithType.InvalidOrder"/>
+    <rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHint"/>
+    <rule ref="SlevomatCodingStandard.TypeHints.PropertyTypeHint">
+        <properties>
+            <property name="enableNativeTypeHint" value="false"/>
+        </properties>
     </rule>
+    <rule ref="SlevomatCodingStandard.TypeHints.ReturnTypeHint"/>
+    <rule ref="SlevomatCodingStandard.TypeHints.UselessConstantTypeHint"/>
 
     <!-- The asterisks in a DocBlock should align, and there should be one
          space between the asterisk and tag. -->

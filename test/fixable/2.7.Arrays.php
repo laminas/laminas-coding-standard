@@ -27,7 +27,7 @@ class Arrays
         ];
 
         $array2 = [
-            'one'    => function () {
+            'one'    => function (): void {
                 $foo    = [1, 2, 3];
                 $barBar = [
                     1,

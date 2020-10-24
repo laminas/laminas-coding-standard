@@ -74,7 +74,7 @@ class MethodAndFunctionArguments
         // When combining both the reference operator and the variadic three dot
         // operator, there MUST NOT be any space between the two of them.
 
-        function method($a, $b, ... $c) {
+        function method($a, $b, ... $c): void {
             if ($a < $b) {
                 method(... func_get_args());
             }

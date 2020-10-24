@@ -65,7 +65,7 @@ class Operators
         $result*=4;
     }
 
-    public function testObjectOperatorSpacing()
+    public function testObjectOperatorSpacing(): void
     {
         // There MAY NOT be any white space around the object operator unless
         // multilines are used.
