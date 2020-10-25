@@ -41,6 +41,10 @@ class Closures
             echo "$arg1, $arg2";
         };
 
+        $closureWithoutReturnType = function ($arg1, $arg2) {
+            echo "$arg1, $arg2";
+        };
+
         $closureWithArgsAndVars = function ($arg1, $arg2) use ($var1, $var2): void {
             echo "$arg1, $arg2, $var1, $var2";
         };
@@ -49,7 +53,7 @@ class Closures
             return $arg1 === $arg2 && $var1 === $var2;
         };
 
-        $multiLineCLosre = function (
+        $multiLineClosure = function (
             $arg1,
             $arg2
         ) use (
@@ -65,7 +69,7 @@ class Closures
         // Inherited variables passed via `use` MUST be used in closures.
 
         $message = 'world';
-        $example = function ($arg) use ($message, $extraVar) {
+        $example = function ($arg) use ($message, $extraVar): void {
             echo "$arg $message";
         };
         $example('hello');
