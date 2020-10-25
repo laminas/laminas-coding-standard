@@ -2,27 +2,25 @@
 
 All notable changes to this project will be documented in this file, in reverse chronological order by release.
 
-## 2.1.2 - TBD
+## 2.1.2 - 2020-10-25
 
-### Added
 
-- Nothing.
+-----
 
-### Changed
+### Release Notes for [2.1.2](https://github.com/laminas/laminas-coding-standard/milestone/7)
 
-- Nothing.
+2.1.x bugfix release (patch)
 
-### Deprecated
+### 2.1.2
 
-- Nothing.
+- Total issues resolved: **2**
+- Total pull requests resolved: **2**
+- Total contributors: **3**
 
-### Removed
+#### Bug
 
-- Nothing.
-
-### Fixed
-
-- Nothing.
+ - [49: Handle intersection types correctly](https://github.com/laminas/laminas-coding-standard/pull/49) thanks to @geerteltink and @weierophinney
+ - [48: Disable automatic missing native typehint fixing](https://github.com/laminas/laminas-coding-standard/pull/48) thanks to @geerteltink and @autowp
 
 ## 2.1.1 - 2020-10-24
 
