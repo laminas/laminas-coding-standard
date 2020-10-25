@@ -797,6 +797,7 @@
         <exclude name="Squiz.Commenting.FunctionComment.TypeHintMissing"/>
         <!-- May use excessive whitespace to align comments after parameter names -->
         <exclude name="Squiz.Commenting.FunctionComment.SpacingAfterParamName"/>
+        <!-- Adds space between intersection types -->
         <exclude name="Squiz.Commenting.FunctionComment.SpacingAfterParamType"/>
     </rule>
 
@@ -808,7 +809,6 @@
         </properties>
     </rule>
     <rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHintSpacing"/>
-    <rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHint"/>
     <rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHint">
         <exclude name="SlevomatCodingStandard.TypeHints.ParameterTypeHint.MissingNativeTypeHint"/>
         <exclude name="SlevomatCodingStandard.TypeHints.ParameterTypeHint.MissingTraversableTypeHintSpecification"/>
