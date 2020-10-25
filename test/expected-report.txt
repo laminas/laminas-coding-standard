@@ -15,7 +15,7 @@ test/fixable/4.1.ExtendsAndImplements.php             6       0
 test/fixable/4.2.UsingTraits.php                      5       0
 test/fixable/4.3.PropertiesAndConstants.php           7       0
 test/fixable/4.4.MethodsAndFunctions.php              26      0
-test/fixable/4.5.MethodAndFunctionArguments.php       66      0
+test/fixable/4.5.MethodAndFunctionArguments.php       68      0
 test/fixable/4.6.AbstractFinalAndStatic.php           5       0
 test/fixable/4.7.MethodAndFunctionCalls.php           11      0
 test/fixable/4.ClassesPropertiesAndMethods.php        34      0
@@ -33,11 +33,11 @@ test/fixable/6.Operators.php                          97      0
 test/fixable/7.Closures.php                           2       0
 test/fixable/8.AnonymousClasses.php                   1       0
 test/fixable/9.CommentingAndDocBlocks.php             17      0
-test/fixable/9.GenericTypeHintSyntax.php              4       0
+test/fixable/9.GenericTypeHintSyntax.php              5       0
 ----------------------------------------------------------------------
-A TOTAL OF 566 ERRORS AND 2 WARNINGS WERE FOUND IN 31 FILES
+A TOTAL OF 569 ERRORS AND 2 WARNINGS WERE FOUND IN 31 FILES
 ----------------------------------------------------------------------
-PHPCBF CAN FIX 483 OF THESE SNIFF VIOLATIONS AUTOMATICALLY
+PHPCBF CAN FIX 486 OF THESE SNIFF VIOLATIONS AUTOMATICALLY
 ----------------------------------------------------------------------
 
 
