@@ -6,7 +6,7 @@ namespace LaminasCodingStandardTest\fixed;
 
 class MethodsAndFunctions
 {
-    public function testMethodsAndFunctions($arg1, &$arg2, $arg3 = []): void
+    public function testMethodsAndFunctions($arg1, &$arg2, $arg3 = [])
     {
         // Visibility MUST be declared on all methods.
         //
