@@ -3,7 +3,7 @@ PHP CODE SNIFFER REPORT SUMMARY
 ----------------------------------------------------------------------
 FILE                                                  ERRORS  WARNINGS
 ----------------------------------------------------------------------
-test/fixable/2.1.BasicCodingStandard.php              48      1
+test/fixable/2.1.BasicCodingStandard.php              47      1
 test/fixable/2.2.Files.php                            6       0
 test/fixable/2.3.Lines.php                            35      0
 test/fixable/2.4.IndentingAndSpacing.php              46      0
@@ -18,7 +18,7 @@ test/fixable/4.4.MethodsAndFunctions.php              26      0
 test/fixable/4.5.MethodAndFunctionArguments.php       68      0
 test/fixable/4.6.AbstractFinalAndStatic.php           5       0
 test/fixable/4.7.MethodAndFunctionCalls.php           11      0
-test/fixable/4.ClassesPropertiesAndMethods.php        34      0
+test/fixable/4.ClassesPropertiesAndMethods.php        33      0
 test/fixable/5.1.IfElseifElse.php                     13      1
 test/fixable/5.2.SwitchCase.php                       11      0
 test/fixable/5.3.WhileAndDoWhile.php                  12      0
@@ -35,7 +35,7 @@ test/fixable/8.AnonymousClasses.php                   1       0
 test/fixable/9.CommentingAndDocBlocks.php             17      0
 test/fixable/9.GenericTypeHintSyntax.php              5       0
 ----------------------------------------------------------------------
-A TOTAL OF 569 ERRORS AND 2 WARNINGS WERE FOUND IN 31 FILES
+A TOTAL OF 567 ERRORS AND 2 WARNINGS WERE FOUND IN 31 FILES
 ----------------------------------------------------------------------
 PHPCBF CAN FIX 486 OF THESE SNIFF VIOLATIONS AUTOMATICALLY
 ----------------------------------------------------------------------
