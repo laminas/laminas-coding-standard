@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file, in reverse chronological order by release.
 
+## 2.1.4 - 2020-10-26
+
+
+-----
+
+### Release Notes for [2.1.4](https://github.com/laminas/laminas-coding-standard/milestone/9)
+
+2.1.x bugfix release (patch)
+
+### 2.1.4
+
+- Total issues resolved: **0**
+- Total pull requests resolved: **1**
+- Total contributors: **1**
+
+#### Bug
+
+ - [54: fix: loosen typehint rules](https://github.com/laminas/laminas-coding-standard/pull/54) thanks to @geerteltink
+
 ## 2.1.3 - 2020-10-25
 
 
