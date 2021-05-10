@@ -1,0 +1,18 @@
+{
+    "additional_checks": [
+        {
+            "name": "QA Checks",
+            "job": {
+                "php": "*",
+                "command": "composer check",
+                "dependencies": ["lowest", "latest"]
+            }
+        },
+        {
+            "name": "Lint ruleset.xml using phpcs.xsd schema",
+            "job": {
+                "command": "xmllint --noout --schema vendor/squizlabs/php_codesniffer/phpcs.xsd src/LaminasCodingStandard/ruleset.xml"
+            }
+        }
+    ]
+}
