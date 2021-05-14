@@ -889,7 +889,9 @@
                 <element value="@api"/>
                 <element value="@author"/>
                 <element value="@category"/>
+                <element value="@copyright"/>
                 <element value="@created"/>
+                <element value="@license"/>
                 <element value="@package"/>
                 <element value="@subpackage"/>
                 <element value="@version"/>
