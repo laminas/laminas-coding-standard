@@ -1,6 +1,6 @@
 # laminas-coding-standard
 
-[![Build Status](https://travis-ci.com/laminas/laminas-coding-standard.svg?branch=master)](https://travis-ci.com/laminas/laminas-coding-standard)
+[![Build Status](https://github.com/laminas/laminas-coding-standard/actions/workflows/continuous-integration.yml/badge.svg)](https://github.com/laminas/laminas-coding-standard/actions/workflows/continuous-integration.yml)
 
 The coding standard ruleset for Laminas components.
 
