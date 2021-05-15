@@ -1,16 +1,21 @@
 # Ruleset
 
 ## Use PSR-2 coding standard as a base
-*PSR2*
+
+Rule: *PSR2*
 
 ## Disallow long array syntax
-*Generic.Arrays.DisallowLongArraySyntax*
+
+Rule: *Generic.Arrays.DisallowLongArraySyntax*
 
 ## Force whitespace after `!`
-*Generic.Formatting.SpaceAfterNot*
+
+Rule: *Generic.Formatting.SpaceAfterNot*
 
 ## Forbid spaces before semicolon `;`
-*Squiz.WhiteSpace.SemicolonSpacing*
+
+Rule: *Squiz.WhiteSpace.SemicolonSpacing*
 
 ## Forbid superfluous whitespaces
-*Squiz.WhiteSpace.SuperfluousWhitespace, Squiz.WhiteSpace.SuperfluousWhitespace.EmptyLines*
+
+Rule: *Squiz.WhiteSpace.SuperfluousWhitespace, Squiz.WhiteSpace.SuperfluousWhitespace.EmptyLines*
