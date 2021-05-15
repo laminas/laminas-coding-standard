@@ -257,14 +257,14 @@ each of the blocks below MUST be separated by a single blank line, and MUST NOT 
 a blank line. Each block MUST be in the order listed below, although blocks that are
 not relevant may be omitted.
 
-* Opening `<?php` tag.
-* File-level docblock.
-* One or more declare statements.
-* The namespace declaration of the file.
-* One or more class-based `use` import statements.
-* One or more function-based `use` import statements.
-* One or more constant-based `use` import statements.
-* The remainder of the code in the file.
+- Opening `<?php` tag.
+- File-level docblock.
+- One or more declare statements.
+- The namespace declaration of the file.
+- One or more class-based `use` import statements.
+- One or more function-based `use` import statements.
+- One or more constant-based `use` import statements.
+- The remainder of the code in the file.
 
 When a file contains a mix of HTML and PHP, any of the above sections may still
 be used. If so, they MUST be present at the top of the file, even if the
@@ -1105,6 +1105,7 @@ $variable = $foo ? 'foo' : 'bar';
 
 When the middle operand of the conditional operator is omitted, the operator
 MUST follow the same style rules as other binary [comparison][] operators:
+
 ```php
 $variable = $foo ?: 'bar';
 ```
