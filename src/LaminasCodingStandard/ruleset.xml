@@ -104,7 +104,9 @@
 
     <!-- The declare(strict_types=1) directive MUST be declared and be the
          first statement in a file. -->
-    <rule ref="WebimpressCodingStandard.Files.DeclareStrictTypes"/>
+    <rule ref="WebimpressCodingStandard.Files.DeclareStrictTypes">
+        <exclude name="WebimpressCodingStandard.Files.DeclareStrictTypes.BelowComment"/>
+    </rule>
 
     <!-- 2.3 Lines -->
 
