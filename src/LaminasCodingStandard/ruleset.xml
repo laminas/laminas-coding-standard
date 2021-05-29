@@ -334,8 +334,6 @@
     <rule ref="WebimpressCodingStandard.Formatting.StringClassReference"/>
     <!-- There MAY NOT be any whitespace around the double colon operator. -->
     <rule ref="WebimpressCodingStandard.Formatting.DoubleColon"/>
-    <!-- All private methods, constants and properties MUST be used. -->
-    <rule ref="SlevomatCodingStandard.Classes.UnusedPrivateElements"/>
 
     <!-- 4.1 Extends and Implements -->
 

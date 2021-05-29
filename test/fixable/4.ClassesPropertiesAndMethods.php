@@ -110,9 +110,4 @@ class ClassesPropertiesAndMethods extends AbstractFoo implements FooInterface
             ::
             createFromFormat('Y-m-d', '2016-01-01');
     }
-
-    public function testUnusedPrivateMethods(): void
-    {
-        // All private methods, constants and properties MUST be used.
-    }
 }
