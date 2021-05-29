@@ -104,10 +104,6 @@
 
     <!-- The declare(strict_types=1) directive MUST be declared and be the
          first statement in a file. -->
-<<<<<<< HEAD
-    <rule ref="WebimpressCodingStandard.Files.DeclareStrictTypes">
-        <exclude name="WebimpressCodingStandard.Files.DeclareStrictTypes.BelowComment"/>
-=======
      <rule ref="SlevomatCodingStandard.TypeHints.DeclareStrictTypes">
         <properties>
             <property name="declareOnFirstLine" value="false"/>
@@ -115,7 +111,6 @@
             <property name="spacesCountAroundEqualsSign" value="0"/>
             <property name="linesCountAfterDeclare" value="1"/>
         </properties>
->>>>>>> 28aaa6c (feat: update to slevomat/coding-standard 7 for improved PHP 8 suport)
     </rule>
 
     <!-- 2.3 Lines -->
