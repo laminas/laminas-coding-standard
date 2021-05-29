@@ -104,8 +104,13 @@
 
     <!-- The declare(strict_types=1) directive MUST be declared and be the
          first statement in a file. -->
-    <rule ref="WebimpressCodingStandard.Files.DeclareStrictTypes">
-        <exclude name="WebimpressCodingStandard.Files.DeclareStrictTypes.BelowComment"/>
+     <rule ref="SlevomatCodingStandard.TypeHints.DeclareStrictTypes">
+        <properties>
+            <property name="declareOnFirstLine" value="false"/>
+            <property name="linesCountBeforeDeclare" value="1"/>
+            <property name="spacesCountAroundEqualsSign" value="0"/>
+            <property name="linesCountAfterDeclare" value="1"/>
+        </properties>
     </rule>
 
     <!-- 2.3 Lines -->
@@ -334,8 +339,6 @@
     <rule ref="WebimpressCodingStandard.Formatting.StringClassReference"/>
     <!-- There MAY NOT be any whitespace around the double colon operator. -->
     <rule ref="WebimpressCodingStandard.Formatting.DoubleColon"/>
-    <!-- All private methods, constants and properties MUST be used. -->
-    <rule ref="SlevomatCodingStandard.Classes.UnusedPrivateElements"/>
 
     <!-- 4.1 Extends and Implements -->
 

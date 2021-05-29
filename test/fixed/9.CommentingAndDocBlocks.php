@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * This is a file level summary.
+ *
+ * This is a file level Description.
+ */
+
 declare(strict_types=1);
 
 namespace LaminasCodingStandardTest\fixed;
