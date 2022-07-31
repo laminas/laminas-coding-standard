@@ -800,7 +800,7 @@
 
     <!-- DocBlocks and comments SHOULD NOT be used for already typehinted arguments,
          except arrays. -->
-    <rule ref="SlevomatCodingStandard.TypeHints.PropertyTypeHintSpacing"/>
+    <rule ref="SlevomatCodingStandard.Classes.PropertyDeclaration"/>
     <rule ref="SlevomatCodingStandard.TypeHints.PropertyTypeHint">
         <properties>
             <property name="enableNativeTypeHint" value="false"/>
