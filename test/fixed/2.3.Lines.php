@@ -19,10 +19,12 @@ class Lines
 
     public function testTrailingWhitespace(): void
     {
-        // There MUST NOT be trailing whitespace at the end of lines.
-        //
-        // Blank lines MAY be added to improve readability and to indicate
-        // related blocks of code except where explicitly forbidden.
+        /**
+         * There MUST NOT be trailing whitespace at the end of lines.
+         *
+         * Blank lines MAY be added to improve readability and to indicate
+         * related blocks of code except where explicitly forbidden.
+         */
 
         $foo = 'bar';
     }

@@ -5,7 +5,7 @@
             "job": {
                 "php": "*",
                 "command": "composer check",
-                "dependencies": ["lowest", "latest"]
+                "dependencies": "*"
             }
         },
         {
