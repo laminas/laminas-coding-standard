@@ -1,11 +1,35 @@
 {
     "additional_checks": [
         {
-            "name": "QA Checks",
+            "name": "QA Checks (latest)",
             "job": {
-                "php": "*",
+                "php": "7.4",
                 "command": "composer check",
                 "dependencies": "*"
+            }
+        },
+        {
+            "name": "QA Checks (latest)",
+            "job": {
+                "php": "8.0",
+                "command": "composer check",
+                "dependencies": "latest"
+            }
+        },
+        {
+            "name": "QA Checks (locked)",
+            "job": {
+                "php": "8.0",
+                "command": "composer check",
+                "dependencies": "locked"
+            }
+        },
+        {
+            "name": "QA Checks (locked)",
+            "job": {
+                "php": "8.0",
+                "command": "composer check",
+                "dependencies": "locked"
             }
         },
         {
