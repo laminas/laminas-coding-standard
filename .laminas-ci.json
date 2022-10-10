@@ -25,11 +25,35 @@
             }
         },
         {
-            "name": "QA Checks (locked)",
+            "name": "QA Checks (latest)",
             "job": {
-                "php": "8.0",
+                "php": "8.1",
                 "command": "composer check",
                 "dependencies": "locked"
+            }
+        },
+        {
+            "name": "QA Checks (locked)",
+            "job": {
+                "php": "8.1",
+                "command": "composer check",
+                "dependencies": "latest"
+            }
+        },
+        {
+            "name": "QA Checks (latest)",
+            "job": {
+                "php": "8.2",
+                "command": "composer check",
+                "dependencies": "locked"
+            }
+        },
+        {
+            "name": "QA Checks (locked)",
+            "job": {
+                "php": "8.2",
+                "command": "composer check",
+                "dependencies": "latest"
             }
         },
         {
