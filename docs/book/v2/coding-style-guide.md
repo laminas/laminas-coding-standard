@@ -194,7 +194,7 @@ $b = $a
 
 ### 2.5 Keywords and Types
 
-All PHP reserved keywords and types [[1]][keywords][[2]][types] MUST be in lower case.
+All PHP reserved keywords [[1]][keywords] and types [[2]][types] MUST be in lower case.
 
 Any new types and keywords added to future PHP versions MUST be in lower case.
 
@@ -1330,7 +1330,6 @@ public function setTitle(string $title, array $context): void
 > Heredoc and nowdoc tags MUST be uppercase without spaces.
 
 [PSR-1]: https://www.php-fig.org/psr/psr-1/
-[PSR-2]: https://www.php-fig.org/psr/psr-2/
 [PSR-12]: https://www.php-fig.org/psr/psr-12/
 [keywords]: https://www.php.net/manual/en/reserved.keywords.php
 [types]: https://www.php.net/manual/en/reserved.other-reserved-words.php
