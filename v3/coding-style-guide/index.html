@@ -15,7 +15,7 @@
     <meta name="docsearch:language" content="en">
     <meta name="docsearch:component" content="laminas-coding-standard">
 
-    <link rel="canonical" href="https://docs.laminas.dev/laminas-coding-standard/v2/coding-style-guide/">
+    <link rel="canonical" href="https://docs.laminas.dev/laminas-coding-standard/v3/coding-style-guide/">
     <link rel="shortcut icon" href="https://docs.laminas.dev/img/trademark-laminas-foundation-rgb.svg">
 
     <title>Coding Style Guide - laminas-coding-standard - Laminas Docs</title>
@@ -123,14 +123,6 @@
 
                 
                 
-
-                    
-                    
-                
-            
-
-                
-                
                     
                         
     <li class="subnavigation__list-item ">
@@ -143,6 +135,14 @@
         <a href="./" class="subnavigation__link">Coding Style Guide</a>
     </li>
 
+                    
+                
+            
+
+                
+                
+
+                    
                     
                 
             
@@ -199,13 +199,13 @@
     <div class="btn-group">
         <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false" id="version-selector-dropdown">
             
-                v2
+                v3
             
         </button>
         <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left" aria-labelledby="version-selector-dropdown">
             
                 
-                    <a href="../../v3/intro/" class="dropdown-item">
+                    <a href="../intro/" class="dropdown-item active">
                         
                             v3 (latest)
                         
@@ -213,7 +213,7 @@
                 
             
                 
-                    <a href="../intro/" class="dropdown-item active">
+                    <a href="../../v2/intro/" class="dropdown-item">
                         
                             v2
                         
@@ -327,14 +327,6 @@
 
 
 
-    <div class="alert alert-danger" role="alert">
-        <h4>Caution</h4>
-        <p>
-            The documentation you are viewing is for an older version of this component.<br>
-            <a href="../..">Switch to the latest (v3) version.</a>
-        </p>
-    </div>
-
 
 
 
@@ -425,15 +417,15 @@ each word is capitalized including the very first letter.</p>
 <h3 id="additional-laminas-rules">Additional Laminas rules</h3>
 <p>For consistency a bunch of older PHP features SHOULD NOT be used:</p>
 <ul>
-<li>The <a href="https://www.php.net/manual/en/language.basic-syntax.phptags.php">short open tag</a> SHOULD NOT be used.</li>
-<li>Deprecated features SHOULD be avoided (<a href="https://www.php.net/manual/en/migration70.deprecated.php">[7.0]</a>,
-  <a href="https://www.php.net/manual/en/migration71.deprecated.php">[7.1]</a>, <a href="https://www.php.net/manual/en/migration72.deprecated.php">[7.2]</a>, <a href="https://www.php.net/manual/en/migration73.deprecated.php">[7.3]</a>,
-  <a href="https://www.php.net/manual/en/migration74.deprecated.php">[7.4]</a>)</li>
-<li>The <a href="https://www.php.net/manual/en/language.operators.execution.php">backtick operator</a> MUST NOT be used.</li>
-<li>The <a href="https://www.php.net/manual/en/control-structures.goto.php">goto</a> language construct SHOULD NOT be used.</li>
-<li>The <a href="https://www.php.net/manual/en/language.variables.scope.php#language.variables.scope.global">global</a> keyword MUST NOT be used.</li>
-<li>The constant <a href="https://www.php.net/manual/en/function.php-sapi-name.php#refsect1-function.php-sapi-name-notes">PHP_SAPI</a> SHOULD be used instead of the <code>php_sapi_name()</code> function.</li>
-<li><a href="https://www.php.net/manual/en/aliases.php">aliases</a> SHOULD NOT be used.</li>
+<li>The <a href="https://www.php.net/manual/language.basic-syntax.phptags.php">short open tag</a> SHOULD NOT be used.</li>
+<li>Deprecated features SHOULD be avoided (<a href="https://www.php.net/manual/migration70.deprecated.php">[7.0]</a>,
+  <a href="https://www.php.net/manual/migration71.deprecated.php">[7.1]</a>, <a href="https://www.php.net/manual/migration72.deprecated.php">[7.2]</a>, <a href="https://www.php.net/manual/migration73.deprecated.php">[7.3]</a>,
+  <a href="https://www.php.net/manual/migration74.deprecated.php">[7.4]</a>)</li>
+<li>The <a href="https://www.php.net/manual/language.operators.execution.php">backtick operator</a> MUST NOT be used.</li>
+<li>The <a href="https://www.php.net/manual/control-structures.goto.php">goto</a> language construct SHOULD NOT be used.</li>
+<li>The <a href="https://www.php.net/manual/language.variables.scope.php#language.variables.scope.global">global</a> keyword MUST NOT be used.</li>
+<li>The constant <a href="https://www.php.net/manual/function.php-sapi-name.php#refsect1-function.php-sapi-name-notes">PHP_SAPI</a> SHOULD be used instead of the <code>php_sapi_name()</code> function.</li>
+<li><a href="https://www.php.net/manual/aliases.php">aliases</a> SHOULD NOT be used.</li>
 </ul>
 <p>There MUST NOT be a space before a semicolon. Redundant semicolons SHOULD be avoided.</p>
 <p>Non executable code MUST be removed.</p>
@@ -496,7 +488,7 @@ $a = 'Hello ';
 $b = $a
    . 'World!';</code></pre>
 <h3 id="25-keywords-and-types">2.5 Keywords and Types</h3>
-<p>All PHP reserved keywords <a href="https://www.php.net/manual/en/reserved.keywords.php">[1]</a> and types <a href="https://www.php.net/manual/en/reserved.other-reserved-words.php">[2]</a> MUST be in lower case.</p>
+<p>All PHP reserved keywords <a href="https://www.php.net/manual/reserved.keywords.php">[1]</a> and types <a href="https://www.php.net/manual/reserved.other-reserved-words.php">[2]</a> MUST be in lower case.</p>
 <p>Any new types and keywords added to future PHP versions MUST be in lower case.</p>
 <p>Short form of type keywords MUST be used i.e. <code>bool</code> instead of <code>boolean</code>,
 <code>int</code> instead of <code>integer</code> etc.</p>
@@ -1129,8 +1121,8 @@ the operator and operand.</p>
     return false;
 }</code></pre>
 <h3 id="62-binary-operators">6.2. Binary operators</h3>
-<p>All binary <a href="https://www.php.net/manual/en/language.operators.arithmetic.php">arithmetic</a>, <a href="https://www.php.net/manual/en/language.operators.comparison.php">comparison</a>, <a href="https://www.php.net/manual/en/language.operators.assignment.php">assignment</a>, <a href="https://www.php.net/manual/en/language.operators.bitwise.php">bitwise</a>,
-<a href="https://www.php.net/manual/en/language.operators.logical.php">logical</a>, <a href="https://www.php.net/manual/en/language.operators.string.php">string</a>, and <a href="https://www.php.net/manual/en/language.operators.type.php">type</a> operators MUST be preceded and
+<p>All binary <a href="https://www.php.net/manual/language.operators.arithmetic.php">arithmetic</a>, <a href="https://www.php.net/manual/language.operators.comparison.php">comparison</a>, <a href="https://www.php.net/manual/language.operators.assignment.php">assignment</a>, <a href="https://www.php.net/manual/language.operators.bitwise.php">bitwise</a>,
+<a href="https://www.php.net/manual/language.operators.logical.php">logical</a>, <a href="https://www.php.net/manual/language.operators.string.php">string</a>, and <a href="https://www.php.net/manual/language.operators.type.php">type</a> operators MUST be preceded and
 followed by at least one space:</p>
 <pre class="highlight"><code class="language-php">if ($a === $b) {
     $foo = $bar ?? $a ?? $b;
@@ -1143,7 +1135,7 @@ preceded and followed by at least one space around both the <code>?</code>
 and <code>:</code> characters:</p>
 <pre class="highlight"><code class="language-php">$variable = $foo ? 'foo' : 'bar';</code></pre>
 <p>When the middle operand of the conditional operator is omitted, the operator
-MUST follow the same style rules as other binary <a href="https://www.php.net/manual/en/language.operators.comparison.php">comparison</a> operators:</p>
+MUST follow the same style rules as other binary <a href="https://www.php.net/manual/language.operators.comparison.php">comparison</a> operators:</p>
 <pre class="highlight"><code class="language-php">$variable = $foo ?: 'bar';</code></pre>
 <h2 id="7-closures">7. Closures</h2>
 <p>Closures MUST be declared with a space after the <code>function</code> keyword, and a
@@ -1346,7 +1338,7 @@ brackets.</p>
         
         <li class="page-nav__item">
             
-                <a rel="next" class="page-nav__link page-nav__link--next" href="../../v1/intro/">
+                <a rel="next" class="page-nav__link page-nav__link--next" href="../../v2/intro/">
                     <small class="page-nav__label">Next</small>
                     Introduction
                     <i class="fa fa-chevron-right"></i>
@@ -1391,14 +1383,6 @@ brackets.</p>
 
                 
                 
-
-                    
-                    
-                
-            
-
-                
-                
                     
                         
     <li class="subnavigation__list-item ">
@@ -1411,6 +1395,14 @@ brackets.</p>
         <a href="./" class="subnavigation__link">Coding Style Guide</a>
     </li>
 
+                    
+                
+            
+
+                
+                
+
+                    
                     
                 
             

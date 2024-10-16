@@ -15,7 +15,7 @@
     <meta name="docsearch:language" content="en">
     <meta name="docsearch:component" content="laminas-coding-standard">
 
-    <link rel="canonical" href="https://docs.laminas.dev/laminas-coding-standard/v1/intro/">
+    <link rel="canonical" href="https://docs.laminas.dev/laminas-coding-standard/v3/intro/">
     <link rel="shortcut icon" href="https://docs.laminas.dev/img/trademark-laminas-foundation-rgb.svg">
 
     <title>Introduction - laminas-coding-standard - Laminas Docs</title>
@@ -123,22 +123,6 @@
 
                 
                 
-
-                    
-                    
-                
-            
-
-                
-                
-
-                    
-                    
-                
-            
-
-                
-                
                     
                         
     <li class="subnavigation__list-item subnavigation__list-item--active">
@@ -148,9 +132,25 @@
                     
                         
     <li class="subnavigation__list-item ">
-        <a href="../ruleset/" class="subnavigation__link">Ruleset</a>
+        <a href="../coding-style-guide/" class="subnavigation__link">Coding Style Guide</a>
     </li>
 
+                    
+                
+            
+
+                
+                
+
+                    
+                    
+                
+            
+
+                
+                
+
+                    
                     
                 
             
@@ -199,13 +199,13 @@
     <div class="btn-group">
         <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false" id="version-selector-dropdown">
             
-                v1
+                v3
             
         </button>
         <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left" aria-labelledby="version-selector-dropdown">
             
                 
-                    <a href="../../v3/intro/" class="dropdown-item">
+                    <a href="./" class="dropdown-item active">
                         
                             v3 (latest)
                         
@@ -221,7 +221,7 @@
                 
             
                 
-                    <a href="./" class="dropdown-item active">
+                    <a href="../../v1/intro/" class="dropdown-item">
                         
                             v1
                         
@@ -268,6 +268,18 @@
                         <a href="#usage" class="toc__link nav-link">Usage</a>
                     </li>
                 
+                    <li class="toc__entry">
+                        <a href="#ignoring-parts-of-a-file" class="toc__link nav-link">Ignoring parts of a File</a>
+                    </li>
+                
+                    <li class="toc__entry">
+                        <a href="#development" class="toc__link nav-link">Development</a>
+                    </li>
+                
+                    <li class="toc__entry">
+                        <a href="#reference" class="toc__link nav-link">Reference</a>
+                    </li>
+                
             </ul>
         </div>
     
@@ -299,14 +311,6 @@
 
 
 
-    <div class="alert alert-danger" role="alert">
-        <h4>Caution</h4>
-        <p>
-            The documentation you are viewing is for an older version of this component.<br>
-            <a href="../..">Switch to the latest (v3) version.</a>
-        </p>
-    </div>
-
 
 
 
@@ -314,6 +318,21 @@
     
 
     <h1 id="introduction">Introduction</h1>
+<p><strong>This specification extends and expands <a href="https://github.com/php-fig/fig-standards/blob/master/proposed/extended-coding-style-guide.md">PSR-12</a>,
+the extended coding style guide and requires adherence to <a href="https://www.php-fig.org/psr/psr-1">PSR-1</a>,
+the basic coding standard.</strong></p>
+<p>These are minimal specifications and don't address all factors, including things like:</p>
+<ul>
+<li>whitespace around operators</li>
+<li>alignment of array keys and operators</li>
+<li>alignment of object operations</li>
+<li>how to format multi-line conditionals</li>
+<li>what and what not to import, and how</li>
+<li>etc.</li>
+</ul>
+<p>Contributors have different coding styles and so do the maintainers. During code reviews there are regularly
+discussions about spaces and alignments, where and when was said that a function needs to be imported. And
+that's where this coding standard comes in: To have internal consistency in a component and between components.</p>
 <h2 id="installation">Installation</h2>
 <ol>
 <li>Install the module via Composer by running:</li>
@@ -327,19 +346,31 @@
   "cs-fix": "phpcbf"
 }</code></pre>
 <ol>
-<li>Create file <code>phpcs.xml</code> on base path of your repository with content:</li>
+<li>Create file <code>phpcs.xml</code> on base path of your repository with this content:</li>
 </ol>
 <pre class="highlight"><code class="language-xml">&lt;?xml version="1.0"?&gt;
-&lt;ruleset name="Laminas Coding Standard"&gt;
-    &lt;rule ref="./vendor/laminas/laminas-coding-standard/ruleset.xml"/&gt;
+&lt;ruleset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="vendor/squizlabs/php_codesniffer/phpcs.xsd"&gt;
+
+    &lt;arg name="basepath" value="."/&gt;
+    &lt;arg name="cache" value=".phpcs-cache"/&gt;
+    &lt;arg name="colors"/&gt;
+    &lt;arg name="extensions" value="php"/&gt;
+    &lt;arg name="parallel" value="80"/&gt;
+
+    &lt;!-- Show progress --&gt;
+    &lt;arg value="p"/&gt;
 
     &lt;!-- Paths to check --&gt;
     &lt;file&gt;config&lt;/file&gt;
     &lt;file&gt;src&lt;/file&gt;
     &lt;file&gt;test&lt;/file&gt;
+
+    &lt;!-- Include all rules from the Laminas Coding Standard --&gt;
+    &lt;rule ref="LaminasCodingStandard"/&gt;
 &lt;/ruleset&gt;</code></pre>
-<p>You can add or exclude some locations in that file.
-For a reference please see: https://github.com/squizlabs/PHP_CodeSniffer/wiki/Annotated-Ruleset</p>
+<p>You can add or exclude some locations in that file. For a reference please see
+the <a href="https://github.com/PHPCSStandards/PHP_CodeSniffer/wiki/Annotated-Ruleset">"Annotated Ruleset" of PHP_CodeSniffer</a>.</p>
 <h2 id="usage">Usage</h2>
 <ul>
 <li>To run checks only:</li>
@@ -349,6 +380,54 @@ For a reference please see: https://github.com/squizlabs/PHP_CodeSniffer/wiki/An
 <li>To automatically fix many CS issues:</li>
 </ul>
 <pre class="highlight"><code class="language-bash">$ composer cs-fix</code></pre>
+<h2 id="ignoring-parts-of-a-file">Ignoring parts of a File</h2>
+<blockquote>
+<h3 id="deprecation">Deprecation</h3>
+<p>Before PHP_CodeSniffer version 3.2.0, <code>// @codingStandardsIgnoreStart</code> and
+<code>// @codingStandardsIgnoreEnd</code> were used. These are deprecated and will be
+removed in PHP_CodeSniffer version 4.0.</p>
+</blockquote>
+<p>Disable parts of a file:</p>
+<pre class="highlight"><code class="language-php">$xmlPackage = new XMLPackage;
+// phpcs:disable
+$xmlPackage['error_code'] = get_default_error_code_value();
+$xmlPackage-&gt;send();
+// phpcs:enable</code></pre>
+<p>Disable a specific rule:</p>
+<pre class="highlight"><code class="language-php">// phpcs:disable Generic.Commenting.Todo.Found
+$xmlPackage = new XMLPackage;
+$xmlPackage['error_code'] = get_default_error_code_value();
+// TODO: Add an error message here.
+$xmlPackage-&gt;send();
+// phpcs:enable</code></pre>
+<h2 id="development">Development</h2>
+<blockquote>
+<h3 id="new-rules-or-sniffs">New Rules or Sniffs</h3>
+<p>New rules or Sniffs may not be introduced in minor or bugfix releases and
+should always be based on the develop branch and queued for the next major
+release, unless considered a bugfix for existing rules.</p>
+</blockquote>
+<p>If you want to test changes against Laminas components or your own projects, install your forked
+laminas-coding-standard globally with Composer:</p>
+<pre class="highlight"><code class="language-bash">$ composer global config repositories.laminas-coding-standard vcs git@github.com:&lt;FORK_NAMESPACE&gt;/laminas-coding-standard.git
+$ composer global require --dev laminas/laminas-coding-standard:dev-&lt;FORKED_BRANCH&gt;
+
+# For this to work, add this to your path: ~/.composer/vendor/bin
+# Using `-s` prints the rules that triggered the errors so they can be reviewed easily. `-p` is for progress display.
+$ phpcs -sp --standard=LaminasCodingStandard src test</code></pre>
+<p><strong>Make sure you remove the global installation after testing from your global
+<code>composer.json</code> file!</strong></p>
+<p>Documentation can be previewed locally by installing <a href="https://www.mkdocs.org/#installation">MkDocs</a> and run
+<code>mkdocs serve</code>. This will start a server where you can read the docs.</p>
+<h2 id="reference">Reference</h2>
+<p>Rules can be added, excluded or tweaked locally, depending on your preferences. More information on how to do this can
+be found here:</p>
+<ul>
+<li><a href="https://github.com/PHPCSStandards/PHP_CodeSniffer/wiki/Coding-Standard-Tutorial">Coding Standard Tutorial</a></li>
+<li><a href="https://github.com/PHPCSStandards/PHP_CodeSniffer/wiki/Configuration-Options">Configuration Options</a></li>
+<li><a href="https://github.com/PHPCSStandards/PHP_CodeSniffer/wiki/Annotated-Ruleset#selectively-applying-rules">Selectively Applying Rules</a></li>
+<li><a href="https://github.com/PHPCSStandards/PHP_CodeSniffer/wiki/Customisable-Sniff-Properties">Customisable Sniff Properties</a></li>
+</ul>
 
 
 
@@ -359,10 +438,10 @@ For a reference please see: https://github.com/squizlabs/PHP_CodeSniffer/wiki/An
         
         <li class="page-nav__item">
             
-                <a rel="prev" class="page-nav__link page-nav__link--prev" href="../../v2/coding-style-guide/">
+                <a rel="prev" class="page-nav__link page-nav__link--prev" href="../..">
                     <small class="page-nav__label">Previous</small>
                     <i class="fa fa-chevron-left"></i>
-                    Coding Style Guide
+                    Home
                 </a>
             
         </li>
@@ -370,9 +449,9 @@ For a reference please see: https://github.com/squizlabs/PHP_CodeSniffer/wiki/An
         
         <li class="page-nav__item">
             
-                <a rel="next" class="page-nav__link page-nav__link--next" href="../ruleset/">
+                <a rel="next" class="page-nav__link page-nav__link--next" href="../coding-style-guide/">
                     <small class="page-nav__label">Next</small>
-                    Ruleset
+                    Coding Style Guide
                     <i class="fa fa-chevron-right"></i>
                 </a>
             
@@ -415,22 +494,6 @@ For a reference please see: https://github.com/squizlabs/PHP_CodeSniffer/wiki/An
 
                 
                 
-
-                    
-                    
-                
-            
-
-                
-                
-
-                    
-                    
-                
-            
-
-                
-                
                     
                         
     <li class="subnavigation__list-item subnavigation__list-item--active">
@@ -440,9 +503,25 @@ For a reference please see: https://github.com/squizlabs/PHP_CodeSniffer/wiki/An
                     
                         
     <li class="subnavigation__list-item ">
-        <a href="../ruleset/" class="subnavigation__link">Ruleset</a>
+        <a href="../coding-style-guide/" class="subnavigation__link">Coding Style Guide</a>
     </li>
 
+                    
+                
+            
+
+                
+                
+
+                    
+                    
+                
+            
+
+                
+                
+
+                    
                     
                 
             
