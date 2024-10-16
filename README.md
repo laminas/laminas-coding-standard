@@ -79,7 +79,7 @@ that's where this coding standard comes in: To have internal consistency in a co
    ```
 
 You can add or exclude some locations in that file.
-For a reference please see: https://github.com/squizlabs/PHP_CodeSniffer/wiki/Annotated-Ruleset
+For a reference please see: https://github.com/PHPCSStandards/PHP_CodeSniffer/wiki/Annotated-Ruleset
 
 ## Usage
 
@@ -158,7 +158,7 @@ Documentation can be previewed locally by installing [MkDocs](https://www.mkdocs
 Rules can be added, excluded or tweaked locally, depending on your preferences. More information on how to do this can
 be found here:
 
-- [Coding Standard Tutorial](https://github.com/squizlabs/PHP_CodeSniffer/wiki/Coding-Standard-Tutorial)
-- [Configuration Options](https://github.com/squizlabs/PHP_CodeSniffer/wiki/Configuration-Options)
-- [Selectively Applying Rules](https://github.com/squizlabs/PHP_CodeSniffer/wiki/Annotated-Ruleset#selectively-applying-rules)
-- [Customisable Sniff Properties](https://github.com/squizlabs/PHP_CodeSniffer/wiki/Customisable-Sniff-Properties)
+- [Coding Standard Tutorial](https://github.com/PHPCSStandards/PHP_CodeSniffer/wiki/Coding-Standard-Tutorial)
+- [Configuration Options](https://github.com/PHPCSStandards/PHP_CodeSniffer/wiki/Configuration-Options)
+- [Selectively Applying Rules](https://github.com/PHPCSStandards/PHP_CodeSniffer/wiki/Annotated-Ruleset#selectively-applying-rules)
+- [Customisable Sniff Properties](https://github.com/PHPCSStandards/PHP_CodeSniffer/wiki/Customisable-Sniff-Properties)
