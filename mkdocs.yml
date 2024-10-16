@@ -2,14 +2,18 @@ docs_dir: docs/book
 site_dir: docs/html
 extra:
     project: Components
-    current_version: v2
+    current_version: v3
     versions:
+      - v3
       - v2
       - v1
     installation:
         composer_dev: true
 nav:
     - Home: index.md
+    - v3:
+        - 'Introduction': v3/intro.md
+        - 'Coding Style Guide': v3/coding-style-guide.md
     - v2:
         - 'Introduction': v2/intro.md
         - 'Coding Style Guide': v2/coding-style-guide.md
