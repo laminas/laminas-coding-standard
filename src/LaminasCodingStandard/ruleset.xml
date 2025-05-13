@@ -82,7 +82,7 @@
     <!-- Non executable code MUST be removed. -->
     <rule ref="Squiz.PHP.NonExecutableCode"/>
     <!-- There MUST be a single space after language constructs. -->
-    <rule ref="Squiz.WhiteSpace.LanguageConstructSpacing"/>
+    <rule ref="Generic.WhiteSpace.LanguageConstructSpacing"/>
     <!-- Parentheses MUST be omitted where possible. -->
     <rule ref="WebimpressCodingStandard.Formatting.RedundantParentheses"/>
     <!-- PHP function calls MUST be in lowercase. -->
