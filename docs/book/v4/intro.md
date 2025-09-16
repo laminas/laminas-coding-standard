@@ -1,7 +1,7 @@
 # Introduction
 
-**This specification extends and expands [PSR-12](https://github.com/php-fig/fig-standards/blob/master/proposed/extended-coding-style-guide.md),
-the extended coding style guide and requires adherence to [PSR-1](https://www.php-fig.org/psr/psr-1),
+**This specification extends and expands [PER Coding Style](https://www.php-fig.org/per/coding-style/),
+the evolving coding style guide and requires adherence to [PSR-1](https://www.php-fig.org/psr/psr-1),
 the basic coding standard.**
 
 These are minimal specifications and don't address all factors, including things like:
@@ -82,8 +82,8 @@ the ["Annotated Ruleset" of PHP_CodeSniffer](https://github.com/PHPCSStandards/P
 > ### Deprecation
 >
 > Before PHP_CodeSniffer version 3.2.0, `// @codingStandardsIgnoreStart` and
-> `// @codingStandardsIgnoreEnd` were used. These are deprecated and will be
-> removed in PHP_CodeSniffer version 4.0.
+> `// @codingStandardsIgnoreEnd` were used. These were removed in
+> PHP_CodeSniffer version 4.0.
 
 Disable parts of a file:
 
@@ -111,8 +111,8 @@ $xmlPackage->send();
 > ### New Rules or Sniffs
 >
 > New rules or Sniffs may not be introduced in minor or bugfix releases and
-> should always be based on the develop branch and queued for the next major
-> release, unless considered a bugfix for existing rules.
+> should always be based on the next major release branch, unless considered a
+> bugfix for existing rules.
 
 If you want to test changes against Laminas components or your own projects, install your forked
 laminas-coding-standard globally with Composer:
