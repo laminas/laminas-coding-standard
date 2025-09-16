@@ -1982,10 +1982,10 @@ public function setTitle(string $title, array $context): void
 > `@subpackage` and `@version` MUST NOT be used in comments. Git commits
 > provide accurate information.
 >
-> The words _private_, _protected_, _static_, _constructor_, _deconstructor_,
-> _Created by_, _getter_ and _setter_, MUST NOT be used in comments.
+> The words *private*, *protected*, *static*, *constructor*, *deconstructor*,
+> *Created by*, *getter* and *setter*, MUST NOT be used in comments.
 >
-> The `@var` tag MAY be used in inline comments to document the _Type_
+> The `@var` tag MAY be used in inline comments to document the *Type*
 > of properties. Single-line property comments with a `@var` tag SHOULD
 > be written as one-liners. The `@var` MAY NOT be used for constants.
 >
